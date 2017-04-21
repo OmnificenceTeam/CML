@@ -1,0 +1,471 @@
+﻿
+
+
+/*/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .cmlhlogo {
+        width: 90px;
+        float: left;
+    }
+
+    .mnu-nov {
+        width: 100px;
+       
+        margin-bottom: 15px;
+    }
+       .tab-con
+    {
+        margin-top:20px;
+    }
+
+       .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    width: 33.3%;
+    text-align: center;
+}
+       .lgoutbtn {
+    float: right;
+        margin-top: 10px;
+    margin-right: 2px;
+    border: 1px solid #FF9900;
+    background: none;
+    font-size: 14px;
+    padding: 3px 7px;
+    background-color:#FF9900;
+    color:white;
+}
+
+       .nav-tabs {
+    width:100%;
+}
+
+         .bannerMain {
+    background: white;
+    position: relative;
+    height: 250px;
+}
+
+         .bannerMain .imgTxt
+         {
+             font-size: 18px;
+    font-family: 'century gothicB';
+         }
+
+         .bannerMain .imgTxt .desc
+         {
+             font-size: 14px;
+    font-family: 'century gothic';
+         }
+
+
+           .menu-btn .menu-cont {
+    background: #FF9900;
+    padding: 15px;
+    position: absolute;
+    color: white;
+    top: 0;
+    font-size: 16px;
+    transition: background ease 1s;
+    -webkit-transition: background ease 1s;
+}
+
+           
+                    .hlpmnu
+             {
+                     position: absolute;
+    left: 50%;
+    margin-left: -141px;
+    width: 200px;
+    margin-top: 12px;
+             }
+
+             .hlplg
+             {
+              position: absolute;
+    right: 0;
+    width: 190px;
+    margin-top: 10px;
+             }
+
+             .hlphid
+             {
+                 left: 50%;
+    position: absolute;
+    margin-left: -95px;
+    margin-top: 275px;
+    width: 190px;
+             }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .cmlhlogo {
+        width: 90px;
+        float: left;
+    }
+
+     .nav-tabs {
+    width:100%;
+}
+     .lgoutbtn {
+   float: right;
+        margin-top: 10px;
+    margin-right: 2px;
+    border: 1px solid #FF9900;
+    background: none;
+    font-size: 14px;
+    padding: 3px 7px;
+    background-color:#FF9900;
+    color:white;
+}
+
+    .mnu-nov {
+        width: 100px;
+        position: absolute;
+        bottom: -60px;
+        right: 15px;
+        margin-bottom: 15px;
+    }
+
+    .tab-con
+    {
+        margin-top:20px;
+    }
+
+    .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    width: 33.3%;
+    text-align: center;
+}
+
+      .bannerMain {
+    background: white;
+    position: relative;
+    height: 250px;
+}
+               .bannerMain .imgTxt
+         {
+             font-size: 18px;
+    font-family: 'century gothicB';
+         }
+                  .bannerMain .imgTxt .desc
+         {
+             font-size: 14px;
+    font-family: 'century gothic';
+         }
+
+               .menu-btn .menu-cont {
+    background: #FF9900;
+    padding: 15px;
+    position: absolute;
+    color: white;
+    top: 0;
+    font-size: 16px;
+    transition: background ease 1s;
+    -webkit-transition: background ease 1s;
+}
+
+
+                    .hlpmnu
+             {
+                       position: absolute;
+    left: 50%;
+    margin-left: -290px;
+    width: 390px;
+             }
+
+             .hlplg
+             {
+                 position: absolute;
+    right: 0;
+    width: 250px;
+             }
+
+             .hlphid
+             {
+                 left: 50%;
+    position: absolute;
+    margin-left: -180px;
+    margin-top: 275px;
+    width:initial;
+             }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .cmlhlogo {
+        width: 120px;
+        float: left;
+    }
+     .nav-tabs {
+    width:100%;
+}
+
+
+    .mnu-nov {
+        width: 150px;
+        position: absolute;
+        bottom: -60px;
+        right: 15px;
+        margin-bottom: 15px;
+    }
+
+    .tab-con
+    {
+        margin-top:20px;
+    }
+
+    .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    width: 33.3%;
+    text-align: center;
+}
+
+    .lgoutbtn {
+     float: right;
+    margin-top: 5px;
+    margin-right: 14px;
+    border: 1px solid #FF9900;
+    background: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #FF9900;
+    color: white;
+}
+
+    .menu-btn .menu-cont
+{
+    background: #FF9900;
+    padding: 16px;
+    position: absolute;
+    color: white;
+    top: 0;
+    font-size: 25px;
+     transition: background ease 1s;
+     -webkit-transition: background ease 1s;
+}
+
+
+      .bannerMain {
+    background: white;
+    position: relative;
+    height: 400px;
+}
+
+               .bannerMain .imgTxt
+         {
+             font-size: 24px;
+    font-family: 'century gothic';
+         }
+
+                  .bannerMain .imgTxt .desc
+         {
+             font-size: 18px;
+    font-family: 'century gothic';
+
+         }
+
+                     .hlpmnu
+             {
+                     position: absolute;
+    left: 50%;
+    margin-left: -362px;
+    width: initial;
+             }
+
+             .hlplg
+             {
+                 position: absolute;
+    right: 0;width: initial;
+             }
+
+             .hlphid
+             {
+                 left: 50%;
+    position: absolute;
+    margin-left: -180px;
+    margin-top: 275px;width: initial;
+             }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    
+    .lgoutbtn {
+      float: right;
+    margin-top: 5px;
+    margin-right: 14px;
+    border: 1px solid #FF9900;
+    background: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #FF9900;
+    color: white;
+}
+
+    .menu-btn .menu-cont
+{
+    background: #FF9900;
+    padding: 16px;
+    position: absolute;
+    color: white;
+    top: 0;
+    font-size: 25px;
+     transition: background ease 1s;
+     -webkit-transition: background ease 1s;
+}
+
+
+    .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    width: 100%;
+    text-align: left;
+}
+
+    .bannerMain {
+    background: white;
+    position: relative;
+    height: 400px;
+}
+
+
+    .tab-header
+    {
+                  padding: 0px 30px 0px 0px;
+    /*border-right: 3px solid #F0F0F0;*/
+    font-size: 16px;
+    }
+
+    .tab-con
+    {
+        padding-left: 30px;
+        margin-top:0px;
+    }
+
+    .mnu-nov {
+        width: 150px;
+        position: absolute;
+        right: 10px;
+        bottom: -60px;
+    }
+
+    .tabs-left, .tabs-right {
+        border-bottom: none;
+        padding-top: 2px;
+    }
+
+    .tabs-left {
+        /*border-right: 1px solid #ddd;*/
+    }
+
+    .tabs-right {
+        border-left: 1px solid #ddd;
+    }
+
+        .tabs-left > li, .tabs-right > li {
+            float: none;
+            margin-bottom: 2px;
+        }
+
+    .tabs-left > li {
+        margin-right: -1px;
+    }
+
+    .tabs-right > li {
+        margin-left: -1px;
+    }
+
+    .tabs-left > li.active > a,
+    .tabs-left > li.active > a:hover,
+    .tabs-left > li.active > a:focus {
+        border-bottom-color: #ddd;
+        border-right-color: transparent;
+    }
+
+    .tabs-right > li.active > a,
+    .tabs-right > li.active > a:hover,
+    .tabs-right > li.active > a:focus {
+        border-bottom: 1px solid #ddd;
+        border-left-color: transparent;
+    }
+
+    .tabs-left > li > a {
+        border-radius: 4px 0 0 4px;
+        margin-right: 0;
+        display: block;
+    }
+
+    .tabs-right > li > a {
+        border-radius: 0 4px 4px 0;
+        margin-right: 0;
+    }
+
+             .bannerMain .imgTxt
+         {
+             font-size: 24px;
+    font-family: 'century gothic';
+
+         }
+
+             .hlpmnu
+             {
+                     position: absolute;
+    left: 50%;
+    margin-left: -362px;
+    width: initial;
+             }
+
+             .hlplg
+             {
+                 position: absolute;
+    right: 0;width: initial;
+             }
+
+             .hlphid
+             {
+                 left: 50%;
+    position: absolute;
+    margin-left: -180px;
+    margin-top: 275px;width: initial;
+             }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+}

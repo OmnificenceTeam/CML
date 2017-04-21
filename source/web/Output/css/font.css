@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'gothic';
+	src: url('../fonts/gothic.eot');
+	src: local('gothic'), url('../fonts/gothic.woff') format('woff'), url('../fonts/gothic.ttf') format('truetype');
+}
+
+
+@font-face {
+	font-family: 'gothicB';
+	src: url('../fonts/gothicB.eot');
+	src: url('../fonts/gothicB.ttf') format('truetype');
+}
+
+
+@font-face {
+	font-family: 'century gothic';
+	src: url('../fonts/gothic.eot');
+	src: local('gothic'), url('../fonts/gothic.woff') format('woff'), url('../fonts/gothic.ttf') format('truetype');
+}
+
+
+@font-face {
+	font-family: 'century gothicB';
+	src: url('../fonts/gothicB.eot');
+	src: url('../fonts/gothicB.ttf') format('truetype');
+}

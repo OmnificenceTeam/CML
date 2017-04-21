@@ -1,0 +1,1220 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            scrollbar-face-color:#401857;
+            scrollbar-3dlight-color:#401857;
+            scrollbar-shadow-color:#401857;
+            scrollbar-highlight-color:#401857;
+            scrollbar-darkshadow-color:#401857;
+            scrollbar-track-color:#401857;
+            scrollbar-arrow-color:#401857;
+        }
+        ::-webkit-scrollbar{
+            width:1px;
+        }
+        ::-webkit-scrollbar-track{
+            background:#401857;
+        }
+        ::-webkit-scrollbar-thumb{
+            background:#401857;
+        }
+        
+        .fullH {
+            height: 100%;
+        }
+
+        .fullW {
+            width: 100%;
+        }
+
+        .fullhw {
+            width: 100%;
+            height: 100%;
+        }
+
+        #scrollMain {
+            padding-left: 100px;
+            height: 100%;
+            padding-top: 100px;
+            padding-right: 50px;
+            overflow: auto;
+        }
+
+        #leftMain {
+            position: absolute;
+            height: 100%;
+            width: 100px;
+        }
+
+        .leftMainInner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .caseYear {
+            position: absolute;
+            width: 140px;
+            background: #36154A;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            top: 40px;
+        }
+
+        .caseContainer {
+            background: #4a286e;
+        }
+
+        .vLine {
+            height: 100%;
+            width: 2px;
+            background: white;
+            position: absolute;
+            right: 50%;
+            background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+            background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+            margin-right: -1px;
+        }
+
+
+        .vLineCont {
+            padding-top: 100px;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vCircle {
+            background: #301447;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            left: 50%;
+            position: absolute;
+            margin-left: -10px;
+            border: 2px solid white;
+        }
+
+        #circle1 {
+            margin-top: 40px;
+        }
+
+        #circle2 {
+            margin-bottom: 40px;
+            bottom: 0;
+        }
+
+            #circle2 .vmonth {
+                opacity: 0.5;
+            }
+
+        .vmonth {
+            position: absolute;
+            color: white;
+            left: -30px;
+            top: -20px;
+            transition:1s all;
+        }
+
+        .chatWindow {
+            width: 90%;
+            height: 85%;
+            background: #401857;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            overflow-y: auto;
+            overflow-x:hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .caseCont {
+            height: 800px;
+        }
+
+        .caseYearAnim {
+            color: white;
+            font-size: 56px;
+            position: relative;
+            height: 80px;
+        }
+/*CASE PLAYER*/
+/*month logo*/
+.month_icons{
+    display:inline;
+    list-style:none !important;
+}
+.month_icons li{
+    margin-bottom:15px;
+}
+
+.content_logo{
+    opacity:0.4;
+}
+.set_bright{
+    opacity:1;
+}
+@media only screen and (max-width:773px){
+    .month_icons li{
+    margin-bottom:0px !important;
+}
+    .present_font{
+        font-size:11px !important;
+    }
+    .present_name{
+        font-size:18px !important;
+    }
+    .present_img{
+        margin:40% 20% !important;
+        width:75% !important;
+    }
+    #month1_logo1,#month1_logo2,#month1_logo3,#month1_logo4,#month1_logo5{
+        min-height:200px !important;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="fullhw caseContainer">
+        <div id="leftMain">
+            <div class="leftMainInner">
+                <div  class="caseYear">
+                    <span id="caseYearFixed">2015</span> 
+                </div>
+                <div class="vLineCont">
+                    <div class="vLine">
+                    </div>
+                    <div id="circle1" class="vCircle">
+                        <div id="cMonth1" class="vmonth">AUG</div>
+                    </div>
+                    <div id="circle2" class="vCircle">
+                        <div id="cMonth2" class="vmonth">SEP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="scrollMain">
+            <div style="width:100%;height:85%;">
+                <div data-value="AUG" data-next="SEP" class="chatWindow" style="float:left;">
+                    <div class="caseCont">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div style="min-height:500px;width:100%;color:white;" id="month1_logo1">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:500px;width:100%;color:white;" id="month1_logo2">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:500px;width:100%;color:white;" id="month1_logo3">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:500px;width:100%;color:white;" id="month1_logo4">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:500px;width:100%;color:white;" id="month1_logo5">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;padding:2% 1%;float:left;width:10%;height: 85%; background: #401857; margin-top: 20px; margin-bottom: 20px;">
+                    <ul class="month_icons">
+                        <li><img src="images/case/m_1.png" style="width:70%;" class="month1logo1 content_logo" /></li>
+                        <li><img src="images/case/m_2.png" style="width:70%;" class="month1logo2 content_logo" /></li>
+                        <li><img src="images/case/m_3.png" style="width:70%;" class="month1logo3 content_logo" /></li>
+                        <li><img src="images/case/m_4.png" style="width:70%;" class="month1logo4 content_logo" /></li>
+                        <li><img src="images/case/m_5.png" style="width:70%;" class="month1logo5 content_logo" /></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div style="width:100%;height:85%;">
+                <div data-value="SEP" data-next="JAN" class="chatWindow" style="float:left;">
+                    <div class="caseCont">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div style="min-height:100px;width:100%;color:white;" id="month2_logo1">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month2_logo2">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month2_logo3">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month2_logo4">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month2_logo5">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;padding:2% 1%;float:left;width:10%;height: 85%; background: #401857; margin-top: 20px; margin-bottom: 20px;">
+                    <ul class="month_icons">
+                        <li><img src="images/case/m_1.png" style="width:70%;" class="monthlogo1" /></li>
+                        <li><img src="images/case/m_2.png" style="width:70%;" class="monthlogo2" /></li>
+                        <li><img src="images/case/m_3.png" style="width:70%;" class="monthlogo3" /></li>
+                        <li><img src="images/case/m_4.png" style="width:70%;" class="monthlogo4" /></li>
+                        <li><img src="images/case/m_5.png" style="width:70%;" class="monthlogo5" /></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="caseYearAnim">
+                <div class="animateYear">
+                    2016
+                </div>
+            </div>
+            <div style="width:100%;height:85%;">
+                <div data-value="JAN" data-next="MAR" class="chatWindow" style="float:left;">
+                    <div class="caseCont">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div style="min-height:100px;width:100%;color:white;" id="month3_logo1">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month3_logo2">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month3_logo3">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month3_logo4">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month3_logo5">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;padding:2% 1%;float:left;width:10%;height: 85%; background: #401857; margin-top: 20px; margin-bottom: 20px;">
+                    <ul class="month_icons">
+                        <li><img src="images/case/m_1.png" style="width:70%;" class="monthlogo1" /></li>
+                        <li><img src="images/case/m_2.png" style="width:70%;" class="monthlogo2" /></li>
+                        <li><img src="images/case/m_3.png" style="width:70%;" class="monthlogo3" /></li>
+                        <li><img src="images/case/m_4.png" style="width:70%;" class="monthlogo4" /></li>
+                        <li><img src="images/case/m_5.png" style="width:70%;" class="monthlogo5" /></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="width:100%;height:85%;">
+                <div data-value="MAR" data-next="JUN" class="chatWindow" style="float:left;">
+                    <div class="caseCont">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div style="min-height:100px;width:100%;color:white;" id="month4_logo1">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month4_logo2">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month4_logo3">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month4_logo4">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month4_logo5">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;padding:2% 1%;float:left;width:10%;height: 85%; background: #401857; margin-top: 20px; margin-bottom: 20px;">
+                    <ul class="month_icons">
+                        <li><img src="images/case/m_1.png" style="width:70%;" class="monthlogo1" /></li>
+                        <li><img src="images/case/m_2.png" style="width:70%;" class="monthlogo2" /></li>
+                        <li><img src="images/case/m_3.png" style="width:70%;" class="monthlogo3" /></li>
+                        <li><img src="images/case/m_4.png" style="width:70%;" class="monthlogo4" /></li>
+                        <li><img src="images/case/m_5.png" style="width:70%;" class="monthlogo5" /></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="caseYearAnim">
+                <div class="animateYear">
+                    2017
+                </div>
+            </div>
+            <div style="width:100%;height:85%;">
+                <div data-value="JUN" data-next="DEC" class="chatWindow" style="float:left;">
+                    <div class="caseCont">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div style="min-height:100px;width:100%;color:white;" id="month5_logo1">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month5_logo2">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month5_logo3">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month5_logo4">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month5_logo5">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;padding:2% 1%;float:left;width:10%;height: 85%; background: #401857; margin-top: 20px; margin-bottom: 20px;">
+                    <ul class="month_icons">
+                        <li><img src="images/case/m_1.png" style="width:70%;" class="monthlogo1" /></li>
+                        <li><img src="images/case/m_2.png" style="width:70%;" class="monthlogo2" /></li>
+                        <li><img src="images/case/m_3.png" style="width:70%;" class="monthlogo3" /></li>
+                        <li><img src="images/case/m_4.png" style="width:70%;" class="monthlogo4" /></li>
+                        <li><img src="images/case/m_5.png" style="width:70%;" class="monthlogo5" /></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="width:100%;height:85%;">
+                <div data-value="DEC" data-next="JAN" class="chatWindow" style="float:left;">
+                    <div class="caseCont">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div style="min-height:100px;width:100%;color:white;" id="month6_logo1">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month6_logo2">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month6_logo3">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month6_logo4">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                            <div style="min-height:100px;width:100%;color:white;" id="month6_logo5">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 present_font" style="padding:5%;">
+                                    <p>
+                                        <strong>11 <br>AUGUST</strong> <br>
+                                        <span style="font-size:34px;" class="present_name">NAME:MR.S</span><br>
+                                        <span>MR.S,a 48-year-old male,presents with following complaints for 6 months</span>
+                                    </p>
+                                    <ul>
+
+                                        <li>Lasstitude</li>
+                                        <li>fatigue</li>
+                                        <li>Weight los</li>
+                                        <li>Abdominal discomforts</li>
+                                    </ul>
+
+                                    <p> He also complaints of night sweats and mid fever</p>
+
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding:5%;"><img src="images/default-avatar.png" style="margin:20%;" class="present_img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;padding:2% 1%;float:left;width:10%;height: 85%; background: #401857; margin-top: 20px; margin-bottom: 20px;">
+                    <ul class="month_icons">
+                        <li><img src="images/case/m_1.png" style="width:70%;" class="monthlogo1" /></li>
+                        <li><img src="images/case/m_2.png" style="width:70%;" class="monthlogo2" /></li>
+                        <li><img src="images/case/m_3.png" style="width:70%;" class="monthlogo3" /></li>
+                        <li><img src="images/case/m_4.png" style="width:70%;" class="monthlogo4" /></li>
+                        <li><img src="images/case/m_5.png" style="width:70%;" class="monthlogo5" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery/jquery-1.12.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap/bootstrap.js" type="text/javascript"></script>
+    <script src="js/jquery-bubble-text.min.js" type="text/javascript"></script>
+    <script>
+
+        /*inner div detection*/
+
+    
+        $(document).ready(function () {
+            for (i = 1; i < 6; i++) {
+                $(".month"+i+"logo1").addClass("set_bright");
+                $(".month" + i + "logo1").removeClass("content_logo");
+                $(".month1logo"+i).css("cursor", "pointer");
+            }
+            
+        });
+
+        $(".chatWindow").on('scroll', function () {
+            var difference1 = $("#month1_logo1").offset().top - $(".chatWindow").offset().top;
+            var diff1 = 1;
+            if (difference1 <= 0 && difference1 > -100) {
+                $(".month1logo1").addClass("set_bright");
+                $(".month1logo1").removeClass("content_logo");
+
+
+                $(".month1logo2").removeClass("set_bright");
+                $(".month1logo2").addClass("content_logo");
+
+                $(".month1logo4").removeClass("set_bright");
+                $(".month1logo4").addClass("content_logo");
+
+                $(".month1logo3").removeClass("set_bright");
+                $(".month1logo3").addClass("content_logo");
+
+                $(".month1logo5").removeClass("set_bright");
+                $(".month1logo5").addClass("content_logo");
+            }
+            
+            var difference2 = $("#month1_logo2").offset().top - $(".chatWindow").offset().top;
+            var diff2 = 1;
+            if (difference2 <= 0 && difference2 > -100) {
+                $(".month1logo2").addClass("set_bright");
+                $(".month1logo2").removeClass("content_logo");
+
+                $(".month1logo1").removeClass("set_bright");
+                $(".month1logo1").addClass("content_logo");
+
+                $(".month1logo4").removeClass("set_bright");
+                $(".month1logo4").addClass("content_logo");
+
+                $(".month1logo3").removeClass("set_bright");
+                $(".month1logo3").addClass("content_logo");
+
+                $(".month1logo5").removeClass("set_bright");
+                $(".month1logo5").addClass("content_logo");
+            }
+            
+            var difference3 = $("#month1_logo3").offset().top - $(".chatWindow").offset().top;
+            var diff3 = 1;
+            if (difference3 <= 0 && difference3 > -100) {
+                $(".month1logo3").addClass("set_bright");
+                $(".month1logo3").removeClass("content_logo");
+
+                $(".month1logo2").removeClass("set_bright");
+                $(".month1logo2").addClass("content_logo");
+
+                $(".month1logo1").removeClass("set_bright");
+                $(".month1logo1").addClass("content_logo");
+
+                $(".month1logo4").removeClass("set_bright");
+                $(".month1logo4").addClass("content_logo");               
+
+                $(".month1logo5").removeClass("set_bright");
+                $(".month1logo5").addClass("content_logo");
+            }
+
+           
+
+            var difference4 = $("#month1_logo4").offset().top - $(".chatWindow").offset().top;
+            var diff4 = 1;
+
+            if (difference4 <= 0 && difference4 > -100) {
+                $(".month1logo4").addClass("set_bright");
+                $(".month1logo4").removeClass("content_logo");
+
+                $(".month1logo2").removeClass("set_bright");
+                $(".month1logo2").addClass("content_logo");
+
+                $(".month1logo1").removeClass("set_bright");
+                $(".month1logo1").addClass("content_logo");
+
+                $(".month1logo3").removeClass("set_bright");
+                $(".month1logo3").addClass("content_logo");
+
+                $(".month1logo5").removeClass("set_bright");
+                $(".month1logo5").addClass("content_logo");
+            }
+
+           
+            var difference5 = $("#month1_logo5").offset().top - $(".chatWindow").offset().top;
+            var diff5 = 1;
+            if (difference5 <= 5 && difference5 > -100) {
+                $(".month1logo5").addClass("set_bright");
+                $(".month1logo5").removeClass("content_logo");
+
+                $(".month1logo2").removeClass("set_bright");
+                $(".month1logo2").addClass("content_logo");
+
+                $(".month1logo1").removeClass("set_bright");
+                $(".month1logo1").addClass("content_logo");
+
+                $(".month1logo3").removeClass("set_bright");
+                $(".month1logo3").addClass("content_logo");
+
+                $(".month1logo4").removeClass("set_bright");
+                $(".month1logo4").addClass("content_logo");
+            }
+
+           
+
+        });
+      
+
+        $.fn.scrollEnd = function (callback, timeout) {
+            $(this).scroll(function () {
+                var $this = $(this);
+                if ($this.data('scrollTimeout')) {
+                    clearTimeout($this.data('scrollTimeout'));
+                }
+                $this.data('scrollTimeout', setTimeout(callback, timeout));
+            });
+        };
+
+
+        $("#scrollMain").scroll(function () {
+            var elems = $(this).find(".caseYearAnim");
+            var fs = 56     //elem font size
+            var fsto = 24;  //elem to font siz
+            var left = 0    //element left value
+            var leftto = -57; // element to left value
+            var scrollStartPos = 120;
+            var scrollEndPos = 50;
+
+            var fsdiff = fs - fsto;   
+            var leftdiff = left - leftto;
+            var sdiff = scrollStartPos - scrollEndPos;
+
+            var fsMfactor = fsdiff / sdiff;
+            var leftfactor = leftdiff / sdiff;
+            var opFactor = 1 / sdiff;
+
+            $(elems).each(function (index, element) {
+                var elem_height = $(element).outerHeight();
+                var elem_top_position = $(element).offset().top;
+                var elem_bottom_position = (elem_top_position + elem_height);
+                if (elem_top_position < scrollStartPos && elem_top_position > scrollEndPos)
+                {
+                    var pos = scrollStartPos - elem_top_position;
+                    $(element).css("opacity", 1);
+
+                    console.log(pos);
+
+
+                    $(element).css("font-size", fs - (fsMfactor * pos) + "px");
+                    $(element).css("left", left - (leftfactor * pos));
+                    $("#caseYearFixed").css("opacity", 1- (opFactor * pos));
+                }
+                else if (elem_top_position < scrollEndPos)
+                {
+                    $(element).css("opacity",0);
+                    $("#caseYearFixed").html($(element).find(".animateYear").html());
+                    $("#caseYearFixed").css("opacity", 1);
+                }
+                else if(elem_top_position > scrollStartPos && elem_top_position < $(window).height())
+                {
+                    $(element).css("opacity", 1);
+                    $(element).css("font-size", fs  + "px");
+                    $(element).css("left", left);
+
+                    $("#caseYearFixed").html(parseInt($(element).find(".animateYear").html()) - 1);
+                    $("#caseYearFixed").css("opacity", 1);
+                }
+                
+
+                //console.log("top = " + elem_top_position);
+
+            });
+
+            var cEle = $(this).find(".chatWindow");
+            $(cEle).each(function (index, element) {
+                var elem_height = $(element).outerHeight();
+                var elem_top_position = $(element).offset().top;
+                var elem_bottom_position = (elem_top_position + elem_height);
+
+                if (elem_top_position < $(window).height() / 3 && elem_top_position > 0) {
+                    //$("#cMonth1").html($(element).attr("data-value"));
+                    //$("#cMonth2").html($(element).attr("data-next"));
+
+                    var $element1 = $("#cMonth1");
+                    var $element2 = $("#cMonth2");
+                    var value1 = $(element).attr("data-value");
+                    var value2 = $(element).attr("data-next");
+                    if ($element1.html() != value1) {
+
+                        bubbleText({
+                            element: $element1,
+                            newText: value1,
+                            letterSpeed: 100,
+                            speed: 3000,
+                            proportional: true
+                        });
+
+                        bubbleText({
+                            element: $element2,
+                            newText: value2,
+                            speed: 3000,
+                            letterSpeed: 100,
+                            proportional: true
+                        });
+                    }
+                }
+               
+            });
+
+        });
+
+
+
+        $("#scrollMain").scrollEnd(function () {
+            var cEle = $("#scrollMain").find(".chatWindow");
+            $(cEle).each(function (index, element) {
+                var elem_height = $(element).outerHeight();
+                var elem_top_position = $(element).offset().top;
+                var elem_bottom_position = (elem_top_position + elem_height);
+
+                if (elem_top_position < $(window).height() / 3 && elem_top_position > 0) {
+                    //$("#cMonth1").html($(element).attr("data-value"));
+                    //$("#cMonth2").html($(element).attr("data-next"));
+
+                    var $element1 = $("#cMonth1");
+                    var $element2 = $("#cMonth2");
+                    var value1 = $(element).attr("data-value");
+                    var value2 = $(element).attr("data-next");
+                        bubbleText({
+                            element: $element1,
+                            newText: value1,
+                            letterSpeed: 70,
+                            speed: 1000,
+                            proportional: true
+                        });
+
+                        bubbleText({
+                            element: $element2,
+                            newText: value2,
+                            speed: 1000,
+                            letterSpeed: 70,
+                            proportional: true
+                        });
+                    }
+
+            });
+        }, 500);
+
+    </script>
+</body>
+</html>

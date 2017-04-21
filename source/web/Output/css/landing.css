@@ -1,0 +1,332 @@
+#header, #footer {
+    position: fixed;
+    display: block;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+    text-align: center;
+    color: #000;
+}
+
+select
+{
+    outline:none;
+}
+.styled-select select {
+   background: url("../images/dpng.png") no-repeat right;
+   -webkit-appearance: none;
+   background-size:10px;
+   }
+/*.styled-select {
+   
+   background: url("../images/dpng.png") no-repeat right #ddd;
+
+   }*/
+
+@media only screen and (min-width:320px){
+    .panel-title a:focus, .panel-title a:hover
+    {
+        color:black !important;
+    }
+}
+
+  
+
+.cs-style
+{
+        color: black !important;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.land-footer p, .land-footer h5
+{
+    cursor:pointer;
+}
+
+.blockUI {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.45);
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+
+.blockUIWhite {
+    background-color: white !important;
+}
+
+.blockUI img {
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+
+.menuLine, .bigT
+{
+  color:  #ff9900 !important;
+}
+
+.txt-violet
+{
+        color: #4B1B65;
+}
+
+.land-footer
+{
+        background-color: #4b1b64;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.ftitle
+{
+    font-family: "century gothicB";
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.ftitle15
+{
+    font-family: "century gothicB";
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+
+.clr-orange
+{
+   color: #ff9900 !important;
+}
+
+.footer-arrow
+{
+        color: white;
+    line-height: 0px;
+    font-size: 24px;
+}
+
+#login-btn.active
+{
+        border-color: #ff9900;
+    background: #ff9900;
+    color: white;
+}
+
+#header {
+    top: 0px;
+}
+
+#footer {
+       bottom: 0px;
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.col-center
+{
+    float:none;
+    display:inline-block;
+    vertical-align:middle;
+    
+    margin-right:-10px;
+}
+
+.hcenter
+{
+    text-align:center;
+}
+
+.white-clr
+{
+    color:white;
+}
+
+
+.black-clr
+{
+    color:black;
+}
+
+
+
+#section1 .intro {
+    left: -130%;
+    position: relative;
+}
+
+
+
+.stopfade {
+    opacity: .5;
+}
+
+a {
+    color: black;
+}
+
+
+.error
+{
+       padding: 10px 10px;
+    font-weight: bold;
+    color: red;
+    background: rgba(255, 255, 255, 0.87);
+}
+
+.success
+{
+     padding: 10px 10px;
+    font-weight: bold;
+    color: green;
+    background: rgba(255, 255, 255, 0.87);
+}
+
+div#rpMsg {
+    font-size: 12px;
+    text-align: left;
+}
+
+
+.bg-white
+{
+    background:white !important;
+}
+/*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+* Get free snippets on bootpen.com
+*******************************/
+	.modal.left .modal-dialog,
+	.modal.right .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 320px;
+		height: 100%;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+	}
+
+	.modal.left .modal-content,
+	.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+	
+	.modal.left .modal-body,
+	.modal.right .modal-body {
+		padding: 15px 15px 80px;
+	}
+
+/*Left*/
+	.modal.left.fade .modal-dialog{
+		left: -320px;
+		-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+		        transition: opacity 0.3s linear, left 0.3s ease-out;
+	}
+	
+	.modal.left.fade.in .modal-dialog{
+		left: 0;
+	}
+        
+/*Right*/
+	.modal.right.fade .modal-dialog {
+		right: -320px;
+		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+		        transition: opacity 0.3s linear, right 0.3s ease-out;
+	}
+	
+	.modal.right.fade.in .modal-dialog {
+		right: 0;
+	}
+
+/* ----- MODAL STYLE ----- */
+	.modal-content {
+		border-radius: 0;
+		border: none;
+	}
+
+	.modal-header {
+		border-bottom-color: #EEEEEE;
+		background-color: #FAFAFA;
+	}
+
+/* ----- v CAN BE DELETED v ----- */
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+/*
+ * Styles copied from the Grid example to make grid rows & columns visible.
+ */
+
+/*
+ * Callout styles copied from Bootstrap's main docs.
+ */
+/* Common styles for all types */
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 3px solid #eee;
+}
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code {
+  background-color: #fff;
+  border-radius: 3px;
+}
+/* Variations */
+.bs-callout-danger {
+  background-color: #fdf7f7;
+  border-color: #d9534f;
+}
+.bs-callout-danger h4 {
+  color: #d9534f;
+}
+.bs-callout-warning {
+  background-color: #fcf8f2;
+  border-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+  color: #f0ad4e;
+}
+.bs-callout-info {
+  background-color: #f4f8fa;
+  border-color: #5bc0de;
+}
+.bs-callout-info h4 {
+  color: #5bc0de;
+}
+.close{
+    font-size:30px;
+}

@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+ <!--<![endif]-->
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="css/transition/component.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/awesome-bootstrap-checkbox.css" />
+    <link href="css/transition/animations.css" rel="stylesheet" />
+    <link href="css/menu-animation.css" rel="stylesheet" />
+    <link href="css/appmediaquries.css" rel="stylesheet" />
+    <link href="css/font.css" rel="stylesheet" />
+    <link href="css/pages.css" rel="stylesheet" />
+    <link href="css/clndr.css" rel="stylesheet" />
+    <link href="css/star-rating.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="images/CML_fav_icon_32X32.png" />
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/landing.css" />
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link rel="stylesheet" type="text/css" href="css/mediaquries.css" />
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
+        var isBlackBerry = /blackberry/i.test(navigator.userAgent.toLowerCase());
+        var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        var isWindowsPhone = /windows phone/i.test(navigator.userAgent.toLowerCase());
+
+        if (isWindowsPhone == true) {
+            isAndroid = isBlackBerry = isiDevice = false;
+        }
+
+
+        var oldIE = false;
+
+        function isIE() {
+            var myNav = navigator.userAgent.toLowerCase();
+            return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : 10;
+        }
+
+        if (isIE() <= 9)
+            oldIE = true;
+
+       
+    </script>
+
+</head>
+<body>
+    <div class='blockUI'><img src='images/loader.gif'></div>
+    <div id="instruct" onclick="$(this).hide()" style="display:none;">
+        <img src="images/help_menu.png" class="hlpmnu" />
+        <img src="images/help_logout.png" class="hlplg" />
+        <img src="images/help_hide.png" class="hlphid" />
+    </div>
+    <input type="hidden" id="hdnOpinionID" value="1" />
+    <input type="hidden" id="hdnUserID" />
+    <div class="wrapper" style="height:100%;">
+        <div class="load-bar">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu-btn" id="menuBtn">
+            <img src="images/CML_logo.png" class="hid-active cmlhlogo  transition" onclick="window.location.href = 'index.html';" id="mnu-hm" data-animate="2" data-id="#page-hm" />
+            <div style="width: 75px;margin: 0 auto;">
+                <div class="menu-cont" id="mnu-panel" onclick="closepanels();">
+                    <table style="" onclick="onClickMenu(document.getElementById('menuBtn'));">
+                        <tr>
+                            <td>
+                                <button class="hamburger hamburger-cancel">
+                                    <span class="icon"></span>
+                                </button>
+                            </td>
+                            <td><span style="padding-left:10px;"> Menu</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <input type="button" class="lgoutbtn" onclick="logout()" value="Logout" />
+        </div>
+        <div class="menu trans-all-1s" id="menu">
+            <div style="height:100%;">
+                <div class="row" style="padding:0px 10px; padding-top: 90px;">
+
+                    <div class="col-lg-4 col-lg-offset-4  col-md-4 col-md-offset-4  col-sm-6 col-sm-offset-3 col-xs-12">
+                        <div class="panel-group" id="accordionMnu" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default closecollapse" onclick="onCmenu(); onClickMenu(document.getElementById('menuBtn')); window.location.href = 'index.html';" role="tab" data-parent="#accordionMnu" id="headingzero" data-toggle="collapse" href="#collapseZero">
+                                <div class="panel-heading collapsed">
+                                    <h4 class="panel-title transition" id="mnu-hm" data-animate="2" data-id="#page-hm">
+                                        <span role="button" aria-expanded="true" aria-controls="collapseZero">
+                                            Home
+                                        </span>
+                                    </h4>
+                                </div>
+                            </div>
+
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading collapsed" role="tab" data-parent="#accordionMnu" id="headingzero" data-target="#collapseOne" data-toggle="collapse" href="#collapseOne">
+                                    <h4 class="panel-title">
+                                        <span role="button" aria-expanded="true" aria-controls="collapseOne">
+                                            Case Corner
+                                        </span>
+                                        <img class="plus" src="images/plus.png" />
+                                        <img class="minus" src="images/minus.png" />
+                                    </h4>
+
+                                    
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <p class="transition" id="mnu-cs" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-cs">Case Scenario 1</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading  collapsed" role="tab" data-parent="#accordionMnu" id="headingzero" data-toggle="collapse" href="#collapseTwo">
+                                    <h4 class="panel-title">
+                                        <span class="collapsed" role="button" aria-expanded="false" aria-controls="collapseTwo">
+                                            Virtual Library
+                                        </span>
+                                        <img class="plus" src="images/plus.png" />
+                                        <img class="minus" src="images/minus.png" />
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <p class="transition" id="mnu-da" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-da">Resource center</p>
+
+                                        <!--client not required below links ,if they need uncomment the below links-->
+
+                                        <!--<p class="transition" id="mnu-cn" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-cn">CML News</p>
+                                        <p class="transition" id="mnu-cj" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-cj">Journal Updates</p>
+                                        <p class="transition" id="mnu-ul" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-ul">Useful Links</p>-->
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="panel panel-default">
+                                <div class="panel-heading  collapsed" role="tab" id="headingFour" data-toggle="collapse" href="#collapseFour">
+                                    <h4 class="panel-title">
+                                        <span class="collapsed" role="button" aria-expanded="false" aria-controls="collapseThree">
+                                            Calculator
+                                        </span>
+                                    </h4><img class="plus" src="images/plus.png" />
+                                    <img class="minus" src="images/minus.png" />
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                    <div class="panel-body">
+                                        <p>Calculator 1</p>
+                                        <p>Calculator 2</p>
+                                        <p>Calculator 3</p>
+                                    </div>
+                                </div>
+                            </div>-->
+
+                            <div class="panel panel-default closecollapse" onclick="onCmenu(); onClickMenu(document.getElementById('menuBtn'))" onmouseup="display_guide('accordionELN'); checkguide();" role="tab" data-parent="#accordionMnu" id="headingzero" data-toggle="collapse">
+                                <div class="panel-heading  collapsed">
+                                    <h4 class="panel-title transition" id="mnu-gr" data-animate="2" data-id="#page-gr">
+                                        <span class="collapsed" role="button" aria-expanded="false" aria-controls="collapseThree">
+                                            Guideline Excerpts
+                                        </span>
+                                    </h4>
+                                    <!--</h4><img class="plus" src="images/plus.png" />
+            <img class="minus" src="images/minus.png" />-->
+                                </div>
+                                <!--<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+            <div class="panel-body">
+                <p class="transition" id="mnu-gr" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-gr">CML Repository</p>
+            </div>
+        </div>-->
+                            </div>
+                            <div class="panel panel-default closecollapse" onclick="onCmenu(); onClickMenu(document.getElementById('menuBtn'))">
+                                <div class="panel-heading  collapsed" role="tab" data-parent="#accordionMnu" id="headingzero" data-toggle="collapse">
+                                    <h4 class="panel-title transition" id="mnu-ev" data-animate="2" data-id="#page-ev">
+                                        <span class="collapsed" role="button" aria-expanded="false" aria-controls="collapseThree">
+                                            Expert Videos
+                                        </span>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <p>Expert videos</p>
+                                        <!--<p class="transition" id="mnu-cr" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-cr">Congress repository</p>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default closecollapse" onclick="onCmenu(); onClickMenu(document.getElementById('menuBtn'))">
+                                <div class="panel-heading  collapsed calendar_event" role="tab" data-parent="#accordionMnu" id="headingzero" data-toggle="collapse">
+                                    <h4 class="panel-title  transition" id="mnu-ec" data-animate="2" data-id="#page-ec">
+                                        <span class="collapsed" role="button" aria-expanded="false" aria-controls="collapseSix">
+                                            Event Calendar
+                                        </span>
+                                        <!--</h4><img class="plus" src="images/plus.png" />
+                <img class="minus" src="images/minus.png" />-->
+                                    </h4>
+                                </div>
+                                <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <p class="transition" id="mnu-ec" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-ec">Calendar</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading  collapsed" role="tab" data-parent="#accordionMnu" id="headingzero" data-toggle="collapse" href="#collapseSeven">
+                                    <h4 class="panel-title">
+                                        <span class="collapsed" role="button" aria-expanded="false" aria-controls="collapseThree">
+                                            Webcast
+                                        </span>
+                                        <img class="plus" src="images/plus.png" />
+                                        <img class="minus" src="images/minus.png" />
+                                    </h4>
+                                </div>
+                                <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                                    <div class="panel-body">
+
+                                        <!--client not required below link ,if they need uncomment the below link-->
+
+                                        <!--<p class="transition" id="mnu-op" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-op">Your opinion</p>-->
+
+                                        <p class="transition" id="mnu-wc" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-wc">View webcast</p>
+                                        <p class="transition" id="mnu-ae" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-ae">Ask the expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<div style="position:relative; text-align:right;">
+
+                            <img src="images/novartis.png" class="mnu-nov" />
+
+                        </div>-->
+
+                    </div>
+                    <!--<div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h5 class="ftitle">CML case simulation</h5>
+                            <h5 class="ftitle">Virtual library</h5>
+                            <p>CML news</p>
+                            <p>Journal updates</p>
+                            <p>Useful links</p>
+                            <p>Digital assets</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h5 class="ftitle">Conference coverage</h5>
+                            <p>Expert videos</p>
+                            <p>Congress repository</p>
+
+                            <h5 class="ftitle transition" id="mnu-ec" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-calc">Calculators</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h5 class="ftitle">Guidelines repository</h5>
+
+                            <h5 class="ftitle">Event calander</h5>
+
+                            <h5 class="ftitle transition" id="mnu-wc" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-wc">Webcast</h5>
+                            <p>Your opinion</p>
+                            <p class="transition" id="mnu-wc" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-wc">View webcast</p>
+                            <p>Ask the expert</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 clr-orange" style="font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+                            <h5 class="ftitle15" style="margin-top: 0px;" data-toggle="modal" data-target="#myModal">Terms of use</h5>
+                            <h5 class="ftitle15" data-toggle="modal" data-target="#myModalDis">Disclamier</h5>
+                            <h5 class="ftitle15" data-toggle="modal" data-target="#myModalCU">Contact us</h5>
+                            <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFAQ">FAQ</h5>
+                            <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+                            <h5 class="ftitle15" data-toggle="modal" data-target="#myModalSC">Sterring commitee</h5>
+
+                        </div>
+                    </div>-->
+
+
+                </div>
+
+                <!--<div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h5 class="ftitle">CML case simulation</h5>
+                        <h5 class="ftitle">Virtual library</h5>
+                        <p>CML news</p>
+                        <p>Journal updates</p>
+                        <p>Useful links</p>
+                        <p>Digital assets</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h5 class="ftitle">Conference coverage</h5>
+                        <p>Expert videos</p>
+                        <p>Congress repository</p>
+
+                        <h5 class="ftitle transition" id="mnu-ec" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-calc">Calculators</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h5 class="ftitle">Guidelines repository</h5>
+
+                        <h5 class="ftitle">Event calander</h5>
+
+                        <h5 class="ftitle transition" id="mnu-wc" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-wc">Webcast</h5>
+                        <p>Your opinion</p>
+                        <p class="transition" id="mnu-wc" data-animate="2" onclick="onClickMenu(document.getElementById('menuBtn'))" data-id="#page-wc">View webcast</p>
+                        <p>Ask the expert</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 clr-orange" style="font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+                        <h5 class="ftitle15" style="margin-top: 0px;" data-toggle="modal" data-target="#myModal">Terms of use</h5>
+                        <h5 class="ftitle15" data-toggle="modal" data-target="#myModalDis">Disclamier</h5>
+                        <h5 class="ftitle15" data-toggle="modal" data-target="#myModalCU">Contact us</h5>
+                        <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFAQ">FAQ</h5>
+                        <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+                        <h5 class="ftitle15" data-toggle="modal" data-target="#myModalSC">Sterring commitee</h5>
+
+                    </div>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div id="content" class="content-wrapper trans-all-1s">
+            <section class="content pt-perspective" id="mainContainer" style="height:100%;">

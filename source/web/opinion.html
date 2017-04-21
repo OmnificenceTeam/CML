@@ -1,0 +1,78 @@
+﻿<div style="height:100%; overflow:auto; -webkit-overflow-scrolling:touch;">
+    <div style="min-height:100%;margin-bottom:140px">
+
+    <div class="bannerMain" style="background-image:url(images/CML_Your_opinion.jpg)">
+        <div class="container" style="height: 100%;">
+            <div class="imgTxt">
+                <p>WEBCAST | YOUR OPINION</p>
+                <p class="desc">On the ‘Your Opinion’ page, you can share your opinion regarding the posed question, rate the opinion of other users and review archived opinions with or without sorting for ‘most liked’ and post any relevant comment at the end of the page.</p>
+
+            </div>
+           </div>
+    </div>
+    <div class="container" id="youropinion_notactive" style="margin-top:20px;">
+        <div class="row">
+            <h4 style="margin-top:10px;text-align:justify">
+                This section will be active before two weeks from the webcast sheduled date. 
+            </h4>
+            <div>
+                <input type="button" id="btn-opi-sub" value="Subscribe" class="btn-orange" onclick="onSubscribe(1,'#' + this.id)" style="margin-top: 20px; float:right;" />
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="container" id="youropinion" style="margin-top:20px; display:none;">
+        <div class="row">
+            <h4 id="opiQues" class="gb" style="text-align:justify">
+                Why do you think it is important to have disgnosed early in the treatment cycle?
+                
+            </h4>
+        </div>
+        <div class="row" style="margin-top:20px;">
+            <select onchange="onchangeopinion(this)" class="form-control" style="width:200px;">
+                <option value="1">Sort by most recent</option>
+                <option value="2">Sort by most rated</option>
+            </select>
+        </div>
+        <div id="commentMainDiv" class="row" style="padding:10px; margin-top: 20px;  height: 300px; overflow:auto; -webkit-overflow-scrolling:touch;">
+
+        </div>
+        <div class="row" style="margin-top:30px; margin-bottom:40px;">
+            <textarea id="txtPostCmt" class="form-control" placeholder="Post your comment here" rows="4"></textarea>
+            <div id="postMsg"></div> <input type="button" value="POST" class="btn-orange" onclick="onClickPostComment()" style="margin-top: 20px; float:right;" />
+        </div>
+
+    </div>
+        </div>
+    <div class="row land-footer" style="margin-top:50px;">
+        <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+            <div class="col-md-2  col-sm-4 col-xs-12">
+                <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/terms-use" target="_blank"> Terms of use </a></h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/privacy-policy" target="_blank">Privacy Policy </a></h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15 transition close_menutitle" id="mnu-hm2" data-id="#page-hm" data-animate="2" onclick="$.fn.fullpage.silentMoveTo('mPage2', 1);">Contact us</h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15 transition close_menutitle" id="mnu-hm1" data-id="#page-hm" data-animate="2" onclick="$.fn.fullpage.silentMoveTo('mPage2', 2);">FAQ</h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+                <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+            </div>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,1416 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/landing.css" />
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link rel="stylesheet" type="text/css" href="css/mediaquries.css" />
+    <link rel="stylesheet" type="text/css" href="css/toastr/toastr.css" />
+    <link rel="stylesheet" type="text/css" href="css/awesome-bootstrap-checkbox.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link href="js/photo/jquery.cropbox.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="images/CML_fav_icon_32X32.png" />
+
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery-ui.min.js"></script>
+    <script src="js/jquery/jquery-1.12.0.min.js"></script>
+
+    <script type="text/javascript" src="js/photo/megapix-image.js"></script>
+    <script type="text/javascript" src="js/photo/exif.js"></script>
+    <script type="text/javascript" src="js/photo/binaryajax.js"></script>
+    <script type="text/javascript" src="js/photo/hammer.js"></script>
+    <script type="text/javascript" src="js/photo/jquery.cropbox.js"></script>
+
+
+    <script type="text/javascript">
+        var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
+        var isBlackBerry = /blackberry/i.test(navigator.userAgent.toLowerCase());
+        var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        var isWindowsPhone = /windows phone/i.test(navigator.userAgent.toLowerCase());
+
+        if (isWindowsPhone == true) {
+            isAndroid = isBlackBerry = isiDevice = false;
+        }
+
+
+        var oldIE = false;
+
+        function isIE() {
+            var myNav = navigator.userAgent.toLowerCase();
+            return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : 10;
+        }
+
+        if (isIE() <= 9)
+            oldIE = true;
+    </script>
+    <script src="js/localStorage/storageCore.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/plugin/toastr/toastr.js"></script>
+    <script src="js/jquery/jquery.slimscroll.min.js"></script>
+    <script src="js/webService/webobjects.js"></script>
+    <script src="js/webService/webservice.js"></script>
+    <script src="js/webService/userservice.js"></script>
+
+    <script src="js/custom/init.js"></script>
+    <script src="js/custom/login.js"></script>
+
+    <script type="text/javascript" src="js/fullpage/jquery.fullPage.js"></script>
+    <style>
+        body {
+            font-family: 'century gothic';
+            letter-spacing: 2px;
+
+        }
+
+
+        a {
+            color: white;
+        }
+
+            a:hover, a:focus {
+                color: white;
+                outline: none;
+                text-decoration: none;
+            }
+
+        .top-menu a {
+            color: black;
+        }
+
+        .fn-f18 {
+            font-weight: normal;
+            font-size: 18px;
+        }
+
+        .br-0 {
+            border-radius: 0px;
+        }
+
+        .btn-custom {
+            background: #FF9900;
+            border-radius: 0px;
+            font-size: 16px;
+            padding: 5px 15px;
+            border: none;
+            float: right;
+        }
+
+            .btn-custom:hover {
+                box-shadow: 0px 2px 9px -4px black;
+            }
+
+        .regInput {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid;
+            width: 100%;
+            color: white;
+        }
+
+        .modal-content {
+            overflow: auto;
+        }
+
+        .modal {
+            padding: 0px !important;
+        }
+
+        .m-20 {
+            margin-top: 20px;
+        }
+
+        #regForm input {
+            margin-top: 20px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        select option {
+            color: black;
+        }
+
+        #regForm select {
+            margin-top: 20px;
+        }
+
+
+        /*bootstrap modified*/
+
+        .panel-group .panel {
+            margin-bottom: 0;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .panel-default > .panel-heading {
+            color: #333;
+            background-color: transparent;
+        }
+
+            .panel-default > .panel-heading + .panel-collapse > .panel-body {
+                border-top-color: #ff9900;
+            }
+
+        .modal-title {
+            font-family: 'century gothicB';
+            color: #FF9900;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            height: 20px;
+            width: 20px;
+        }
+
+        .checkbox label {
+            line-height: 24px;
+        }
+
+        .radio input[type="radio"]:focus, .radio input[type="radio"]:active {
+            outline: none;
+        }
+
+        .fp-section {
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background: url('../images/cml.jpg') no-repeat;
+            background-size: cover;
+            -webkit-transition: 1s opacity;
+            transition: 1s opacity;
+        }
+
+        .fp-controlArrow {
+            display: none;
+        }
+    </style>
+
+    <script type="text/javascript">
+        
+
+        $(document).ready(function () {
+            var sessionBc = ['url(images/1.jpg)', 'url(images/1.jpg)', 'url(images/2.jpg)', 'url(images/3.jpg)', 'url(images/4.jpg)'];
+            if (!isiDevice && !isBlackBerry && !isAndroid && !oldIE) {
+                sessionBc = ['rgba(0, 0, 0, 0.62)', 'rgba(0, 0, 0, 0.62)', 'rgba(255, 255, 255, 0.75)', ' rgba(0, 0, 0, 0.62)', 'rgba(39, 15, 51, 0.87)'];
+            }
+
+            //var _autoScrolling = true;
+            //if (isAndroid || isBlackBerry || isiDevice || isWindowsPhone) {
+            //    _autoScrolling = false;
+            //    $("#fullpage").css("overflow-x", "auto");
+
+            //}
+
+            $('#fullpage').fullpage({
+                anchors: ['mPage0', 'mPage1', 'mPage2', 'mPage3', 'mPage4'],
+                // 'navigation': true,
+                // 'navigationPosition': 'right', rgba(75, 27, 100, 0.5);
+                sectionsColor: sessionBc,
+                css3: true,
+                scrollingSpeed: 1000,
+                scrollOverflow: true,
+                afterLoad: function (anchorLink, index) {
+
+                    for (var i = 0; i < 5; i++) {
+                        if (i < index)
+                            $("#Page" + i).addClass('active');
+                        else
+                            $("#Page" + i).removeClass('active');
+                    }
+
+                    if (index == 1) {
+                        $("#header").hide();
+                    }
+                    else if (index == 2) {
+                        $('#section1').find('.intro').animate({
+                            left: '0%'
+                        }, 500);
+                    }
+
+
+
+                    if (index == 5) {
+                        $("#login-btn").addClass('active');
+                        $("#footer").hide();
+                    }
+                    else {
+                        $("#login-btn").removeClass('active');
+                        $("#footer").show();
+                        $("#section4").find(".fp-scrollable").css("-webkit-overflow-scrolling", "auto");
+
+                    }
+
+                    if (index != 1) {
+                        $("#header").fadeIn();
+                    }
+
+
+                    if (index != 2) {
+                        $('#section1').find('.intro').css("left", "-130%");
+                    }
+
+
+                    if (index == 3) {
+                        $("#moveSectionDown").css("color", "#ff9900");
+                    }
+                    else {
+                        $("#moveSectionDown").css("color", "white");
+                    }
+                },
+
+                onLeave: function (index, nextIndex, direction) {
+                    if (index == 2 && nextIndex == 1)
+                        $("#header").fadeOut();
+
+
+                    if ((index == 4 && nextIndex == 5) || (index == 5 && nextIndex == 4))
+                        $.fn.fullpage.silentMoveTo('mPage4', 0);
+
+                }
+            });
+
+            $('#moveSectionDown').click(function (e) {
+                e.preventDefault();
+                $.fn.fullpage.moveSectionDown();
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+        <video poster="images/cml.jpg" id="bgvid" loop>
+            <source src="images/cml.webm" type="video/webm">
+            <source src="images/cml.mp4" type="video/mp4">
+        </video>
+
+        <input type="hidden" id="hdnUserID" value="0">
+
+
+        <div id="header" style="display:none;">
+            <div class="row black-clr landing-menu top-menu">
+                <div class="col-md-2 col-sm-3 col-xs-3 col-center"><img style="float: left;width: 90%;" class="center-block img-responsive" src="images/CML_logo.png" /></div>
+                <div class="col-md-2 col-sm-0 col-xs-0 col-center"></div>
+                <div class="col-md-2 col-sm-3 col-xs-3 col-center"><a href="#mPage1"><div class="hcenter">Introduction<div id="Page1" class="menuLine"></div></div></a></div>
+                <div class="col-md-3 col-sm-4 col-xs-3 col-center"><a href="#mPage3"><div class="hcenter"><span class="hidden-xs">About CML INTERACT</span><span class="visible-xs">About CML</span><div id="Page3" class="menuLine"></div></div></a></div>
+                <div class="col-md-2 col-sm-2 col-xs-3 col-center" style="padding-right: 10px;"><a href="#mPage4"><div class="hcenter"><div id="login-btn" class="login-btn-black active">Login</div></div></a></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="moveSectionDown" class="footer-arrow">
+                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="margin-bottom: -10px;"></span><br />
+                <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div id="fullpage">
+            <div class="section" id="section0" style="">
+                <div class="row white-clr landing-menu hidden-xs">
+                    <div class="col-md-4 col-sm-3 col-xs-3 col-center"><img class="center-block img-responsive" src="images/CML_logo_white.png" /></div>
+                    <div class="col-md-2 col-sm-3 col-xs-2 col-center"><a href="#mPage1"><div class="hcenter">Introduction</div></a></div>
+                    <div class="col-md-3 col-sm-4 col-xs-3 col-center"><a href="#mPage3"><div class="hcenter">About CML INTERACT</div></a></div>
+                    <div class="col-md-2 col-sm-2 col-xs-2 col-center"><a href="#mPage4"><div class="hcenter"><div class="login-btn">Login</div></div></a></div>
+                </div>
+                <div class="row visible-xs" style="text-align: center;">
+                    <div class="col-xs-12 col-center"><img class="center-block img-responsive" style="    width: 190px;" src="images/CML_logo_white.png" /></div>
+                    <div class="col-xs-12 col-center" style="margin-bottom: 15px;"><a href="#mPage1"><div class="hcenter">Home</div></a></div>
+                    <div class="col-xs-12 col-center" style="margin-bottom: 15px;"><a href="#mPage2"><div class="hcenter">Introduction</div></a></div>
+                    <div class="col-xs-12 col-center" style="margin-bottom: 15px;"><a href="#mPage3"><div class="hcenter">About CML</div></a></div>
+                    <div class="col-xs-2 col-center" style="margin-bottom: 15px; margin-top: 10px;"><a href="#mPage4"><div class="hcenter"><div class="login-btn">Login</div></div></a></div>
+
+                </div>
+            </div>
+            <div class="section" id="section1" style="">
+
+                <div class="intro">
+                    <table class="tog-table">
+                        <tr>
+                            <td class="bigT" rowspan="4">T</td>
+                            <td>
+                                <div class="smallO">
+                                    Together Towards<br /><span style="color:#FF9900;">omorrow</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="section" id="section2" style="">
+                <div class="intro">
+
+                    <table style="height:100%;">
+
+                        <tr>
+                            <td class="hidden-xs">
+                                <h3 class="section-title introTitle clr-orange" style="text-align:center;"> <p class="">Introduction</p><p style="text-align:left;">to CML </p>  </h3>
+                            </td>
+                            <td>
+                                <div class="visible-xs">
+                                    <h3 class="section-title introTitle clr-orange" style="text-align:left;"> Introduction to CML </h3>
+
+                                </div>
+                                <div class="section-content" style="text-align:justify;">
+                                    Chronic myelogenous leukaemia (CML) will affect over 100,000 patients worldwide every year and represent a significant global health burden. The introduction of tyrosine kinase inhibitors (TKIs) has increased the life expectancy of patients with CML and also an increased prevalence of the condition. It has also been observed that the prevalence of survivors with CML has increased by 4000 to 5000 per year since the approval of oral TKI therapy in 2001 and is expected to plateau at 181,000 by 2050.
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+            <div class="section" id="section3" style="background: rgba(0, 0, 0, 0.62);">
+                <div class="intro">
+
+                    <div class="row  white-clr">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <h3 class="section-title"> <span class="clr-orange">About CML Interact</span>  </h3>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="section-content" style="text-align:justify;">
+                                <p>
+                                    CML Interact is a unified platform which brings together the best minds in the management of CML from around the world while also bringing together several resources that can be useful for better patient outcomes into one portal.
+
+                                </p>
+                                <br />
+                                <p>
+                                    There is a wealth of information about CML available from several prestigious groups and organizations. However, all of this information is present in various websites placing demands on time to access it. Despite the availability of all this information some experts believe that the results of scientific advances may not be translated in to public health benefits. CML Interact is an endeavour that attempts to address this by bringing together resources of information and experts from various geographies together to facilitate better understanding of the information and assimilation into clinical practice.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="row white-clr">
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="content">
+                                <p class="title-why">WHY</p>
+                                <p class="title-cml">CML INTERACT</p>
+                                <p class="contentB"> In sensibus constituto mea, populo gubergren et vis. Ne vocibus eleifend qualisque vis</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="content">
+                                <div class="colored">Lorem ipsum dolor sit amet, id aliquid posidonium per. </div>
+                                <div>In sensibus constituto mea, populo gubergren et vis. Ne vocibus eleifend qualisque vis, lobortis vituperata ut ius. </div>
+
+                            </div>
+                            <div class="content">
+                                <div class="colored">Lorem ipsum dolor sit amet, id aliquid posidonium per. Cum et quaerendum vituperatoribus. Integre deterruisset at qui.</div>
+                                <div>In sensibus constituto mea, populo gubergren et vis. Ne vocibus eleifend qualisque vis, lobortis vituperata ut ius. vis. Ne vocibus eleifend qualisque vis, lobortis vituperata ut ius. vis. Ne vocibus eleifend qualisque vis </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="content">
+                                <div class="colored">Lorem ipsum dolor sit amet, id aliquid posidonium per. Cum et quaerendum vituperatoribus. Integre deterruisset at qui.</div>
+                                <div>In sensibus constituto mea, populo gubergren et vis. Ne vocibus eleifend qualisque vis, lobortis vituperata ut ius. At quaestio reprehendunt mea, case omittam usu te, sit illud modus ex. No quo iusto interesset, eos malorum efficiendi definitionem ex. Mel putant maiestatis ut, usu ludus nihil aliquam ei. Facer omnium fabellas eu mea, malorum fierent dissentiet ut cum, vis in illud numquam.</div>
+
+                            </div>
+
+                        </div>
+                    </div>-->
+
+                </div>
+            </div>
+            <div class="section" id="section4" style="background: rgba(0, 0, 0, 0.62); color:white;">
+                <div class="slide">
+                    <div class="intro">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-12 p-r-40">
+                                <div class="loginDiv">
+                                    <form id="lgform" onsubmit="return false;">
+                                        <h1>Login</h1>
+                                        <br />
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class=" col-lg-4 col-md-5 col-sm-5 col-xs-12">
+
+                                                <label for="exampleInputName2" class="fn-f18" style="min-width: 150px;">Username* </label>
+                                            </div>
+                                            <div class=" col-lg-8 col-md-7 col-sm-7 col-xs-12">
+
+                                                <input type="text" class="form-control br-0" id="txtUName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">
+                                            <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12">
+
+
+                                                <label for="exampleInputName2" class="fn-f18" style="min-width: 150px;">Password*</label>
+                                            </div>
+                                            <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+                                                <input type="password" class="form-control  br-0" id="txtLPass">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">
+                                            <div class="col-md-9 col-sm-8 col-xs-12">
+                                                <div id="lgMsg">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                                <input type="button" onclick="onClickLogin()" class=" btn-custom" value="Submit" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="passDiv" style="margin-top:50px;">
+                                    <form id="ffrorm" onsubmit="return false;">
+                                        <h1>Forgot Password?</h1>
+                                        <br />
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <p>Enter your email address below and we will send your password reset instruction.</p>
+
+                                            <input type="text" class="form-control br-0" id="txtFUName">
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">
+                                            <div class="col-md-9 col-sm-8 col-xs-12">
+                                                <div id="fpMsg">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                                <input type="button" id="frbtn" onclick="onClickForgotPass()" class=" btn-custom" value="Submit" />
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                            </div>
+                            <div class="col-md-8 col-sm-6 col-xs-12 p-r-40">
+                                <h1>Registration</h1><br />
+
+                                <form id="regForm" onsubmit="return false;" style="display:none;">
+                                    <div style="position: absolute;top: 208px;left:9px;z-index: 999; display: block;color: orange;font-weight: bold;font-size:13px">Change Avatar</div>
+                                    <div class="col-md-5 col-sm-12 col-xs-12 p-r-40 styled-select">
+
+                                        <table style="width:100%;">
+                                            <tr>
+                                                <td style="width: 120px;">
+                                                    <input type="file" id="regFile" class="profileFile"
+                                                           accept="image/*;capture=camera" onchange="DisplayPicture(this);" style="border: 1px solid white;" />
+                                                    <img class="profilePic" style="border: 1px solid white;" id="regAvatar" src="data:image/png;base64,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" />
+
+                                                </td>
+                                                <td style="vertical-align:bottom;" class="styled-select">
+                                                    <select id="ddTitle" class="regInput">
+                                                        <option value="0">Title*</option>
+                                                        <option value="Dr">Dr</option>
+                                                        <option value="Mr">Mr</option>
+                                                        <option value="Mrs">Mrs</option>
+                                                        <option value="Ms">Ms</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <input type="text" style="text-transform: initial;" id="txtFName" class="regInput" placeholder="First name*" />
+
+                                        <input type="text" style="text-transform: initial;" id="txtLName" class="regInput" placeholder="Last name*" />
+                                        <input type="text" style="text-transform: initial;" id="txtSpec" class="regInput" placeholder="Speciality*" />
+                                        <select id="ddCountry" class="regInput styled-select">
+                                            <option value="0" disabled selected>Country*</option>
+                                            <option value="Afganistan">Afghanistan</option>
+                                            <option value="Albania">Albania</option>
+                                            <option value="Algeria">Algeria</option>
+                                            <option value="American Samoa">American Samoa</option>
+                                            <option value="Andorra">Andorra</option>
+                                            <option value="Angola">Angola</option>
+                                            <option value="Anguilla">Anguilla</option>
+                                            <option value="Antigua &amp; Barbuda">Antigua &amp; Barbuda</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="Armenia">Armenia</option>
+                                            <option value="Aruba">Aruba</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Austria">Austria</option>
+                                            <option value="Azerbaijan">Azerbaijan</option>
+                                            <option value="Bahamas">Bahamas</option>
+                                            <option value="Bahrain">Bahrain</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Barbados">Barbados</option>
+                                            <option value="Belarus">Belarus</option>
+                                            <option value="Belgium">Belgium</option>
+                                            <option value="Belize">Belize</option>
+                                            <option value="Benin">Benin</option>
+                                            <option value="Bermuda">Bermuda</option>
+                                            <option value="Bhutan">Bhutan</option>
+                                            <option value="Bolivia">Bolivia</option>
+                                            <option value="Bonaire">Bonaire</option>
+                                            <option value="Bosnia &amp; Herzegovina">Bosnia &amp; Herzegovina</option>
+                                            <option value="Botswana">Botswana</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                                            <option value="Brunei">Brunei</option>
+                                            <option value="Bulgaria">Bulgaria</option>
+                                            <option value="Burkina Faso">Burkina Faso</option>
+                                            <option value="Burundi">Burundi</option>
+                                            <option value="Cambodia">Cambodia</option>
+                                            <option value="Cameroon">Cameroon</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Canary Islands">Canary Islands</option>
+                                            <option value="Cape Verde">Cape Verde</option>
+                                            <option value="Cayman Islands">Cayman Islands</option>
+                                            <option value="Central African Republic">Central African Republic</option>
+                                            <option value="Chad">Chad</option>
+                                            <option value="Channel Islands">Channel Islands</option>
+                                            <option value="Chile">Chile</option>
+                                            <option value="China">China</option>
+                                            <option value="Christmas Island">Christmas Island</option>
+                                            <option value="Cocos Island">Cocos Island</option>
+                                            <option value="Colombia">Colombia</option>
+                                            <option value="Comoros">Comoros</option>
+                                            <option value="Congo">Congo</option>
+                                            <option value="Cook Islands">Cook Islands</option>
+                                            <option value="Costa Rica">Costa Rica</option>
+                                            <option value="Cote DIvoire">Cote D'Ivoire</option>
+                                            <option value="Croatia">Croatia</option>
+                                            <option value="Cuba">Cuba</option>
+                                            <option value="Curaco">Curacao</option>
+                                            <option value="Cyprus">Cyprus</option>
+                                            <option value="Czech Republic">Czech Republic</option>
+                                            <option value="Denmark">Denmark</option>
+                                            <option value="Djibouti">Djibouti</option>
+                                            <option value="Dominica">Dominica</option>
+                                            <option value="Dominican Republic">Dominican Republic</option>
+                                            <option value="East Timor">East Timor</option>
+                                            <option value="Ecuador">Ecuador</option>
+                                            <option value="Egypt">Egypt</option>
+                                            <option value="El Salvador">El Salvador</option>
+                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                            <option value="Eritrea">Eritrea</option>
+                                            <option value="Estonia">Estonia</option>
+                                            <option value="Ethiopia">Ethiopia</option>
+                                            <option value="Falkland Islands">Falkland Islands</option>
+                                            <option value="Faroe Islands">Faroe Islands</option>
+                                            <option value="Fiji">Fiji</option>
+                                            <option value="Finland">Finland</option>
+                                            <option value="France">France</option>
+                                            <option value="French Guiana">French Guiana</option>
+                                            <option value="French Polynesia">French Polynesia</option>
+                                            <option value="French Southern Ter">French Southern Ter</option>
+                                            <option value="Gabon">Gabon</option>
+                                            <option value="Gambia">Gambia</option>
+                                            <option value="Georgia">Georgia</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="Ghana">Ghana</option>
+                                            <option value="Gibraltar">Gibraltar</option>
+                                            <option value="Great Britain">Great Britain</option>
+                                            <option value="Greece">Greece</option>
+                                            <option value="Greenland">Greenland</option>
+                                            <option value="Grenada">Grenada</option>
+                                            <option value="Guadeloupe">Guadeloupe</option>
+                                            <option value="Guam">Guam</option>
+                                            <option value="Guatemala">Guatemala</option>
+                                            <option value="Guinea">Guinea</option>
+                                            <option value="Guyana">Guyana</option>
+                                            <option value="Haiti">Haiti</option>
+                                            <option value="Hawaii">Hawaii</option>
+                                            <option value="Honduras">Honduras</option>
+                                            <option value="Hong Kong">Hong Kong</option>
+                                            <option value="Hungary">Hungary</option>
+                                            <option value="Iceland">Iceland</option>
+                                            <option value="India">India</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Iran">Iran</option>
+                                            <option value="Iraq">Iraq</option>
+                                            <option value="Ireland">Ireland</option>
+                                            <option value="Isle of Man">Isle of Man</option>
+                                            <option value="Israel">Israel</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Jamaica">Jamaica</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Jordan">Jordan</option>
+                                            <option value="Kazakhstan">Kazakhstan</option>
+                                            <option value="Kenya">Kenya</option>
+                                            <option value="Kiribati">Kiribati</option>
+                                            <option value="Korea North">Korea North</option>
+                                            <option value="Korea Sout">Korea South</option>
+                                            <option value="Kuwait">Kuwait</option>
+                                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                            <option value="Laos">Laos</option>
+                                            <option value="Latvia">Latvia</option>
+                                            <option value="Lebanon">Lebanon</option>
+                                            <option value="Lesotho">Lesotho</option>
+                                            <option value="Liberia">Liberia</option>
+                                            <option value="Libya">Libya</option>
+                                            <option value="Liechtenstein">Liechtenstein</option>
+                                            <option value="Lithuania">Lithuania</option>
+                                            <option value="Luxembourg">Luxembourg</option>
+                                            <option value="Macau">Macau</option>
+                                            <option value="Macedonia">Macedonia</option>
+                                            <option value="Madagascar">Madagascar</option>
+                                            <option value="Malaysia">Malaysia</option>
+                                            <option value="Malawi">Malawi</option>
+                                            <option value="Maldives">Maldives</option>
+                                            <option value="Mali">Mali</option>
+                                            <option value="Malta">Malta</option>
+                                            <option value="Marshall Islands">Marshall Islands</option>
+                                            <option value="Martinique">Martinique</option>
+                                            <option value="Mauritania">Mauritania</option>
+                                            <option value="Mauritius">Mauritius</option>
+                                            <option value="Mayotte">Mayotte</option>
+                                            <option value="Mexico">Mexico</option>
+                                            <option value="Midway Islands">Midway Islands</option>
+                                            <option value="Moldova">Moldova</option>
+                                            <option value="Monaco">Monaco</option>
+                                            <option value="Mongolia">Mongolia</option>
+                                            <option value="Montserrat">Montserrat</option>
+                                            <option value="Morocco">Morocco</option>
+                                            <option value="Mozambique">Mozambique</option>
+                                            <option value="Myanmar">Myanmar</option>
+                                            <option value="Nambia">Nambia</option>
+                                            <option value="Nauru">Nauru</option>
+                                            <option value="Nepal">Nepal</option>
+                                            <option value="Netherland Antilles">Netherland Antilles</option>
+                                            <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                                            <option value="Nevis">Nevis</option>
+                                            <option value="New Caledonia">New Caledonia</option>
+                                            <option value="New Zealand">New Zealand</option>
+                                            <option value="Nicaragua">Nicaragua</option>
+                                            <option value="Niger">Niger</option>
+                                            <option value="Nigeria">Nigeria</option>
+                                            <option value="Niue">Niue</option>
+                                            <option value="Norfolk Island">Norfolk Island</option>
+                                            <option value="Norway">Norway</option>
+                                            <option value="Oman">Oman</option>
+                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="Palau Island">Palau Island</option>
+                                            <option value="Palestine">Palestine</option>
+                                            <option value="Panama">Panama</option>
+                                            <option value="Papua New Guinea">Papua New Guinea</option>
+                                            <option value="Paraguay">Paraguay</option>
+                                            <option value="Peru">Peru</option>
+                                            <option value="Phillipines">Philippines</option>
+                                            <option value="Pitcairn Island">Pitcairn Island</option>
+                                            <option value="Poland">Poland</option>
+                                            <option value="Portugal">Portugal</option>
+                                            <option value="Puerto Rico">Puerto Rico</option>
+                                            <option value="Qatar">Qatar</option>
+                                            <option value="Republic of Montenegro">Republic of Montenegro</option>
+                                            <option value="Republic of Serbia">Republic of Serbia</option>
+                                            <option value="Reunion">Reunion</option>
+                                            <option value="Romania">Romania</option>
+                                            <option value="Russia">Russia</option>
+                                            <option value="Rwanda">Rwanda</option>
+                                            <option value="St Barthelemy">St Barthelemy</option>
+                                            <option value="St Eustatius">St Eustatius</option>
+                                            <option value="St Helena">St Helena</option>
+                                            <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                                            <option value="St Lucia">St Lucia</option>
+                                            <option value="St Maarten">St Maarten</option>
+                                            <option value="St Pierre &amp; Miquelon">St Pierre &amp; Miquelon</option>
+                                            <option value="St Vincent &amp; Grenadines">St Vincent &amp; Grenadines</option>
+                                            <option value="Saipan">Saipan</option>
+                                            <option value="Samoa">Samoa</option>
+                                            <option value="Samoa American">Samoa American</option>
+                                            <option value="San Marino">San Marino</option>
+                                            <option value="Sao Tome &amp; Principe">Sao Tome &amp; Principe</option>
+                                            <option value="Saudi Arabia">Saudi Arabia</option>
+                                            <option value="Senegal">Senegal</option>
+                                            <option value="Serbia">Serbia</option>
+                                            <option value="Seychelles">Seychelles</option>
+                                            <option value="Sierra Leone">Sierra Leone</option>
+                                            <option value="Singapore">Singapore</option>
+                                            <option value="Slovakia">Slovakia</option>
+                                            <option value="Slovenia">Slovenia</option>
+                                            <option value="Solomon Islands">Solomon Islands</option>
+                                            <option value="Somalia">Somalia</option>
+                                            <option value="South Africa">South Africa</option>
+                                            <option value="Spain">Spain</option>
+                                            <option value="Sri Lanka">Sri Lanka</option>
+                                            <option value="Sudan">Sudan</option>
+                                            <option value="Suriname">Suriname</option>
+                                            <option value="Swaziland">Swaziland</option>
+                                            <option value="Sweden">Sweden</option>
+                                            <option value="Switzerland">Switzerland</option>
+                                            <option value="Syria">Syria</option>
+                                            <option value="Tahiti">Tahiti</option>
+                                            <option value="Taiwan">Taiwan</option>
+                                            <option value="Tajikistan">Tajikistan</option>
+                                            <option value="Tanzania">Tanzania</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Togo">Togo</option>
+                                            <option value="Tokelau">Tokelau</option>
+                                            <option value="Tonga">Tonga</option>
+                                            <option value="Trinidad &amp; Tobago">Trinidad &amp; Tobago</option>
+                                            <option value="Tunisia">Tunisia</option>
+                                            <option value="Turkey">Turkey</option>
+                                            <option value="Turkmenistan">Turkmenistan</option>
+                                            <option value="Turks &amp; Caicos Is">Turks &amp; Caicos Is</option>
+                                            <option value="Tuvalu">Tuvalu</option>
+                                            <option value="Uganda">Uganda</option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="United Arab Erimates">United Arab Emirates</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="United States of America">United States of America</option>
+                                            <option value="Uraguay">Uruguay</option>
+                                            <option value="Uzbekistan">Uzbekistan</option>
+                                            <option value="Vanuatu">Vanuatu</option>
+                                            <option value="Vatican City State">Vatican City State</option>
+                                            <option value="Venezuela">Venezuela</option>
+                                            <option value="Vietnam">Vietnam</option>
+                                            <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                                            <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                                            <option value="Wake Island">Wake Island</option>
+                                            <option value="Wallis &amp; Futana Is">Wallis &amp; Futana Is</option>
+                                            <option value="Yemen">Yemen</option>
+                                            <option value="Zaire">Zaire</option>
+                                            <option value="Zambia">Zambia</option>
+                                            <option value="Zimbabwe">Zimbabwe</option>
+                                        </select>
+
+                                        <select id="ddGender" class="regInput styled-select" onchange="selgender()">
+                                            <option value="0" disabled selected>Gender*</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                        <input type="number" min="0" id="txtPNo" class="regInput" placeholder="Phone number" />
+
+                                    </div>
+
+                                    <div class="col-md-7 col-sm-12 col-xs-12 p-r-40" style="top:5px;">
+                                        <div style="height:100px;" class="hidden-xs hidden-sm"></div>
+                                        <input type="text" style="text-transform: initial;" id="txtFAdd" class="regInput" placeholder="Address on first line" />
+                                        <input type="text" style="text-transform: initial;" id="txtLAdd" class="regInput" placeholder="Address on second line" />
+                                        <input type="text" style="text-transform: initial;" id="txtCity" class="regInput" placeholder="City" />
+                                        <input type="text" style="text-transform: initial;" id="txthospital" class="regInput" placeholder="Hospital affiliation" />
+                                        <input type="text" style="text-transform: lowercase;" id="txtEmail" class="regInput" placeholder="E-mail ID* (will be default login)" />
+                                        <input type="password" id="txtPass" class="regInput" placeholder="Password*" />
+                                        <input type="password" id="txtCPass" class="regInput" placeholder="Confirm password*" />
+
+                                        <!--<input type="button" onclick="$('#regFile').click()" id="btnCAva" value="Change Avatar" />-->
+
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="checkbox">
+                                                <input type="checkbox" style="    margin-top: 0px;" class=" styled" id="chkTerms">
+                                                <label for="chkTerms">
+                                                    I agree to the CML Interact <a style="text-decoration:underline;" target="_blank" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/terms-use">Terms of Use</a>
+                                                </label>
+                                            </div>
+
+                                            <!--<div class="checkbox">
+                                                <label style="padding-left: 24px;font-size: 12px;">
+                                                    <input id="chkTerms" style="margin-top:0px; width:18px; height:18px; margin-left:-24px;" type="checkbox">
+                                                </label>
+                                            </div>-->
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <div id="regMsg">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <input type="button" id="regbtn" onclick="onClickRegister()" style="margin-top:0px;" class="btn-custom" value="Submit" />
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+
+                                <form id="confirmForm" onsubmit="return false;">
+                                    <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom:40px;">
+                                        Enter the access code provided to you to register.
+
+                                    </div>
+                                    <div class="col-md-8 col-sm-8 col-xs-12 p-r-40">
+                                        <input type="text" id="txtACode" class="regInput" style="padding: 5px;" placeholder="Access code" />
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                        <input type="button" onclick="onClickValidateAC()" class="btn-custom visible-xs" style="float:right; margin-top:30px;" value="Verify" />
+
+                                        <input type="button" onclick="onClickValidateAC()" class="btn-custom hidden-xs" style="float:left;" value="Verify" />
+                                    </div>
+
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                        <div id="accMsg">
+
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div class="row bg-violet">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row land-footer" style="margin-top:50px;">
+                        <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+                            <div class="col-md-2  col-sm-4 col-xs-12">
+                                <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/terms-use" target="_blank"> Terms of use </a></h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/privacy-policy" target="_blank">Privacy Policy </a></h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 1); clearContactUs();">Contact us</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 2);">FAQ</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+                                <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!--<div class="slide" style="    background: rgba(0, 0, 0, 0.5);">
+                    <div class="intro" style="text-align: justify;">
+                        <h3>Terms of Use</h3>
+                        <div class="modal-body" style="text-align: justify;">
+
+                            By using this website, you signify your agreement to all terms, conditions, and notices contained or referenced herein (the "Terms of Use"). If you do not agree to these Terms of Use, please do not use this site.  We reserve the right, at our discretion, to update or revise these Terms of Use. Please check the Terms periodically for changes. Your continued use of this website following the posting of any changes to the Terms of Use constitutes acceptance of those changes.
+                            <br />
+                            <br />
+                            BLOGS AND USER COMMENT AREAS
+                            <br />
+                            <br />
+                            In order to post content on this website, users are required to provide a username and e-mail address. Neither the administrators of or the moderators of the website or the blogs, are responsible for the privacy practices of any user. Remember that all information that is disclosed in these areas becomes public information and you should exercise caution when deciding to share any of your personal information.
+                            <br />
+                            <br />
+                            AGREEMENT TO RULES OF USER CONDUCT
+                            <br />
+                            <br />
+                            You agree to abide by the following Rules of User Conduct:
+                            <br />
+                            <br />
+                            By posting information in or otherwise using any blog, comment area, or other interactive service, that may be available to you on or through this website, you agree that you will not upload, post, or otherwise distribute or facilitate distribution of any content that:
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row land-footer" style="margin-top:50px;">
+                        <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+                            <div class="col-md-2  col-sm-4 col-xs-12">
+                                <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 1);"> Terms of use</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 2);">Disclaimer</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 3);">Contact us</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 4);">FAQ</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+                                <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>
+                <div class="slide">
+                        <div class="intro">
+                            <h3> Disclaimer </h3>
+                            <div class="modal-body" style="text-align: justify;">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                                <br />
+                                <br />
+                                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+                                <br />
+                                <br />
+                                Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+                                <br />
+                                <br />
+                                Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                                <br />
+                                <br />
+                                Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+                            </div>
+
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="row land-footer" style="margin-top:50px;">
+                            <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+                                <div class="col-md-2  col-sm-4 col-xs-12">
+                                    <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 1);"> Terms of use</h5>
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                    <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 2);">Disclaimer</h5>
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                    <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 3);">Contact us</h5>
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                    <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 4);">FAQ</h5>
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                    <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+                                    <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>-->
+                <div class="slide">
+                    <div class="intro">
+                        <h3 class="clr-orange"> Contact Us </h3>
+                        <div class="row">
+                            <form id="contactForm" onsubmit="return false;">
+
+                                <div class="col-md-offset-3 col-sm-offset-3 col-md-6 col-sm-6 col-xs-12 p-r-40">
+
+                                    <h4>Feedback type*</h4>
+                                    <select id="ddftype" class="regInput cs-style bg-white">
+                                        <option value="Technical Support">Technical Support</option>
+                                        <option value="Feedback">Feedback</option>
+                                        <option value="Request for change of registration">Request for change of registration</option>
+                                    </select>
+                                    <h4>Email*</h4>
+                                    <input type="email" id="cemail" class="regInput cs-style bg-white br-0" placeholder="" />
+                                    <h4>Description*</h4>
+                                    <textarea rows="4" class="regInput cs-style bg-white br-0" style="resize:none;" id="cdesc" placeholder=""></textarea>
+                                    <br />
+
+                                    <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">
+                                        <div class="col-md-9 col-sm-8 col-xs-12">
+                                            <div id="cuMsg">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-4 col-xs-12">
+                                            <input type="button" onclick="onClickContactus()" style="margin-bottom:40px;" class="btn-custom" value="Submit" />
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div class="row land-footer" style="margin-top:50px;">
+                        <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+                            <div class="col-md-2  col-sm-4 col-xs-12">
+                                <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/terms-use" target="_blank"> Terms of use </a></h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/privacy-policy" target="_blank">Privacy Policy </a></h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 1); clearContactUs();">Contact us</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 2);">FAQ</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+                                <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="intro" style="margin-bottom:150px;">
+                        <h3 class="clr-orange">FAQ</h3>
+                        <br />
+                        <h4>1.	Unable to register</h4>
+                        <ul>
+                            <li>Ensure to enter the unique access code provided by the Novartis representative</li>
+                            <li>Ensure to enter all mandatory fields (marked with asterisk * )</li>
+                            <li>Password must be 8 characters/digits long</li>
+                            <li>It is mandatory to agree to the terms of use and provide consent. Kindly check the box after going through the details and before clicking/tapping on submit icon.</li>
+                        </ul>
+                        <br />
+                        <h4>2.	Do not have Access code. How to register?</h4>
+                        <ul>
+                            <li>
+                                Approach the Novartis representative
+                            </li>
+                            <li>Alternatively please write to us from the ‘Contact us’ section</li>
+                        </ul>
+                        <br />
+                        <h4>3.	Successfully registered but unable to Login</h4>
+                        <ul>
+                            <li>
+                                Kindly check your registered email ID for an account activation email from 'info@cmlinteract.com'
+                            </li>
+                            <li>	Post activation of your account you will be able to Login with the registered credentials.</li>
+                        </ul>
+                        <br />
+                        <h4>4.	Forgot password/Reset password</h4>
+                        <ul>
+                            <li>
+                                On the landing page click on ‘Forgot Password’, enter the registered email ID and submit. User will receive an automated email on their registered email ID, with a link to reset password. User can then login using the new password
+                            </li>
+                        </ul>
+                        <br />
+                        <h4>5.	Accessibility on Mobile/Tablet </h4>
+                        <ul>
+                            <li>
+                                You can download CML Interact app from windows; android and apple store.
+
+                            </li>
+                            <li>Once registered on either laptop/desktop or mobile app, you can directly login on any device.</li>
+                        </ul>
+                        <br />
+                        <h4> 6.	The minimum system requirements.</h4>
+
+                        <table class="table table-bordered border-white" style="margin-left:25px;width:90%;">
+                            <tr>
+                                <td>CPU</td>
+                                <td>A modern computer manufactured in the last 5 years</td>
+                            </tr>
+                            <tr>
+                                <td> RAM	</td>
+                                <td>512MB required, 1GB or more recommended</td>
+                            </tr>
+                            <tr>
+                                <td> Operating System		</td>
+                                <td>Windows XP, Vista, Windows 7, Mac OS X 10.4.x or later</td>
+                            </tr>
+                            <tr>
+                                <td> Internet	</td>
+                                <td>Cable Modem, DSL, LAN (min 512Kbps, 1Mbps or greater recommended)	</td>
+                            </tr>
+                            <tr>
+                                <td> Sound Card	</td>
+                                <td>Sound card and speakers, headset with microphone (optional)	</td>
+                            </tr>
+                            <tr>
+                                <td> Monitor and Video Card		</td>
+                                <td>1024 x 768 or higher screen resolution</td>
+                            </tr>
+                        </table>
+                        <br />
+                        <h4>7.	Browser settings </h4>
+                        <p>Please check if your browser is updated with the laquizversion. Below are the compatible browsers:</p>
+
+
+                        <ul>
+                            <li>
+                                Internet Explorer: Version 10 and above
+                            </li>
+                            <li>Mozilla Firefox: Version 44 and above</li>
+                            <li>Google Chrome: Version 50 and above</li>
+                            <li>Safari: Version 8 and above</li>
+                        </ul>
+                        <br />
+                        <h4>8.	Technical assistance</h4>
+
+                        <ul>
+
+                            <li>For all technical assistance, you can write to us via 'Contact us' section. Technical team will get back to you over email within 48 business hours.</li>
+                        </ul>
+                        <br />
+                        <h4>9.	Changes in registered email ID.</h4>
+                        <ul>
+
+                            <li>For change in registered email ID, you can write to us via 'Contact us' section. Technical team will get back to you over email within 48 business hours.</li>
+                        </ul>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row land-footer" style="margin-top:50px;">
+                        <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+                            <div class="col-md-2  col-sm-4 col-xs-12">
+                                <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/terms-use" target="_blank"> Terms of use </a></h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/privacy-policy" target="_blank">Privacy Policy </a></h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 1); clearContactUs();">Contact us</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage4', 2);">FAQ</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                                <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12">
+                                <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <canvas id="photo" style="width:0px; height:0px;"></canvas>
+
+
+        <div class="modal left fade" id="myModalFb" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document" style="margin: 0px;width: 320px;height: 100%; position: relative;float: left;">
+                <div class="modal-content" style="height: 400px; bottom: 0;position: absolute;">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Feedback</h4>
+                    </div>
+                    <div class="modal-body" style="     width: 320px;   padding: 15px 20px 0px 20px;">
+                        <form id="fbForm">
+                            <div class="hdQues ques1">
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>1. Was the layout of the website easy to understand?</p>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="radio">
+                                                <input type="radio" name="ques1" id="radio2" value="Yes">
+                                                <label for="radio2">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="radio">
+                                                <input type="radio" name="ques1" id="radio3" value="No">
+                                                <label for="radio3">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input type="button" onclick="onClickNext(1,true)" class="btn-custom" value="Next" />
+
+                                </div>
+
+                            </div>
+                            <div class="hdQues ques2" style="display:none;">
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>2. Are you satisfied with the content offered on the website?</p>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="radio">
+                                                <input type="radio" name="ques2" id="radio4" value="Yes">
+                                                <label for="radio4">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="radio">
+                                                <input type="radio" name="ques2" id="radio5" value="No">
+                                                <label for="radio5">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input type="button" onclick="onClickNext(2,true)" class="btn-custom" value="Next" />
+
+                                </div>
+
+                            </div>
+
+                            <div class="hdQues ques3" style="display:none;">
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>3. Please suggest any additional feature to enhance engagement on the website?</p>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div>
+                                                <textarea style="width:100%;" class="br-0" rows="5" id="ques3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input type="button" style="margin-top:10px;" onclick="onClickNext(3,false)" class="btn-custom" value="Submit" />
+
+                                </div>
+
+                            </div>
+                        </form>
+
+                        <div class="row" id="cusMsg">
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalImagecrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="height: 100%; width: 98%; margin: 1%;">
+                <div class="modal-content" style="height:100%;background:rgba(75,27,100,0.7);">
+                    <div class="modal-body" style="min-height: 100px; height:90%;     background:rgba(75,27,100,0.7); overflow-y: auto;">
+                        <table style="width: 290px; height:100%; margin: 0 auto; margin-top:-25px;">
+                            <tr>
+                                <td style="text-align:left;"><img src="images/plus1.png" onclick="$('.cropZoomIn').trigger('click');" style="width:40px;" /></td>
+                                <td style="text-align:center;">
+                                    <img id="cropimage" alt="" />
+                                    <div style="color:white;position:relative;top:50px">Use + and - to Zoomin and Zoomout</div>
+                                    <button id="closeImg" class="btn-primary-bright ink-reaction btn" onclick="cancelImg()" style="position:relative;top:50px">Close</button>
+                                    <button id="btnCloseImg" onclick="onclockcropimg();" class=" btn-primary-bright ink-reaction btn" style="background:#FF9900;color:white;position:relative;top:50px">Save</button>
+                                </td>
+
+                                <td style="text-align:right;"><img src="images/minus1.png" onclick="$('.cropZoomOut').trigger('click');" style="width:40px;" /></td>
+
+                            </tr>
+
+
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    
+    <script>
+        $(".land-footer p").click(function () {
+            toastr.error("Please login to view this section");
+        });
+
+        $(".land-footer .ftitle").click(function () {
+            toastr.error("Please login to view this section");
+        });
+
+
+        if (!isiDevice && !isBlackBerry && !isAndroid && !oldIE) {
+            var vid = document.getElementById("bgvid");
+            vid.play();
+
+            function vidFade() {
+                vid.classList.add("stopfade");
+            }
+
+            vid.addEventListener('ended', function () {
+                // only functional if "loop" is removed
+                vid.pause();
+                // to capture IE10
+                vidFade();
+            });
+        }
+        else {
+            $("#bgvid").remove();
+            //window.addEventListener("resize", function () {
+            //    window.location.reload();
+            //}, false);
+
+        }
+
+
+        $("input[type='number']").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter and .
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+
+        $(document).ready(function () {
+            var data = _glocalStorage.loadData("login");
+            if (data != null && data != undefined)
+                window.location.href = "index.html";
+
+            if(isiDevice)
+            {
+                window.setTimeout(function () { $("#section4").find(".fp-scrollable").css("-webkit-overflow-scrolling", "auto"); }, 500);
+            }
+           
+
+        });
+       
+
+
+    </script>
+
+
+
+
+</body>
+</html>

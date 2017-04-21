@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>App Updater</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="common/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="common/css/updater.css" />
+    <script type="text/javascript" src="common/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="common/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="common/js/updater.js"></script>
+</head>
+<body id="updater">
+    <div id="updateProcess" style="display: none;">
+        <span id="updaterTitle">Checking for the updates...</span>
+        <br /><br />
+        <progress id="updateProgress" value="0" max="100" style="width: 100%;">
+        </progress>
+    </div>
+    <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true" disabled="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Alert!
+                </div>
+                <div class="modal-body">
+                    <span id="alertMessage">Your device is not connected to the network. Please connect your device to internet before proceed.</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+
+
+        $(window).load(function () {
+
+            var height = window.innerHeight;
+            var width = window.innerWidth;
+            if (height < width) {
+                $("body").css("background", "url('img/bg3.png') no-repeat");
+
+            }
+            else {
+                $("body").css("background", "url('img/bg.png') no-repeat");
+            }
+        });
+        if (isiDevice) {
+            window.onorientationchange = function () {
+                var height = window.innerHeight;
+                var width = window.innerWidth;
+                if (height < width) {
+                    $("body").css("background", "url('img/bg3.png') no-repeat");
+
+                }
+                else {
+                    $("body").css("background", "url('img/bg.png') no-repeat");
+                }
+            }
+
+
+        }
+        else {
+            window.onresize = function () {
+                var height = window.innerHeight;
+                var width = window.innerWidth;
+                if (height < width) {
+                    $("body").css("background", "url('img/bg3.png') no-repeat");
+
+                }
+                else {
+                    $("body").css("background", "url('img/bg.png') no-repeat");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

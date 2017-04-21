@@ -1,0 +1,602 @@
+﻿<div style="height:100%; overflow:auto; -webkit-overflow-scrolling:touch;">
+    <div style="min-height:100%;margin-bottom:140px">
+
+    
+    <div class="bannerMain" style="background-image:url(images/CML_event_calendar_.jpg)">
+        <div class="container" style="height: 100%;">
+            <div class="imgTxt">
+                <p>EVENT CALENDAR</p>
+                <p class="desc">Lists events of haematology or oncology conducted by the scientific community across the globe. It also gives access to information such as dates and location of the event with the last date of registration and last date for submission of abstracts where applicable.</p>
+
+            </div>
+         </div>
+    </div>
+    <div class="container" style="margin-top:20px;">
+      
+
+        <div style="margin-top:40px;">
+            <div id="evecal" class="cal3 visible-md visible-lg" style="padding:0px; width:100%; min-width:940px;">
+                <script type="text/template" id="template-calendar-event">
+                    <div class="clndr-controls top">
+                        <div class="clndr-previous-button"><i class="glyphicon glyphicon-triangle-left"></i></div>
+                        <div class="clndr-next-button"><i class="glyphicon glyphicon-triangle-right"></i></div>
+                    </div>
+                    <div class="clearfix">
+                        <div style="display: table; width: 100%;">
+                            <div style="display: table; margin:0 auto;">
+                                <% _.each(months, function(cal) { %>
+                                <div class="cal">
+                                    <div class="clndr-controls">
+                                        <div class="month"><%= cal.month.format('MMMM') %>  <%= cal.month.format('YYYY') %></div>
+                                    </div>
+                                    <div class="clndr-grid">
+                                        <div class="days-of-the-week">
+                                            <% _.each(daysOfTheWeek, function(day) { %>
+                                            <div class="header-day"><%= day %></div>
+                                            <% }); %>
+                                            <div class="days">
+                                                <% _.each(cal.days, function(day) { %>
+                                                <div class="<%= day.classes %>"><%= day.day %></div>
+                                                <% }); %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }); %>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--<div class="clndr-today-button">Today</div>-->
+                </script>
+                <!--</div>-->
+            </div>
+
+            <div id="evecals" class="cal3 visible-sm visible-xs" style="padding:0px; width:100%; min-width:100%;">
+                <script type="text/template" id="template-calendar-event">
+                    <div class="clndr-controls top">
+                        <div class="clndr-previous-button"><i class="glyphicon glyphicon-triangle-left"></i></div>
+                        <div class="clndr-next-button"><i class="glyphicon glyphicon-triangle-right"></i></div>
+                    </div>
+                    <div class="clearfix">
+                        <div style="display: table; width: 100%;">
+                            <div style="display: table; margin:0 auto;">
+                                <% _.each(months, function(cal) { %>
+                                <div class="cal">
+                                    <div class="clndr-controls">
+                                        <div class="month"><%= cal.month.format('MMMM') %>  <%= cal.month.format('YYYY') %></div>
+                                    </div>
+                                    <div class="clndr-grid">
+                                        <div class="days-of-the-week">
+                                            <% _.each(daysOfTheWeek, function(day) { %>
+                                            <div class="header-day"><%= day %></div>
+                                            <% }); %>
+                                            <div class="days">
+                                                <% _.each(cal.days, function(day) { %>
+                                                <div class="<%= day.classes %>"><%= day.day %></div>
+                                                <% }); %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }); %>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!--<div class="clndr-today-button">Today</div>-->
+                </script>
+                <!--</div>-->
+            </div>
+        </div>
+
+        <div style="margin-top:20px; margin-bottom:40px; text-align:justify">
+            <div class="wc-box">
+                <div id="eve1" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify"> PAHA/EHA Joint congress</h3>
+                    <p style="text-align:justify">A rich scientific program accredited by American Academy Of Continuous Medical Education. </p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Cairo, Egypt</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.panarabhematology-2016.com/');" class="btn-flat btn-orange btn-ot">Click here to visit event website</button>
+                    </div>
+                </div>
+
+                <div id="eve2" class="eve" style="text-align:justify">
+                    <h3> 6th Emirates Haematology Conference (EHC)</h3>
+                    <p>Discussion on optimal use of current technologies and sustainable solutions for the improvement in quality of care of patients.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Dubai, UAE</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://ehc-uae.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve3" class="eve" style="text-align:justify">
+                    <h3> 36th World Congress of the International Society of Hematology (ISH)</h3>
+                    <p>Wide range of laboratory and clinical haematology issues utilising the experience of a Scientific Committee drawn from both Societies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Glasgow, UK</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ish2016.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve4" class="eve" style="text-align:justify">
+                    <h3>24th International Symposium on Technical Innovations in Laboratory Hematology</h3>
+                    <p>Up-to-date symposia, research and journal reviews on: Cellular Analysis, Hemostasis and Thrombosis etc.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Milano, Italy</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('https://www.islh.org/2016/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve5" class="eve" style="text-align:justify">
+                    <h3>Biennial Meeting of the European Society of Paediatric Haematology - Immunology 2016</h3>
+                    <p>Research in the main fields paediatric haematology, paediatric coagulation, thrombosis & stroke and paediatric immunology.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Berlin, Germany</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.esphi.info/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve6" class="eve" style="text-align:justify">
+                    <h3>American Society of Clinical Oncology (ASCO) 2016 Annual Meeting</h3>
+                    <p>A variety of engaging session formats with expert insight and global perspectives on treatment and communication stratergies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Chicago, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://am.asco.org/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve7" class="eve" style="text-align:justify">
+                    <h3>European Hematology Association 21st Congress 2016 (EHA 2016)</h3>
+                    <p>Provides a forum for presenting original unpublished data and sharing ideas for hematological innovation as well as disseminating evidence-based knowledge of primary clinical relevance.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Copenhagen, Denmark</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/21st-congress/key-information-3/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve8" class="eve" style="text-align:justify">
+                    <h3>4th International Conference on Advances in Hematology and Oncology (ICAHO) 2016</h3>
+                    <p>Improve the care of hematology and oncology patients by updating the hematology and oncology care providers about the new developments in the field.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Idaho, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://oncology.binayfoundation.org/178/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve9" class="eve" style="text-align:justify">
+                    <h3>18th Meeting of the European Association for Haematopathology</h3>
+                    <p>A well-balanced mixture of scientific and practical issues of topics such as Bone Marrow and Lymphoma symposia etc.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Basel, Switzerland</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.eahp2016.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve10" class="eve" style="text-align:justify">
+                    <h3>ASH<sup>&reg;</sup> Meeting on Hematologic Malignancies 2016 (ASH 2016)</h3>
+                    <p>Latest developments in clinical care, showcase their evidence-based treatment approaches, and provide answers to challenging patient care questions.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Chicago, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Malignancies/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve11" class="eve" style="text-align:justify">
+                    <h3>NCCN 11th Annual Congress: Hematologic Malignancies</h3>
+                    <p>Issues relating to pathology, transplantation, and various new therapies require oncologists and hematologists to stay abreast of breakthrough advances.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">New York, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.nccn.org/professionals/meetings/hematological/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve12" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">ESMO 2016 Congress</h3>
+                    <p style="text-align:justify"></p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Copenhagen, Denmark</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.esmo.org/Conferences/ESMO-2016-Congress');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <!--New topic added-->
+
+                <div id="eve13" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">Highlights of Past EHA - HOPE Dubai 2016</h3>
+                    <p style="text-align:justify">To be updated and to access the latest results on clinical and translational research in hematologic disorders.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Dubai, UAE</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/educational-events/highlights-of-past-eha-hope/key-information/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve14" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">58th ASH Annual Meeting & Exposition</h3>
+                    <p style="text-align:justify">World's premier event in malignant and non-malignant hematology.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Chicago, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Annual-Meeting/ ');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve15" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">58th ASH Annual Meeting & Exposition</h3>
+                    <p style="text-align:justify">World's premier event in malignant and non-malignant hematology.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Chicago, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Annual-Meeting/ ');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br/>
+                    <h3 style="text-align:justify">Ham-Wasserman Lecture on Inherited Thrombophilia: How Does a Double-Edged Sword Fit into Clinical Practice?</h3>
+                    <p style="text-align:justify">Overview of the way thrombophilia came into clinical practice and discuss the association of inherited thrombophilia.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Chicago, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Annual-Meeting/Program/General-Sessions.aspx');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve16" class="eve" style="text-align:justify">
+                    <h3> 6th Emirates Haematology Conference (EHC)</h3>
+                    <p>Discussion on optimal use of current technologies and sustainable solutions for the improvement in quality of care of patients.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Dubai, UAE</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://ehc-uae.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br/>
+                    <h3 style="text-align:justify">Great Debates & Updates in Hematologic Malignancies</h3>
+                    <p style="text-align:justify">Focus on controversial areas in the management of hematologic malignancies as nationally-recognized thought leaders take opposing sides on topics of clinical interest.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">New York, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://imedex.com/hematologic-malignancies-debate-conference/index.asp');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve17" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">Debates and Didactics in Hematology and Oncology</h3>
+                    <p style="text-align:justify">Comprehensive review into mechanisms of disease and treatments for patients with cancer or blood disorders.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Sea Island, Georgia</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.winshipcancerddho.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <!--2017 year updates-->
+                <div id="eve18" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">14th Annual Mayo Clinic Hematology Review 2017</h3>
+                    <p style="text-align:justify">Overview of the most recent advances in the treatment of various hematologic malignancies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Minneapolis, United States </span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('https://ce.mayo.edu/hematology-and-oncology/content/14th-annual-mayo-clinic-hematology-review-2017');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br/>
+                    <h3 style="text-align:justify">2017 Highlights of ASH in North America</h3>
+                    <p style="text-align:justify">Exhibition of products and services in the area of hematology and blood transfusion will be held simultaneously with the event.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Chicago and Dallas, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Highlights/North-America.aspx ');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve19" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">11th Dutch Hematology Congress</h3>
+                    <p style="text-align:justify">Educational sessions on Bone Marrow Masterclass and research projects for Experimental Hematlogy, Immunology and the KWF Lymphoma.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Papendal, Netherlands</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematologiecongres.nl/en/dutch-hematology-congress/congress-information#prodhc');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>               
+                <div id="eve20" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">Mayo Clinic Clinical and Multidisciplinary Hematology and Oncology: The 14th Annual Review 2017</h3>
+                    <p style="text-align:justify">Comprehensive update and management strategies of issues in hematologic and oncologic malignancies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Scottsdale, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('https://ce.mayo.edu/hematology-and-oncology/content/clinical-and-multidisciplinary-hematology-and-oncology-14th-annual-review-2017');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve21" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">11th Dutch Hematology Congress</h3>
+                    <p style="text-align:justify">Educational sessions on Bone Marrow Masterclass and research projects for Experimental Hematlogy, Immunology and the KWF Lymphoma.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Papendal, Netherlands</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematologiecongres.nl/en/dutch-hematology-congress/congress-information#prodhc');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br/>
+                    <h3 style="text-align:justify">9th Annual T-cell Lymphoma Forum</h3>
+                    <p style="text-align:justify">Latest information on novel agents and treatment approachesca.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">San Francisco, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.tcellforum.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve22" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">11th Dutch Hematology Congress</h3>
+                    <p style="text-align:justify">Educational sessions on Bone Marrow Masterclass and research projects for Experimental Hematlogy, Immunology and the KWF Lymphoma.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Papendal, Netherlands</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematologiecongres.nl/en/dutch-hematology-congress/congress-information#prodhc');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br/>
+                    <h3 style="text-align:justify">Mayo Clinic Clinical and Multidisciplinary Hematology and Oncology: The 14th Annual Review 2017</h3>
+                    <p style="text-align:justify">Comprehensive update and management strategies of issues in hematologic and oncologic malignancies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Scottsdale, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('https://ce.mayo.edu/hematology-and-oncology/content/clinical-and-multidisciplinary-hematology-and-oncology-14th-annual-review-2017');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br/>
+                    <h3 style="text-align:justify">9th Annual T-cell Lymphoma Forum</h3>
+                    <p style="text-align:justify">Latest information on novel agents and treatment approachesca.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">San Francisco, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.tcellforum.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br />
+                    <h3 style="text-align:justify">2017 Highlights of ASH in North America</h3>
+                    <p style="text-align:justify">Exhibition of products and services in the area of hematology and blood transfusion will be held simultaneously with the event.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">New York and Seattle, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Highlights/North-America.aspx ');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve23" class="eve" style="text-align:justify">                    
+                    <h3 style="text-align:justify">9th Annual T-cell Lymphoma Forum</h3>
+                    <p style="text-align:justify">Latest information on novel agents and treatment approachesca.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">San Francisco, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.tcellforum.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br />
+                    <h3 style="text-align:justify">Mayo Clinic Clinical and Multidisciplinary Hematology and Oncology: The 14th Annual Review 2017</h3>
+                    <p style="text-align:justify">Comprehensive update and management strategies of issues in hematologic and oncologic malignancies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Scottsdale, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('https://ce.mayo.edu/hematology-and-oncology/content/clinical-and-multidisciplinary-hematology-and-oncology-14th-annual-review-2017');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br />
+                    <h3 style="text-align:justify">2017 Highlights of ASH in North America</h3>
+                    <p style="text-align:justify">Exhibition of products and services in the area of hematology and blood transfusion will be held simultaneously with the event.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">New York and Seattle, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Highlights/North-America.aspx ');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve24" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">32nd General Annual Meeting of the Belgian Hematology Society</h3>
+                    <p style="text-align:justify"></p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Brussels, Belgium</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.bhs.be/meetings/national-meetings/general-annual-meetings');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve25" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">10th Annual Congress of the European Association for Haemophilia and Allied Disorders 2017 </h3>
+                    <p style="text-align:justify">Promote education, support research and improve clinical care and lives of patients with inherited or acquired bleeding disorders. </p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Paris, France</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://eahad2017.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve26" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">EHA Scientific Meeting on Anemia diagnosis and Treatment in the Omics Era</h3>
+                    <p style="text-align:justify">Impact of new technologies in solving clinical problems in the diagnosis and treatment of Anemias</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Barcelona, Spain</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/scientific-events/eha-swg-scientific-meeting-on-anemias/eha-swg-scientific-meeting-on-anemias-diagnosis-and-treatment-in-the-omics-era/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br />
+                    <h3 style="text-align:justify">10th Annual Congress of the European Association for Haemophilia and Allied Disorders 2017 </h3>
+                    <p style="text-align:justify">Promote education, support research and improve clinical care and lives of patients with inherited or acquired bleeding disorders. </p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Paris, France</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://eahad2017.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve27" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">EHA Scientific Meeting on Anemia diagnosis and Treatment in the Omics Era</h3>
+                    <p style="text-align:justify">Impact of new technologies in solving clinical problems in the diagnosis and treatment of Anemias</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Barcelona, Spain</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/scientific-events/eha-swg-scientific-meeting-on-anemias/eha-swg-scientific-meeting-on-anemias-diagnosis-and-treatment-in-the-omics-era/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve28" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">8th International Hematologic Malignancies Conference: Bridging the Gap 2017</h3>
+                    <p style="text-align:justify">Update on research and treatment of hematologic malignancies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Bangkok, Thailand</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://aphcon.org/btg2017.html');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br />
+                    <h3 style="text-align:justify">2017 Highlights of ASH in North America</h3>
+                    <p style="text-align:justify">Evaluate your diagnostic techniques and therapeutic approaches and discuss with leading hematology experts and colleagues</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Atlanta, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Highlights/ ');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve29" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">2017 Highlights of ASH in North America</h3>
+                    <p style="text-align:justify">Exhibition of products and services in the area of hematology and blood transfusion will be held simultaneously with the event.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Chicago and Dallas, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Highlights/North-America.aspx ');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve30" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">8th International Hematologic Malignancies Conference: Bridging the Gap 2017</h3>
+                    <p style="text-align:justify">Update on research and treatment of hematologic malignancies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Bangkok, Thailand</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://aphcon.org/btg2017.html');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve31" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">61st Annual Meeting of the Society of Thrombosis and Hemostasis Research</h3>
+                    <p style="text-align:justify">Insight on thromsosis and hemostatis.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Basel, Switzerland</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.gth2017.org/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve32" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">61st Annual Meeting of the Society of Thrombosis and Hemostasis Research</h3>
+                    <p style="text-align:justify">Insight on thromsosis and hemostatis.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Basel, Switzerland</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.gth2017.org/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br />
+                    <h3 style="text-align:justify">Scripps' 37th Annual Conference: Clinical Hematology & Oncology 2017</h3>
+                    <p style="text-align:justify">Discuss on new clinical developments and significant advances designed especially for hematologists,surgeons,radiation oncologists,internists.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">California, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('https://www.scripps.org/events/scripps-37th-annual-conference-clinical-hematology-oncology-2017-february-18-2017');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve33" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">Scripps' 37th Annual Conference: Clinical Hematology & Oncology 2017</h3>
+                    <p style="text-align:justify">Discuss on new clinical developments and significant advances designed especially for hematologists,surgeons,radiation oncologists,internists.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">California, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('https://www.scripps.org/events/scripps-37th-annual-conference-clinical-hematology-oncology-2017-february-18-2017');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve34" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">EHA Hematology Tutorial on Lymphoid malignancies, multiple myeloma and bone marrow failure</h3>
+                    <p style="text-align:justify">An integrated diagnostic and clinical work-up of hematological disorders.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Colombo, Sri Lanka</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/educational-events/hematology-tutorials/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve35" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">EHA Scientific Meeting on Advances in Biology and treatment of B cell malignancies with a focus on Rare Lymphoma Subtypes </h3>
+                    <p style="text-align:justify">Elaborated discussion on Lymphoma Biology and different kinds of lymphomas.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Barcelona, Spain</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/scientific-events/eha-swg-scientific-meetings/eha-swg-scientific-meeting-on-advances-in-biology-and-treatment-of-b-cell-malignancies-with-a-focus-on-rare-lymphoma-subtypes');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br />
+                    <h3 style="text-align:justify">Highlights of ASH<sup>&reg;</sup> Asia - Pacific</h3>
+                    <p style="text-align:justify">Examine advances in clinical and translational hematologic research and evaluate the role of new diagnostic techniques with respective to Haematology.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Hong Kong</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Highlights/Asia.aspx ');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve36" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">7th Emirates Haematology Conference (EHC)</h3>
+                    <p style="text-align:justify">Conference highlights on intereactive workshops,clinical case presentations, oral and poster presentations,industry symposia and panel discussions on haemtalogy. </p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Dubai, UAE</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://ehc-uae.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve36" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">7th Emirates Haematology Conference (EHC)</h3>
+                    <p style="text-align:justify">Conference highlights on intereactive workshops,clinical case presentations, oral and poster presentations,industry symposia and panel discussions on haemtalogy. </p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Dubai, UAE</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://ehc-uae.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve37" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">7th Emirates Haematology Conference (EHC)</h3>
+                    <p style="text-align:justify">Conference highlights on intereactive workshops,clinical case presentations, oral and poster presentations,industry symposia and panel discussions on haemtalogy. </p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Dubai, UAE</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://ehc-uae.com/');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                    <br />
+                    <h3 style="text-align:justify">EHA Hematology Tutorial on Lymphoid malignancies</h3>
+                    <p style="text-align:justify">Advances in biology, diagnostic approaches and therapy of lymphoid malignancies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Warsow, Poland</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/educational-events/hematology-tutorials/eha-pthit-tutorial-on-lymphoid-malignancies');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve38" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">British Society for Haematology 57th Annual Scientific Meeting </h3>
+                    <p style="text-align:justify">Aims to advance the practice and study of haematology and to facilitate contact between persons interested in haematology in the UK.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Brighton, London</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.wisepress.com/exhibitions/bsh17a/printable-pdf');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve39" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">Highlights of ASH in Latin America</h3>
+                    <p style="text-align:justify">Improve patient management and care strategies on Haematology with leading faculty in the field.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Punta del Este, Uruguay</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Highlights/Latin-America.aspx ');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve40" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">2017 European Focus on Myeloproliferative Neoplasms and Myelodysplastic Syndromes</h3>
+                    <p style="text-align:justify">Presentation of cutting-edge research on Myeloproliferative Neoplasms and Myelodysplastic Syndromes.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Prague, Czech Republic</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.imedex.com/myeloproliferative-neoplasms-myelodysplastic-syndromes');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve41" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">EHA Scientific Meeting on Aging and Hematology</h3>
+                    <p style="text-align:justify">Topics related to pathophyisology of aging, age-related molecular changes,aging of the hematopoeitic stem cell etc.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">To be confirmed</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/scientific-events/eha-swg-scientific-meetings/eha-swg-scientific-meeting-on-aging-and-hematology');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve42" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">22nd Congress of the European Hematology Association</h3>
+                    <p style="text-align:justify">Opportunity to attend satellite programs, Updates-in-Hematology and to visit the exhibition organized by pharmaceutical companies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Madrid, Spain</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/22nd-congress/key-information');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve43" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">2017 ASH Meeting on Hematologic Malignancies</h3>
+                    <p style="text-align:justify">Evidence-based treatment approaches on Hematologic Malignancies.</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">Chicago, USA</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.hematology.org/Malignancies/ ');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve44" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">EHA Scientific Meeting on Challenges in the diagnosis and management of myeloproliferative neoplasms</h3>
+                    <p style="text-align:justify">Novel therapies for MPN</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">To be confirmed</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/scientific-events/eha-swg-scientific-meetings/eha-swg-scientific-meeting-on-challenges-in-the-diagnosis-and-management-of-myeloproliferative-neoplasms');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+                <div id="eve45" class="eve" style="text-align:justify">
+                    <h3 style="text-align:justify">EHA Scientific Meeting on Shaping the Future of Mesenchymal Stromal Cells Therapy</h3>
+                    <p style="text-align:justify">Illumination on Mesenchymal Stromal Cells</p>
+                    <span class="glyphicon glyphicon-map-marker eventmap"></span><span class="mapcont">To be confirmed</span>
+                    <div class="vmore">
+                        <button type="button" onclick="askConf('http://www.ehaweb.org/congress-and-events/scientific-events/eha-swg-scientific-meetings/eha-swg-scientific-meeting-on-shaping-the-future-of-mesenchymal-stromal-cells-therapy');" class="btn-flat btn-orange btn-ot"> Visit event website</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        </div>
+
+    <div class="row land-footer" style="margin-top:50px;">
+        <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+            <div class="col-md-2  col-sm-4 col-xs-12">
+                <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/terms-use" target="_blank"> Terms of use </a></h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/privacy-policy" target="_blank">Privacy Policy </a></h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15 transition close_menutitle" id="mnu-hm2" data-id="#page-hm" data-animate="2" onclick="$.fn.fullpage.silentMoveTo('mPage2', 1);">Contact us</h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15 transition close_menutitle" id="mnu-hm1" data-id="#page-hm" data-animate="2" onclick="$.fn.fullpage.silentMoveTo('mPage2', 2);">FAQ</h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+                <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+            </div>
+        </div>
+
+
+    </div>
+</div>

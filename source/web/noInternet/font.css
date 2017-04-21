@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'century gothic';
+    src: url('fonts/century gothic.eot');
+    src: local('century gothic'), url('fonts/century gothic.woff') format('woff'), url('fonts/century gothic.ttf') format('truetype');
+}

@@ -1,0 +1,2044 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/case.css">
+    <link rel="stylesheet" href="css/font.css">
+
+    <script src="js/jquery/jquery-1.12.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap/bootstrap.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/custom/init.js"></script>
+    <script type="text/javascript" src="js/custom/opinion.js"></script>
+    <script>
+
+        function ReadSVG(file) {
+            //return true;
+
+            return '<embed type="image/svg+xml" src="'+file+'" style="width:100%;" />';
+            try {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", file, false);
+                xmlhttp.send();
+                return xmlhttp.responseText;
+            }
+            catch (ex) { }
+        }
+
+    </script>
+    
+</head>
+<body class="caseplayer_font">
+    <div class='blockUI'><img src='images/loader.gif'></div>
+    <div id="instruct1" onclick="$(this).hide()" style="display:none;">
+        <img src="images/case/guide_1.png" class="caseguide1" />       
+    </div>
+    <div id="instruct2" onclick="$(this).hide()" style="display:none;">
+        <img src="images/case/guide_2.png" class="caseguide1" />
+    </div>
+    <div id="instruct3" onclick="$(this).hide()" style="display:none;">
+        <img src="images/case/guide_3.png" class="caseguide1" />
+    </div>
+    <div id="instruct4" onclick="$(this).hide()" style="display:none;">
+        <img src="images/case/guide_4.png" class="caseguide1" />
+    </div>
+    <div id="instruct5" onclick="$(this).hide()" style="display:none;">
+        <img src="images/case/guide_5.png" class="caseguide1" />
+    </div>
+    <div id="instruct6" onclick="$(this).hide()" style="display:none;">
+        <img src="images/case/guide_6.png" class="caseguide1" />
+    </div>
+    <!--Scroll top-->
+    <div><a href="javascript:" id="return-to-top"><span class="glyphicon glyphicon-chevron-up movetop"></span></a></div>
+    <!--end-->
+    <div style="" id="case_player_head">
+
+        <div style="width:10%;float:left;"><a  href="index.html?page=page-cs" id="case_playertext"><img style="width: 60px;" src="images/back.png" /></a></div>
+
+        <div id="case_player_header" style="">
+            <table class="casetitle">
+                <tr>
+                    <td style="width:100%;height:100%;">
+                        Nilotinib as the first line agent for CML-CP: Examining the evidence
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div style="height:100%;" class="slide">
+        <div class="col-md-6 col-sm-6 col-xs-6 fullH swiper-year-main caseplayer_font">
+            <div id="swiper-year" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <table class="swiper-table" style="margin:0 ;">
+                            <tr>
+                                <td colspan="5">
+                                    <div class="case-year">
+                                        <span id="case-year1">2014</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="case-year-image">
+                                <td>
+                                    <div style="background:url(images/case/yr_1.png) center no-repeat;background-size:contain;" class="tooltip2">
+                                        <div style="background-color:red;color:white;float:left;text-align:center;" id="year1img1"></div>
+                                        <span class="tooltiptext">Presentation</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="background:url(images/case/yr_2.png) center no-repeat;background-size:contain;" class="tooltip2">
+                                        <div style="background-color:red;color:white;float:left;text-align:center;" id="year1img2"></div>
+                                        <span class="tooltiptext">Event History</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="background:url(images/case/yr_3.png) center no-repeat;background-size:contain;" class="tooltip2">
+                                        <div style="background-color:red;color:white;float:left;text-align:center;" id="year1img3"></div>
+                                        <span class="tooltiptext">Examination</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="background:url(images/case/yr_4.png) center no-repeat;background-size:contain;" class="tooltip2">
+                                        <div style="background-color:red;color:white;float:left;text-align:center;" id="year1img4"></div>
+                                        <span class="tooltiptext">Laboratory Finding</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="background:url(images/case/yr_5.png) center no-repeat;background-size:contain;" class="tooltip2">
+                                        <div style="background-color:red;color:white;float:left;text-align:center;" id="year1img5"></div>
+                                        <span class="tooltiptext">Management</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+                <div id="swiper-year-select-box">
+
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 fullH swiper-month-main caseplayer_font">
+
+            <div id="swiper-month" class="swiper-container">
+                <div class="swiper-wrapper" id="month_data">
+
+
+
+                </div>
+                <div id="swiper-month-select-box">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="fullhw caseContainer slide" style="display:none;">
+        <div id="leftMain">
+            <div class="leftMainInner">
+                <div class="caseYear" id="toggleSlider2" onclick="toggleSlider2();">
+                    <span id="caseYearFixed"><br /></span>
+                </div>
+                <div class="vLineCont">
+                    <div class="vLine">
+                    </div>
+                    <div id="circle1" class="vCircle" onclick="circle1();">
+                        <div id="cMonth1" class="vmonth" onclick="circle1();">04 FEB</div>
+                    </div>
+                    <div id="circle2" class="vCircle" >
+                        <div id="cMonth2" class="vmonth" >07 MAY</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="scrollMain">
+            <div class="caseYearAnim">
+                <div class="animateYear">
+                    2014
+                </div>
+            </div>
+
+            <div style="width:100%;height:auto;">
+                <div data-value="04 FEB" data-next="07 MAY" class="chatWindow window1" style="float:left;">
+                    <div class="caseCont">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 scrollwrapper-child1 childscroll" style="padding:0 0% 15% 0%; float:left;">
+                            <div style="min-height:100%;width:100%;color:white;overflow-y:auto;" id="month1_logo1">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Presenting complaint</h2>
+                                    <div style="width:100%;">
+                                        <!--<img src="images/SVG/f1.svg" />-->
+                                        <script type="text/javascript">
+                                            document.write(ReadSVG('images/SVG/f1.svg'));
+                                        </script>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div style="min-height:100%;width:100%;color:white;overflow-y:auto;" id="month1_logo2">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Relevant history</h2>
+                                    <br />
+                                    <div style="width:100%;">
+                                        <!--<img src="images/SVG/f2.svg" />-->
+                                        <script type="text/javascript">
+                                            document.write(ReadSVG('images/SVG/f2.svg'));
+                                        </script>
+                                    </div>
+                                    <!--<p class="innertext">
+                                        He has no history of diabetes, hypertension or any other cardiovascular disease.<br />
+                                        He has no history of any thyroid disorders.<br />
+                                        He has no history of any previous malignancy
+                                    </p>-->
+                                </div>
+
+                            </div>
+                            <div style="min-height:100%;width:100%;color:white;overflow-y:auto;" id="month1_logo3">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Examination</h2>
+                                    <br />
+                                    <div style="width:100%;">
+                                        <!--<script type="text/javascript">
+                                            document.write(ReadSVG('images/SVG/f3.svg'));
+                                        </script>-->
+
+                                        <!--<img src="images/SVG/f3.svg" />-->
+
+                                    </div>
+                                    <ul class="innertext">
+                                        <li>Temperature: 37.1°C</li>
+                                        <li>Pulse: 70 beats/min</li>
+                                        <li>Respiration: 16 respirations/min</li>
+                                        <li>Blood Pressure: 134/86 mm Hg</li>
+                                        <li>Weight: 79 kg</li>
+                                        <li>Height: 1 meter 75 cm</li>
+                                        <li>Enlarged spleen, 3 finger breadths below the left costal margin</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <div style="min-height:100%;width:100%;color:white;overflow-y:auto;" id="month1_logo4">
+
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Lab results</h2>
+                                    <br />
+                                    <div>
+                                        <!--<script type="text/javascript">
+                                            document.write(ReadSVG('images/SVG/f33.svg'));
+                                        </script>-->
+                                        <!--<img src="images/SVG/f33.svg" />-->
+                                    </div>
+                                    <ul class="innertext">
+                                        <li>CBC reveals a WBC of 52,000 cells/uL, with a left shift.</li>
+                                        <li>Hemoglobin: 9.4gm/dL.</li>
+                                        <li>Platelet count: 380000/uL.</li>
+                                        <li>Leukocyte alkaline phosphatase score: 16.</li>
+                                        <li>Blasts, promyelocytes, myelocytes, eosinophils and increased basophils present</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2 style="text-align:center;">Bone marrow analysis</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/F3_bone.svg'));
+                                            </script>
+                                            <!--<img src="images/SVG/F3_bone.svg" />-->
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2 style="text-align:center;">Diagnosis</h2>
+                                    <div style="width:100%;">
+                                        <script type="text/javascript">
+                                            document.write(ReadSVG('images/SVG/F4_diagnosis.svg'));
+                                        </script>
+                                        <!--<img src="images/SVG/F4_diagnosis.svg" />-->
+                                    </div>
+                                   
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2 style="text-align:center;">CML - Epidemiology</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <b style="font-size:25px">In the US</b>
+                                        <ul style="" class="innertext">
+                                            <li>CML accounts for 0.4% of all new cancers</li>
+                                            <li>Annually there are 6660 new cases of CML which account for 12.3% of all leukaemia cases</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Phases of CML</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                       
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f5_phases_cml.svg'));
+                                            </script>
+
+                                            <!--<img src="images/SVG/f5_phases_cml.svg" />-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Treatment goals</h2>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f6_treatment_g.svg'));
+                                            </script>
+
+                                            <!--<img src="images/SVG/f6_treatment_g.svg" />-->
+                                        </div>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Treatment options for CP CML</h2>
+                             
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f7_treatment_option.svg'));
+                                            </script>
+                                            <!--<img src="images/SVG/treatment_option_f7.svg" />-->
+                                        </div>
+                                        <!--<img src="images/case/cp2.png" style="width:100%;" />-->
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f8_treatment_option2.svg'));
+                                            </script>
+                                            <!--<img src="images/SVG/treatment_option2_f8.svg" />-->
+                                        </div>
+                                        <!--<img src="images/case/cp3.png" style="width:100%;" />-->
+                                    </div>
+
+
+                                    <!--end-->
+
+                                </div>
+
+                            </div>
+
+                            <div style="min-height:100%;width:100%;color:white;overflow-y:auto;" id="month1_logo5">
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Management</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;text-align: center;">
+                                                <tr>
+                                                    <td><h3>Treatment started with nilotinib 300 mg BD</h3></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Nilotinib</h2>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;text-align: center;">
+                                                <tr>
+                                                    <td><h3 style="padding:2px;">Potent inhibitor of the Abl kinase structurally similar to imatinib</h3></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;text-align: center;">
+                                                <tr>
+                                                    <td><h3 style="padding:2px;">About 30 times more potent in vitro than imatinib against wild-type BCR-ABL</h3></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;text-align: center;">
+                                                <tr>
+                                                    <td><h3 style="padding:2px;">Active against most imatinib-resistant BCR-ABL KD mutants, except T315I</h3></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;text-align: center;">
+                                                <tr>
+                                                    <td><h1 style="padding:2px;">WHY NILOTINIB?</h1></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <br/>
+                                    <h2>ENESTnd – Pivotal Phase 3, Randomized; Open-label Multi-centre Study</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f9_ENESTnd_phase3.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <!--end-->
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENESTnd – Early Molecular Response (EMR) at 3 months</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">                                        
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f10_ENESTnd3_EMR_at3.svg'));
+                                            </script>
+                                        </div>
+                                    </div>                                   
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENESTnd 6-yr Update – Rate of MR<sup>4.5</sup>based on 3-month BCR-ABL Levels<sup>a</sup></h2>                                    
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f11_ENESTnd_6yr.svg'));
+                                            </script>
+                                        </div>                                        
+                                    </div>                                                                       
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENESTnd – Response to treatment at 12 months</h2>
+                                    
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f12_ENESTnd_at12.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+                                   
+                                  
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Response rates with nilotinib as first-line for CML CP</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f13_Response_rate.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+
+                                   
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Indirect Comparison Analysis – ENESTnd and DASISION</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div>
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f14_indirect_compare.svg'));
+                                            </script>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Indirect Comparison Analysis of MMR at 12 months – ENESTnd and DASISION</h2>
+                                    
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f15_indirect_comp_at12.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Indirect Comparison Analysis of MR<sup>4.0</sup> at 12 months – ENESTnd and DASISION</h2>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f16.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Indirect Comparison Analysis of MR<sup>4.5</sup> at 12 months – ENESTnd and DASISION</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f17.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width:100%;height:auto;">
+                <div data-value="07 MAY" data-next="27 NOV" class="chatWindow window2" style="float:left;">
+                    <div class="caseCont">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 scrollwrapper-child2 childscroll" style="float:left;">
+                            <div style="min-height:100%;width:100%;color:white;overflow-y:auto;" id="month2_logo1">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Follow-up visit after 3 months</h2>
+                                    <br>
+                                    <h2>Presentation</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;padding:20px;">
+                                        <table style="width: 100%;height: 100%;text-align: center;">
+                                            <tr>
+                                                <td>Improvement in fatigue</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;padding:20px;">
+                                        <table style="width: 100%;height: 100%;text-align: center;">
+                                            <tr>
+                                                <td>
+                                                    No further loss of weight
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;padding:20px;">
+                                        <table style="width: 100%;height: 100%;text-align: center;">
+                                            <tr>
+                                                <td>
+                                                    No night sweats
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;padding:20px;">
+                                        <table style="width: 100%;height: 100%;text-align: center;">
+                                            <tr>
+                                                <td>
+                                                    No fever
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div style="min-height:0px;width:100%;color:white;overflow-y:auto;" id="month2_logo2">
+                            </div>
+                            <div style="min-height:0px;width:100%;color:white;overflow-y:auto;" id="month2_logo3">
+                            </div>
+                            <div style="min-height:100%;width:100%;color:white;overflow-y:auto;" id="month2_logo4">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Investigations</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <ul>
+                                            <li>
+                                                WBC count 22000/uL
+                                            </li>
+                                            <li>
+                                                5% basophils
+                                            </li>
+                                            <li>
+                                                Platelet count 400000/uL
+                                            </li>
+                                            <li>
+                                                Spleen size reduced
+                                            </li>
+                                            <li>
+                                                No immature granulocytes in peripheral blood
+                                            </li>
+                                            <li>
+                                                BCR-ABL<sup>IS</sup> 10%
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;padding:20px;">
+                                        <table style="width: 100%;height: 100%;text-align: center;">
+                                            <tr>
+                                                <td>
+                                                    <h3>Defining and Monitoring Treatment Response</h3>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading" style="padding:2% !important;">
+                                    <h2>Response to first-line TKI treatment</h2>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f18_response_1stline.svg'));
+                                            </script>
+                                        </div>                                        
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Molecular monitoring of response to TKI treatment</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f19_molecular_monitor.svg'));
+                                            </script>
+                                        </div>                                       
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div style="min-height:0px;width:100%;color:white;overflow-y:auto;" id="month2_logo5">
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <!--<div class="caseYearAnim">
+                <div class="animateYear">
+                    2016
+                </div>
+            </div>-->
+            <div style="width:100%;height:auto;" class="last_content">
+                <div data-value="27 NOV" data-next="" class="chatWindow window3" style="float:left;">
+                    <div class="caseCont">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 scrollwrapper-child3 childscroll" style="padding:0 0% 15% 0%;float:left;">
+                            <div style="min-height:100%;width:100%;color:white;overflow-y:auto;" id="month3_logo1">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Presentation</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;padding:20px;">
+                                        <table style="width: 100%;height: 100%;text-align: center;">
+                                            <tr>
+                                                <td>Improvement in fatigue</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;padding:20px;">
+                                        <table style="width: 100%;height: 100%;text-align: center;">
+                                            <tr>
+                                                <td>
+                                                    Improvement in weight
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;padding:20px;">
+                                        <table style="width: 100%;height: 100%;text-align: center;">
+                                            <tr>
+                                                <td>
+                                                    No night sweats
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;padding:20px;">
+                                        <table style="width: 100%;height: 100%;text-align: center;">
+                                            <tr>
+                                                <td>
+                                                    No fever
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div style="min-height:0px;width:100%;color:white;overflow-y:auto;" id="month3_logo2">
+                            </div>
+                            <div style="min-height:0px;width:100%;color:white;overflow-y:auto;" id="month3_logo3">
+                            </div>
+                            <div style="min-height:100%;width:100%;color:white;overflow-y:auto;" id="month3_logo4">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>Investigations</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <ul>
+                                            <li>WBC count 9000/uL,</li>
+                                            <li>
+                                                < 5% basophils,
+                                            </li>
+                                            <li>
+                                                Platelet count 300000/uL,
+                                            </li>
+                                            <li>
+                                                Spleen size reduced
+                                            </li>
+                                            <li>
+                                                No immature granulocytes in peripheral blood
+                                            </li>
+                                            <li>                                                
+                                                BCR-ABL<sup>IS</sup> 1%
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext" style="border-radius:10px;background-color:#c3c3c3;color:black;max-height:200px;min-height:50px;padding:20px;">
+                                        <table style="width: 100%;height: 100%;text-align: center;">
+                                            <tr>
+                                                <td><h3>Patient continued on nilotinib</h3></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENESTnd – Response at 24 months</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f20a_ENESTnd_MMRat24.svg'));
+                                            </script>
+                                        </div>
+                                            <!--<img src="images/SVG/f20a_ENESTnd_MMRat24.svg" />-->
+                                        </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <!--<img src="images/SVG/f20_b_MR4at24.svg" />-->
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f20_b_MR4at24.svg'));
+                                            </script>
+                                        </div>
+
+                                        </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">  
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f20_c_CCyR.svg'));
+                                            </script>
+                                        </div>
+                                        </div>
+                                </div>
+
+
+                                
+                               
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  heading">
+                                    <h2>ENEST1st – Response rate at 2 years on treatment</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f21_a_ENEST1stat2years.svg'));
+                                            </script>
+                                        </div>
+                                    </div>                                    
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                    <h2>ENEST1st – Response rate at 2 years on treatment</h2>
+                                  
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f21_b_ENEST1stat2year.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENEST1st – Safety at 2 years on Treatment</h2>
+                                  
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f22_aENESt1st_at2year_on_treatment.svg'));
+                                            </script>
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f22_b.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="border-radius:10px;background-color:#c3c3c3;color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;text-align: center;">
+                                                <tr>
+                                                    <td><h1 style="padding:2px;">Long-term  Nilotinib Data</h1></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENESTnd 6-yr Update – Cumulative Incidence of Major Molecular Response (MMR)</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f23_ENESTnd_6yr_Update.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENESTnd 6-yr Update – Cumulative Incidence of MR<sup>4.5</sup></h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f24_ENEStnd_6yrupdate_cumulative.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENESTnd 6-yr Update – Progression to AP/BC</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f25_progress_AP_BC.svg'));
+                                            </script>
+                                        </div>
+
+                                    </div>
+                                   
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENESTnd 6-yr Update – OS and Deaths Due to Advanced CML</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f26_ENESTnd_os_deaths.svg'));
+                                            </script>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENESTnd 6-yr Update – Hematologic, Biochemical and Non-hematologic AEs</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f27_hemato_biochemical.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font heading">
+                                    <h2>ENESTnd 6-yr Update – AEs of Interest (all cause, all grade)</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f28_ENESTnd_AEs_inst_A.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                       
+                                        <div style="width:100%;">
+                                            <script type="text/javascript">
+                                                document.write(ReadSVG('images/SVG/f28_ENESTnd_AEs_inst_B.svg'));
+                                            </script>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  heading">
+                                    <h2>Conclusions</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="background-color:#c3c3c3;border-radius:10px;border:1px solid black; color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;">
+                                                <tr>
+                                                    <td style="padding:10px;">Nilotinib is a potent inhibitor of the ABL kinase structurally similar to Imatinib and 30 times more potent in vitro than imatinib<sup>1</sup></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="background-color:#c3c3c3;border-radius:10px;border:1px solid black; color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;">
+                                                <tr>
+                                                    <td style="padding:10px;">Nilotinib is a TKI recommended for the first line management of CP CML<sup>2</sup></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="background-color:#c3c3c3;border-radius:10px;border:1px solid black; color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;">
+                                                <tr>
+                                                    <td style="padding:10px;">Nilotinib allows for earlier achievement of deeper molecular responses<sup>3</sup></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="background-color:#c3c3c3;border-radius:10px;border:1px solid black; color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;">
+                                                <tr>
+                                                    <td style="padding:10px;">In ENESTnd trial, Nilotinib was associated with significantly less progressions to AP/BC compared to Imatinib<sup>4</sup></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font innertext">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 present_font" style="background-color:#c3c3c3;border-radius:10px;border:1px solid black; color:black;min-height:50px;">
+                                            <table style="width: 100%;height: 100%;">
+                                                <tr>
+                                                    <td style="padding:10px;">With 6 years of follow-up, results from ENESTnd continue to support use of frontline Nilotinib 300 mg BID as a standard of care for patients with newly diagnosed Ph+ CML-CP  with a safety profile that remained consistent with previous reports<sup>4</sup></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                        <ol style="text-align:left;">
+                                            <li class="reference">
+                                                Cortes JE, et al. J Clin Oncol. 2010;28(3):392-397.
+                                            </li>
+                                            <li class="reference">
+                                                Baccarani M, et al. Blood. 2013;122(6):872-884.
+                                            </li>
+                                            <li class="reference">
+                                                Hughes TP, et al. Blood. 2014;123(9):1353-1360.
+                                            </li>
+                                            <li class="reference">
+                                                Larson RA, et al. ASH 2014;Poster
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="min-height:0px;width:100%;color:white;overflow-y:auto;" id="month3_logo5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class=" iconlist" style=" ">
+            <div style="display: table-cell; vertical-align: middle">
+                <ul class="month_icons">
+                    <li>
+                        <img src="images/case/m_1.png" class="month1logo1 set_bright mlogo" />
+                        <br />
+                        <div style="color:white;width:90px;font-size:11px;margin: auto;">PRESENTATION</div>
+                    </li>
+
+
+                    <li>
+                        <img src="images/case/m_2.png" class="month1logo2 set_bright mlogo" />
+                        <br />
+                        <div style="color:white;width:90px;font-size:11px;margin: auto;">EVENT HISTORY</div>
+                    </li>
+
+                    <li>
+                        <img src="images/case/m_3.png" class="month1logo3 set_bright mlogo" />
+                        <br />
+                        <div style="color:white;width:90px;font-size:11px;margin: auto;">EXAMINATION</div>
+                    </li>
+
+                    <li>
+                        <img src="images/case/m_4.png" class="month1logo4 set_bright mlogo" />
+                        <br />
+                        <div style="color:white;width:90px;font-size:11px;margin: auto;">LABORATORY FINDING</div>
+                    </li>
+
+                    <li>
+                        <img src="images/case/m_5.png" class="month1logo5 set_bright mlogo" />
+                        <br />
+                        <div style="color:white;width:90px;font-size:11px;margin: auto;">MANAGEMENT</div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script src="js/jquery-bubble-text.min.js" type="text/javascript"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/localStorage/storageCore.js"></script>
+    <script>
+        var swiperY = new Swiper('#swiper-year', {
+            slidesPerView: 3,
+            speed: 600,
+            centeredSlides: true,
+            direction: 'vertical',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            onSlideChangeEnd: function (swiper, currentClassName) {
+                activeYr(swiper.activeIndex);
+            }
+        });
+
+        var activeSwiperMonth = 0;
+
+        function loadMonth() {
+            var swiperM = new Swiper('#swiper-month', {
+                slidesPerView: 5,
+                speed: 800,
+                centeredSlides: true,
+                direction: 'vertical',
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                onSlideChangeEnd: function (swiper, currentClassName) {
+                    activeSwiperMonth = swiper.activeIndex;
+                }, breakpoints: {
+                    
+                    760: {
+                        slidesPerView: 3
+                    },
+                    
+                }
+
+
+            });
+        }
+
+
+        window.onload = function () {
+            var Yheight = $(document).height() / 3;
+            var Ymtop = -Yheight / 2;
+
+            $("#swiper-year-select-box").css("height", Yheight + "px");
+            $("#swiper-year-select-box").css("margin-top", Ymtop + "px");
+
+            var Mheight = $(document).height() / 5;
+            var Mmtop = -Mheight / 2;
+
+            $("#swiper-month-select-box").css("height", Mheight + "px");
+            $("#swiper-month-select-box").css("margin-top", Mmtop + "px");
+            loadMonth();
+            $("body").find(".blockUI").fadeOut("slow").delay(1000);
+        }
+
+
+
+        var MonthDetails = new Array();
+        var year = JSON.parse('{ "2014": [ { "month": "February", "presentation": 1, "history": 1, "examination": 1, "labfindings": 10, "management": 13 },{ "month": "May", "presentation": 1, "history": 0, "examination": 0, "labfindings": 4, "management": 0 },{ "month": "November", "presentation": 1, "history": 0, "examination": 0, "labfindings": 16, "management": 0 }], "2015": [{ "month": "January", "presentation": 1, "history": 2, "examination": 3, "labfindings": 4, "management": 5 }, { "month": "February", "presentation": 1, "history": 2, "examination": 3, "labfindings": 4, "management": 5 },{ "month": "March", "presentation": 0, "history": 0, "examination": 0, "labfindings": 0, "management": 0 },{ "month": "April", "presentation": 0, "history": 0, "examination": 0, "labfindings": 0, "management": 0 },{ "month": "May", "presentation": 1, "history": 2, "examination": 3, "labfindings": 4, "management": 5 },{ "month": "June", "presentation": 1, "history": 2, "examination": 3, "labfindings": 4, "management": 5 },{ "month": "July", "presentation": 0, "history": 0, "examination": 0, "labfindings": 0, "management": 0 },{ "month": "August", "presentation": 0, "history": 0, "examination": 0, "labfindings": 0, "management": 0 },{ "month": "September", "presentation": 1, "history": 2, "examination": 3, "labfindings": 4, "management": 5 },{ "month": "October", "presentation": 1, "history": 2, "examination": 3, "labfindings": 4, "management": 5 },{ "month": "November", "presentation": 1, "history": 2, "examination": 3, "labfindings": 4, "management": 5 },{ "month": "December", "presentation": 1, "history": 2, "examination": 3, "labfindings": 4, "management": 5 }], "2016": [{ "month": "January", "presentation": 0, "history": 0, "examination": 0, "labfindings": 0, "management": 0 }, { "month": "February", "presentation": 0, "history": 0, "examination": 0, "labfindings": 0, "management": 0 },{ "month": "March", "presentation": 1, "history": 0, "examination": 0, "labfindings": 0, "management": 0 },{ "month": "April", "presentation": 1, "history": 0, "examination": 0, "labfindings": 2, "management": 1 },{ "month": "May", "presentation": 0, "history": 0, "examination": 0, "labfindings": 0, "management": 0 },{ "month": "June", "presentation": 1, "history": 2, "examination": 0, "labfindings": 0, "management": 0 },{ "month": "July", "presentation": 1, "history": 0, "examination": 3, "labfindings": 4, "management": 5 },{ "month": "August", "presentation": 1, "history": 2, "examination": 0, "labfindings": 0, "management": 0 },{ "month": "September", "presentation": 1, "history": 0, "examination": 0, "labfindings": 0, "management": 0 },{ "month": "October", "presentation": 1, "history": 8, "examination": 3, "labfindings": 4, "management": 5 },{ "month": "November", "presentation": 1, "history": 2, "examination": 3, "labfindings": 4, "management": 5 },{ "month": "December", "presentation": 1, "history": 2, "examination": 3, "labfindings": 4, "management": 5 }] }');
+        var data = new Array();
+        data[0] = year["2014"];
+        data[1] = year["2015"];
+        data[2] = year["2016"];
+
+        var month_list = "";
+
+        function activeYr(obj) {
+            month_list = "";
+
+            MonthDetails = data[obj];
+            for (i = 0; i < MonthDetails.length; i++) {
+
+                if (MonthDetails[i].presentation == 0 && MonthDetails[i].history == 0 && MonthDetails[i].examination == 0 && MonthDetails[i].labfindings == 0 && MonthDetails[i].management == 0) {
+
+                }
+                else if (MonthDetails[i].presentation != 0 || MonthDetails[i].history != 0 || MonthDetails[i].examination != 0 || MonthDetails[i].labfindings != 0 || MonthDetails[i].management != 0) {
+
+                    month_list += '<div class="swiper-slide col-lg-12 col-md-12 col-sm-12 col-xs-12">' +
+                         '<table class=" swiper-table" id="month' + i + '">' +
+                             '<tr>' +
+                                 '<td colspan="5">' +
+                                     '<div class="case-month">' +
+                                         '<span>' + MonthDetails[i].month + '</span>' +
+                                     '</div>' +
+                                 '</td>' +
+                             '</tr>' +
+                            '<tr class="case-month-image">' +
+                                '<td>' +
+                                    '<div class="month-badge-cont tooltip"  style="background:url(images/case/m1.png) center no-repeat;background-size:contain;" id="month' + i + 'logo1">' +
+                                       '<div class="month-badge" id="month' + i + 'img1">' + MonthDetails[i].presentation + '</div>' +
+                                       '<span class="tooltiptext">' + "Presentation" + '</span>' +
+                                    '</div>' +
+                                '</td>' +
+                                 '<td>' +
+                                    '<div class="month-badge-cont tooltip" style="background:url(images/case/m2.png) center no-repeat;background-size:contain;" id="month' + i + 'logo2">' +
+                                       '<div class="month-badge" id="month' + i + 'img2">' + MonthDetails[i].history + '</div>' +
+                                       '<span class="tooltiptext">' + "Event History" + '</span>' +
+                                    '</div>' +
+                                '</td>' +
+                                 '<td>' +
+                                    '<div class="month-badge-cont tooltip"  style="background:url(images/case/m3.png) center no-repeat;background-size:contain;" id="month' + i + 'logo3">' +
+                                       '<div class="month-badge" id="month' + i + 'img3">' + MonthDetails[i].examination + '</div>' +
+                                       '<span class="tooltiptext">' + "Examination" + '</span>' +
+                                    '</div>' +
+                                '</td>' +
+                                 '<td>' +
+                                    '<div class="month-badge-cont tooltip"  style="background:url(images/case/m4.png) center no-repeat;background-size:contain;" id="month' + i + 'logo4">' +
+                                       '<div class="month-badge" id="month' + i + 'img4">' + MonthDetails[i].labfindings + '</div>' +
+                                       '<span class="tooltiptext">' + "Laboratory Finding" + '</span>' +
+                                    '</div>' +
+                                '</td>' +
+                                 '<td>' +
+                                    '<div class="month-badge-cont tooltip"  style="background:url(images/case/m5.png) center no-repeat;background-size:contain;" id="month' + i + 'logo5">' +
+                                       '<div class="month-badge" id="month' + i + 'img5">' + MonthDetails[i].management + '</div>' +
+                                       '<span class="tooltiptext">' + "Management" + '</span>' +
+                                    '</div>' +
+                                '</td>' +
+                             '</tr>' +
+                         '</table>' +
+                     '</div>';
+                }
+            }
+            $("#month_data").html(month_list);
+            loadMonth();
+
+            for (i = 0; i < MonthDetails.length; i++) {
+                if (MonthDetails[i].presentation == 0) {
+                    $("#month" + i + "img1").css("display", "none");
+                    $("#month" + i + "logo1").css("opacity", "0.5");
+                }
+                if (MonthDetails[i].history == 0) {
+                    $("#month" + i + "img2").css("display", "none");
+                    $("#month" + i + "logo2").css("opacity", "0.5");
+                }
+                if (MonthDetails[i].examination == 0) {
+                    $("#month" + i + "img3").css("display", "none");
+                    $("#month" + i + "logo3").css("opacity", "0.5");
+                }
+                if (MonthDetails[i].labfindings == 0) {
+                    $("#month" + i + "img4").css("display", "none");
+                    $("#month" + i + "logo4").css("opacity", "0.5");
+                }
+                if (MonthDetails[i].management == 0) {
+                    $("#month" + i + "img5").css("display", "none");
+                    $("#month" + i + "logo5").css("opacity", "0.5");
+                }
+
+
+            }
+
+
+            var prsentation = 0;
+            var history = 0;
+            var exam = 0;
+            var lab = 0;
+            var manage = 0;
+
+            var yrpics = 1;
+
+            var yearTotaldocs = "";
+            for (i = 0; i < yrpics; i++) {
+                yearTotaldocs = data[i];
+                prsentation = 0;
+                history = 0;
+                exam = 0;
+                lab = 0;
+                manage = 0;
+                for (j = 0; j < yearTotaldocs.length; j++) {
+                    prsentation = prsentation + yearTotaldocs[j].presentation;
+                    history = history + yearTotaldocs[j].history;
+                    exam = exam + yearTotaldocs[j].examination;
+                    lab = lab + yearTotaldocs[j].labfindings;
+                    manage = manage + yearTotaldocs[j].management;
+                }
+                $("#year" + yrpics + "img1").html(prsentation);
+                $("#year" + yrpics + "img2").html(history);
+                $("#year" + yrpics + "img3").html(exam);
+                $("#year" + yrpics + "img4").html(lab);
+                $("#year" + yrpics + "img5").html(manage);
+                if (yrpics < 3) {
+                    yrpics++;
+                }
+
+            }
+
+        }
+
+        $(document).ready(function () {
+            activeYr(0);            
+            $(".month1logo1").attr("src", "images/case/m_1o.png");            
+        });
+
+        /*slide function*/
+
+        var toggleButton = document.getElementById('swiper-month');
+        var slide = document.querySelector('.slide');
+
+        /*Inner section */
+        /*inner div detection*/
+              
+        /*Case player back button*/
+        var inside = 0;
+        $(document.body).on('click', '#swiper-month .swiper-slide-active', function () {
+            blockUI("body");
+            window.setTimeout(function () {
+                try {
+                    if (slide.classList.contains('slide-up')) {
+                        slide.classList.remove('slide-up');
+                    } else {
+                        slide.classList.add('slide-up');
+                        $(".caseContainer").addClass("slide");
+                        $(".caseContainer").css("display", "block");
+                        setTimeout(function () { $(".slide-up").css("display", "none"); }, 700);
+                    }
+
+                    inside++;
+                    var Case = location.pathname;
+                    var name = Case.split("/").pop();
+                    if (name == "case1.html" || "index.html") {
+                        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $("#case_playertext").attr('href') == 'index.html?page=page-cs') {
+                            $("#case_player_head").css("display", "none");
+                        }
+                        else {
+                            $("#case_player_head").css("display", "block");
+                        }
+
+                        $("#case_playertext").attr('href', '');
+                        $("#case_playertext").attr('href', Case);
+                    }
+
+                    window.setTimeout(function () {
+                        var $container = $("#scrollMain");
+                        var $scrollTo = $('.window' + (activeSwiperMonth + 1));
+                        $container.animate({ scrollTop: $scrollTo.position().top - 85, scrollLeft: 0 }, 300);
+                        window.setTimeout(function () {
+                            unblockUI("body");
+                        }, 1500);
+                    }, 1000);
+                }
+                catch (e) {
+                    unblockUI("body");
+                }
+            }, 500);
+        });
+
+
+        $("#case_playertext").on('click', function () {
+            if (inside == 1) {
+                var Case = $('#case_playertext').attr('href');
+                var name = Case.split("/").pop();
+                if (name == "case1.html") {
+                   
+                    $("#case_player_head").css("display", "block");
+
+                    location.pathname = Case;
+                }
+            }
+           
+        });
+
+        /*end*/
+
+        /*content indication icons*/
+        var month1 = "";
+        $(".month1logo1").on('click', function () {
+            month1 = document.getElementById("cMonth1").innerHTML;
+            scrollinner(month1,1);
+            
+        });
+        $(".month1logo2").on('click', function () {
+            month1 = document.getElementById("cMonth1").innerHTML;
+            scrollinner(month1,2);
+           
+        });
+        $(".month1logo3").on('click', function () {
+            month1 = document.getElementById("cMonth1").innerHTML;
+            scrollinner(month1,3);
+           
+        });
+        $(".month1logo4").on('click', function () {
+            month1 = document.getElementById("cMonth1").innerHTML;
+            scrollinner(month1,4);
+           
+        });
+        $(".month1logo5").on('click', function () {
+            month1 = document.getElementById("cMonth1").innerHTML;
+            scrollinner(month1,5);
+            
+        });
+        /*end*/
+
+        function scrollinner(obj,value) {
+            if (obj == "04 FEB") {
+                if (value == 1) {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('#month1_logo1');
+                    
+                    $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 300);
+                    
+                }
+                if (value == 2) {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('#month1_logo2');
+                   
+                    $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 300);
+                   
+                }
+                if (value == 3) {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('#month1_logo3');
+                   
+                    $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 300);
+                   
+                }
+                if (value == 4) {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('#month1_logo4');
+                    
+                    $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 300);
+                    
+                }
+                if (value == 5) {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('#month1_logo5');
+                    
+                    $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 300);
+                   
+                }
+            }
+
+            if (obj == "07 MAY") {
+                if (value == 1) {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('#month2_logo1');
+                   
+                    $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 300);
+                   
+                }            
+                if (value == 4) {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('#month2_logo4');
+                    
+                    $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 300);
+                    
+                }               
+            }
+
+            if (obj == "27 NOV") {
+                if (value == 1) {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('#month3_logo1');                   
+                   
+                    $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 300);
+                                      
+                }               
+                if (value == 4) {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('#month3_logo4');
+                    
+                    $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 300);
+                  
+                }               
+            }            
+
+        }
+     
+
+        $("#scrollMain").on('scroll', function () {
+
+            for (j = 1; j < 4; j++) {
+                var difference1 = $("#month" + j + "_logo1").offset().top - $("#scrollMain").offset().top;
+
+                var htmlstring = document.getElementById("month" + j + "_logo1").innerHTML;
+                htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/, '');
+
+                var month1l5_inner = document.getElementById("month1_logo5").innerHTML;
+                month1l5_inner = (month1l5_inner.trim) ? month1l5_inner.trim() : month1l5_inner.replace(/^\s+/, '');
+
+                var month_2_l4inner = document.getElementById("month2_logo4").innerHTML;
+                month_2_l4inner = (month_2_l4inner.trim) ? month_2_l4inner.trim() : month_2_l4inner.replace(/^\s+/, '');
+
+
+                setTimeout(function () { 
+                    var month1 = document.getElementById("cMonth1").innerHTML;
+
+                    if (month1 == "07 MAY" || month1 == "27 NOV") {
+
+
+                        $(".month1logo2").removeClass("content_logo");
+                        $(".month1logo2").removeClass("set_bright");
+                        $(".month1logo2").addClass("content_logo");
+
+                        $(".month1logo3").removeClass("content_logo");
+                        $(".month1logo3").removeClass("set_bright");
+                        $(".month1logo3").addClass("content_logo");
+
+                        $(".month1logo5").removeClass("content_logo");
+                        $(".month1logo5").removeClass("set_bright");
+                        $(".month1logo5").addClass("content_logo");
+
+                    }
+                    else if (month1 == "04 FEB" ) {
+
+                        $(".month1logo2").removeClass("content_logo");
+                        $(".month1logo2").removeClass("set_bright");
+                        $(".month1logo2").addClass("set_bright");
+
+                        $(".month1logo3").removeClass("content_logo");
+                        $(".month1logo3").removeClass("set_bright");
+                        $(".month1logo3").addClass("set_bright");
+
+                        $(".month1logo5").removeClass("content_logo");
+                        $(".month1logo5").removeClass("set_bright");
+                        $(".month1logo5").addClass("set_bright");
+
+                    }
+
+                }, 2100);
+               
+
+                if (difference1 <= 100 && difference1 > -200 && htmlstring != '') {
+                   
+                    $(".month1logo1").attr("src", "images/case/m_1o.png");
+
+                   
+                    $(".month1logo2").attr("src", "images/case/m_2.png");
+
+                 
+                    $(".month1logo4").attr("src", "images/case/m_4.png");
+
+                  
+                    $(".month1logo3").attr("src", "images/case/m_3.png");
+
+                   
+                    $(".month1logo5").attr("src", "images/case/m_5.png");
+                }
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    if (difference1 > 300 && difference1 < 700 && (("month" + j + "_logo1") == "month2_logo1") && month1l5_inner != '') {
+                       
+                        $(".month1logo1").attr("src", "images/case/m_1.png");
+
+                        
+                        $(".month1logo5").attr("src", "images/case/m_5o.png");
+
+
+                    }
+                }
+                else if (difference1 > 550 && difference1< 900 && (("month" + j + "_logo1")=="month2_logo1") && month1l5_inner != '') {
+                    //$(".month1logo1").removeClass("content_logo");
+                    //$(".month1logo1").removeClass("set_bright");
+                    //$(".month1logo1").addClass("set_bright");
+                    $(".month1logo1").attr("src", "images/case/m_1.png");
+
+                    //$(".month1logo5").removeClass("content_logo");
+                    //$(".month1logo5").removeClass("set_bright");
+                    //$(".month1logo5").addClass("set_bright");
+                    $(".month1logo5").attr("src", "images/case/m_5o.png");
+                   
+                   
+                }
+                if (difference1 > 500 && difference1 < 900 && (("month" + j + "_logo1") == "month3_logo1") && month_2_l4inner != '') {
+                  
+                    $(".month1logo1").attr("src", "images/case/m_1.png");
+
+
+                    $(".month1logo4").removeClass("content_logo");
+                    $(".month1logo4").removeClass("set_bright");
+                    $(".month1logo4").addClass("set_bright");
+                    $(".month1logo4").attr("src", "images/case/m_4o.png");
+                }
+
+                else {
+
+                    if (htmlstring == '' && ("month" + j + "_logo1" == "month1_logo1")) {                        
+                        $(".month1logo1").attr("src", "images/case/m_1.png");
+                    }
+
+
+
+                }
+
+                var difference2 = $("#month" + j + "_logo2").offset().top - $("#scrollMain").offset().top;
+
+                var htmlstring = document.getElementById("month" + j + "_logo2").innerHTML;
+                htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/, '');
+
+                if (difference2 <= 100 && difference2 > -200 && htmlstring != '') {                   
+                    $(".month1logo2").attr("src", "images/case/m_2o.png");
+
+                  
+                    $(".month1logo1").attr("src", "images/case/m_1.png");
+                    
+                    $(".month1logo4").attr("src", "images/case/m_4.png");
+
+                   
+                    $(".month1logo3").attr("src", "images/case/m_3.png");
+
+                    
+                    $(".month1logo5").attr("src", "images/case/m_5.png");
+                }
+
+                if (difference2 > 100 && difference2 < 500 && htmlstring != '') {
+                    //$(".month1logo2").removeClass("content_logo");
+                    //$(".month1logo2").removeClass("set_bright");
+                    //$(".month1logo2").addClass("content_logo");
+
+
+                    //$(".month" + j + "logo1").removeClass("content_logo");
+                    //$(".month" + j + "logo1").removeClass("set_bright");
+                    //$(".month" + j + "logo1").addClass("set_bright");
+                }
+
+                else {
+                    if (htmlstring == '' && ("month" + j + "_logo2" == "month1_logo2")) {
+                        
+                        $(".month1logo2").attr("src", "images/case/m_2.png");
+                    }
+
+                }
+
+                var difference3 = $("#month" + j + "_logo3").offset().top - $("#scrollMain").offset().top;
+
+                var htmlstring = document.getElementById("month" + j + "_logo3").innerHTML;
+                htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/, '');
+
+                if (difference3 <= 100 && difference3 > -200 && htmlstring != '') {
+                   
+                    $(".month1logo3").attr("src", "images/case/m_3o.png");
+
+
+                    
+                    $(".month1logo1").attr("src", "images/case/m_1.png");
+
+                   
+                    $(".month1logo4").attr("src", "images/case/m_4.png");
+
+                  
+                    $(".month1logo2").attr("src", "images/case/m_2.png");
+
+                  
+                    $(".month1logo5").attr("src", "images/case/m_5.png");
+
+
+                }
+                if (difference3 > 500  && htmlstring != '') {
+                    //if ("#month" + j + "_logo3" != "#month3_logo3" || "#month" + j + "_logo3" != "#month2_logo3") {
+
+                    //$(".month1logo3").removeClass("content_logo");
+                    //$(".month1logo3").removeClass("set_bright");
+                    //$(".month1logo3").addClass("content_logo");
+
+                    //$(".month" + j + "logo2").removeClass("content_logo");
+                    //$(".month" + j + "logo2").removeClass("set_bright");
+                    //$(".month" + j + "logo2").addClass("set_bright");
+                    //}
+
+                }
+
+                else {
+                    if (htmlstring == '' && ("month" + j + "_logo3" =="month1_logo3")) {
+                        
+                        $(".month1logo3").attr("src", "images/case/m_3.png");
+                    }
+
+                }
+
+
+
+                var difference4 = $("#month" + j + "_logo4").offset().top - $("#scrollMain").offset().top;
+
+                var htmlstring = document.getElementById("month" + j + "_logo4").innerHTML;
+                htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/, '');
+
+
+
+                if (difference4 <= 100 && difference4 > -200 && htmlstring != '') {
+                   
+                    $(".month1logo4").attr("src", "images/case/m_4o.png");
+
+
+                 
+                    $(".month1logo1").attr("src", "images/case/m_1.png");
+
+                 
+                    $(".month1logo3").attr("src", "images/case/m_3.png");
+
+                 
+                    $(".month1logo2").attr("src", "images/case/m_2.png");
+
+                  
+                    $(".month1logo5").attr("src", "images/case/m_5.png");
+                }
+                if (difference4 > 500  && htmlstring != '') {
+                    //if ("#month" + j + "_logo4" != "#month2_logo4" || "#month" + j + "_logo4" != "#month3_logo4") {
+                    //$(".month1logo4").removeClass("content_logo");
+                    //$(".month1logo4").removeClass("set_bright");
+                    //$(".month1logo4").addClass("content_logo");
+
+
+                    //$(".month" + j + "logo3").removeClass("content_logo");
+                    //$(".month" + j + "logo3").removeClass("set_bright");
+                    //$(".month" + j + "logo3").addClass("set_bright");
+                    //}
+
+                }
+                else {
+
+                    if (htmlstring == '' && ("month" + j + "_logo4" == "month1_logo4")) {
+                     
+                        $(".month1logo4").attr("src", "images/case/m_4.png");
+                    }
+
+                }
+
+
+                var difference5 = $("#month" + j + "_logo5").offset().top - $("#scrollMain").offset().top;
+
+                var htmlstring = document.getElementById("month" + j + "_logo5").innerHTML;
+                htmlstring = (htmlstring.trim) ? htmlstring.trim() : htmlstring.replace(/^\s+/, '');
+
+                var month1l4_inner = document.getElementById("month1_logo4").innerHTML;
+                month1l4_inner = (month1l4_inner.trim) ? month1l4_inner.trim() : month1l4_inner.replace(/^\s+/, '');
+
+
+                if (difference5 <= 100 && difference5 > -200 && htmlstring != '') {
+                
+                    $(".month1logo5").attr("src", "images/case/m_5o.png");
+
+
+               
+                    $(".month1logo1").attr("src", "images/case/m_1.png");
+
+                
+                    $(".month1logo3").attr("src", "images/case/m_3.png");
+
+                  
+                    $(".month1logo2").attr("src", "images/case/m_2.png");
+
+                   
+                    $(".month1logo4").attr("src", "images/case/m_4.png");
+                }
+                if (difference5 > 500 && difference5 < 900 && (("month" + j + "_logo5") == "month1_logo5") && month1l4_inner != '') {
+                  
+                    $(".month1logo5").attr("src", "images/case/m_5.png");
+
+                    $(".month1logo4").removeClass("content_logo");
+                    $(".month1logo4").removeClass("set_bright");
+                    $(".month1logo4").addClass("set_bright");
+                    $(".month1logo4").attr("src", "images/case/m_4o.png");
+                }
+                else {
+
+                    if (htmlstring == '' && ("month" + j + "_logo5" == "month1_logo5")) {                       
+                        $(".month1logo5").attr("src", "images/case/m_5.png");
+                    }
+                }
+
+            }
+        });
+
+
+        $.fn.scrollEnd = function (callback, timeout) {
+            $(this).scroll(function () {
+                var $this = $(this);
+                if ($this.data('scrollTimeout')) {
+                    clearTimeout($this.data('scrollTimeout'));
+                }
+                $this.data('scrollTimeout', setTimeout(callback, timeout));
+            });
+        };
+
+        var ipadscroll = document.getElementById("scrollMain");             
+        ipadscroll.addEventListener("scroll", function () {
+            var elems = $(this).find(".caseYearAnim");
+
+            var width = $(window).width();
+            var fs = 100     //elem font size
+            var fsto = 24;  //elem to font siz
+            var left = 0    //element left value
+            var leftto = -57; // element to left value
+            var scrollStartPos = 220;
+            var scrollEndPos = 110;
+
+            var fontmovestart = 150;
+            var fontmoveend = 110;
+
+            if (width < 500)
+            {
+                var fs = 80     //elem font size
+                var fsto = 24;  //elem to font siz
+                var left = 0    //element left value
+                var leftto = -57; // element to left value
+                var scrollStartPos = 220;
+                var scrollEndPos = 110;
+
+                var fontmovestart = 150;
+                var fontmoveend = 110;
+            }
+
+            if (width < 768) {
+                var fs = 80     //elem font size
+                var fsto = 24;  //elem to font siz
+                var left = 0    //element left value
+                var leftto = -57; // element to left value
+                var scrollStartPos = 220;
+                var scrollEndPos = 110;
+
+                var fontmovestart = 150;
+                var fontmoveend = 110;
+            }
+
+
+            var fsdiff = fs - fsto;
+            var leftdiff = left - leftto;
+            var sdiff = scrollStartPos - scrollEndPos;
+
+            var fmovediff = fontmovestart - fontmoveend;
+
+            var leftfactor = leftdiff / fmovediff;
+            var leftopFactor = 1 / fmovediff;
+            var leftfsMfactor = fsdiff / fmovediff;
+
+            var fsMfactor = fsdiff / sdiff;
+            var opFactor = 1 / sdiff;
+
+            $(elems).each(function (index, element) {
+                var elem_height = $(element).outerHeight();
+                var elem_top_position = $(element).offset().top;
+                var elem_bottom_position = (elem_top_position + elem_height);
+                console.log(elem_top_position);
+
+                if (elem_top_position < scrollStartPos && elem_top_position > scrollEndPos) {
+                    var pos = scrollStartPos - elem_top_position;
+                    $(element).css("opacity", 1);
+
+                  
+
+                    $(".caseYear").css("opacity", 0);
+                    $(element).css("font-size", fs - (fsMfactor * pos) + "px");
+                    //$(element).css("left", left - (leftfactor * pos));
+                    $("#caseYearFixed").css("opacity", 1 - (opFactor * pos));
+                }
+                else if (elem_top_position < scrollEndPos) {
+                    $(element).css("opacity", 0);
+                    $(".caseYear").css("opacity", 0);
+
+                    if (($(element).find(".animateYear").html()) >= 2014) {
+                        $("#caseYearFixed").html(parseInt($(element).find(".animateYear").html()));
+                        $(".caseYear").css("opacity", 1);
+                    }
+                    else {
+                        $("#caseYearFixed").html("");
+                        $(".caseYear").css("opacity", 0);
+                    }
+
+                    $("#caseYearFixed").css("opacity", 1);
+                }
+                else if (elem_top_position > scrollStartPos && elem_top_position < $(window).height()) {
+                    $(element).css("opacity", 1);
+                    $(element).css("font-size", fs + "px");
+                    $(element).css("left", left);
+                    if (($(element).find(".animateYear").html()) - 1 >= 2014) {
+                        $("#caseYearFixed").html(parseInt($(element).find(".animateYear").html()) - 1);
+                        $(".caseYear").css("opacity", 1);
+                    }
+                    else {
+                        $("#caseYearFixed").html("");
+                        $(".caseYear").css("opacity", 0);
+                    }
+
+                    $("#caseYearFixed").css("opacity", 1);
+                }
+
+
+                //font move to left//
+
+                if (elem_top_position < fontmovestart && elem_top_position > fontmoveend) {
+                    var pos = scrollStartPos - elem_top_position;
+                    $(element).css("opacity", 1);
+
+
+
+                    $(".caseYear").css("opacity", 0);
+                    $(element).css("font-size", fs - (leftfsMfactor * pos) + "px");
+                    //$(element).css("left", left - (leftfactor * pos));
+                    $("#caseYearFixed").css("opacity", 1 - (leftopFactor * pos));
+                }
+                else if (elem_top_position < fontmoveend) {
+                    $(element).css("opacity", 0);
+                    $(".caseYear").css("opacity", 0);
+
+                    if (($(element).find(".animateYear").html()) >= 2014) {
+                        $("#caseYearFixed").html(parseInt($(element).find(".animateYear").html()));
+                        $(".caseYear").css("opacity", 1);
+                    }
+                    else {
+                        $("#caseYearFixed").html("");
+                        $(".caseYear").css("opacity", 0);
+                    }
+
+                    $("#caseYearFixed").css("opacity", 1);
+                }
+
+
+
+                //console.log("top = " + elem_top_position);
+
+            });
+
+            var cEle = $(this).find(".chatWindow");
+            $(cEle).each(function (index, element) {
+                var elem_height = $(element).outerHeight();
+                var elem_top_position = $(element).offset().top;
+                var elem_bottom_position = (elem_top_position + elem_height);
+
+                if (elem_top_position < $(window).height() / 3 && elem_top_position > 0) {
+                    //$("#cMonth1").html($(element).attr("data-value"));
+                    //$("#cMonth2").html($(element).attr("data-next"));
+
+                    var $element1 = $("#cMonth1");
+                    var $element2 = $("#cMonth2");
+                    var value1 = $(element).attr("data-value");
+                    var value2 = $(element).attr("data-next");
+                    if ($element1.html() != value1) {
+
+                        bubbleText({
+                            element: $element1,
+                            newText: value1,
+                            letterSpeed: 100,
+                            speed: 3000,
+                            proportional: true
+                        });
+
+                        bubbleText({
+                            element: $element2,
+                            newText: value2,
+                            speed: 3000,
+                            letterSpeed: 100,
+                            proportional: true
+                        });
+                    }
+                }
+
+            });           
+
+        });
+      
+       
+
+
+       
+
+
+        $("#scrollMain").scrollEnd(function () {
+            var cEle = $("#scrollMain").find(".chatWindow");
+            $(cEle).each(function (index, element) {
+                var elem_height = $(element).outerHeight();
+                var elem_top_position = $(element).offset().top;
+                var elem_bottom_position = (elem_top_position + elem_height);
+
+                if ($(element).attr("class") == "chatWindow window2") {
+                    if (elem_top_position > $(window).height()/3 && elem_top_position > 0 &&elem_top_position <700) {
+                        var $element1 = $("#cMonth1");
+                        var $element2 = $("#cMonth2");
+                        var value1 = "04 FEB";
+                        var value2 = "07 MAY";
+                        bubbleText({
+                            element: $element1,
+                            newText: value1,
+                            letterSpeed: 70,
+                            speed: 1000,
+                            proportional: true
+                        });
+
+                        bubbleText({
+                            element: $element2,
+                            newText: value2,
+                            speed: 1000,
+                            letterSpeed: 70,
+                            proportional: true
+                        });
+                    }
+                }
+                if (elem_top_position < $(window).height() / 3 && elem_top_position > 0) {
+                    //$("#cMonth1").html($(element).attr("data-value"));
+                    //$("#cMonth2").html($(element).attr("data-next"));
+
+                    var $element1 = $("#cMonth1");
+                    var $element2 = $("#cMonth2");
+                    var value1 = $(element).attr("data-value");
+                    var value2 = $(element).attr("data-next");
+                    bubbleText({
+                        element: $element1,
+                        newText: value1,
+                        letterSpeed: 70,
+                        speed: 1000,
+                        proportional: true
+                    });
+
+                    bubbleText({
+                        element: $element2,
+                        newText: value2,
+                        speed: 1000,
+                        letterSpeed: 70,
+                        proportional: true
+                    });
+                }
+
+            });
+        }, 500);
+
+        /*slide function inner section*/
+
+    //    var toggleButton2 = document.getElementById('toggleSlider2');
+    //slide = document.querySelector('.slide');
+
+    //$("#toggleSlider2").on('touchstart click', toggleSlider2);
+
+        function toggleSlider2() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                if (inside == 1) {
+                    var Case = $('#case_playertext').attr('href');
+                    var name = Case.split("/").pop();
+                    if (name == "case1.html") {
+                        for (i = 1; i < 6; i++) {
+                            $(".month1logo" + i).removeClass("content_logo");
+                            $(".month1logo" + i).removeClass("set_bright");
+                            $(".month1logo" + i).addClass("content_logo");
+
+                        }
+
+                        //$("#case_player_head").css("display", "block");
+                        location.pathname = Case;
+                    }
+                }
+            }
+     
+        }
+
+        /*scroll top*/
+        $("#scrollMain").on('scroll', function () {
+            if ($(this).scrollTop() >= 400) {        // If page is scrolled more than 400px
+                setTimeout(function () { $('#return-to-top').css("opacity", "1") },0);
+               
+
+                // Fade in the arrow
+            }
+            else
+            {
+                $('#return-to-top').css("opacity", "0");   
+            }           
+
+        });
+        $('#return-to-top').on('click touchstart', function () {      // When arrow is clicked
+            var $container = $("#scrollMain");
+            var $scrollTo = $('#month1_logo1');
+            
+            $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 300);
+            setTimeout(function () { $('#return-to-top').css("opacity", "0") },1500);
+            
+        });
+
+
+        function circle1() {
+           
+            var month1 = document.getElementById("cMonth1").innerHTML;
+            if (month1 == "04 FEB") {
+                window.setTimeout(function () {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('.window1');
+                    //var $scrollend = $('.window2');
+                    if ($scrollTo.position().top > 400) {
+                        $container.animate({ scrollTop: $scrollend.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 600);
+                    }
+                   
+                   
+                }, 500);
+            }
+            else if (month1 == "07 MAY") {
+                window.setTimeout(function () {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('.window2');
+                    //var $scrollend = $('.window3');
+                    if ($scrollTo.position().top > 400) {
+                        $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 600);
+                    }
+                    }, 500);
+
+
+            }
+            else if (month1 == "27 NOV") {
+               
+            }
+        }
+        $("#circle2").on('click', function () {
+            circle2();
+        });
+
+        function circle2() {
+            var month2 = document.getElementById("cMonth2").innerHTML;
+            if (month2 == "07 MAY") {
+                window.setTimeout(function () {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('.window2');
+                    //var $scrollend = $('.window1');
+                    if ($scrollTo.position().top > 400) {
+                        $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 600);
+                    }
+                }, 500);
+            }
+            else if (month2 == "27 NOV") {
+                window.setTimeout(function () {
+                    var $container = $("#scrollMain");
+                    var $scrollTo = $('.window3');
+                    //var $scrollend = $('.window2');
+                    if ($scrollTo.position().top > 400) {
+                        $container.animate({ scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop() - 60, scrollLeft: 0 }, 600);
+                    }
+                }, 500);
+            }
+        }
+
+        /*keydown arrow function*/
+        $(document).keydown(function (e) {            
+            if (e.keyCode == 40 && ($('body').attr('class') == "caseplayer_font")) {
+                $("#scrollMain").scrollTop($("#scrollMain").scrollTop() + 15);
+            }
+            if (e.keyCode == 38 && ($('body').attr('class') == "caseplayer_font")) {
+                $("#scrollMain").scrollTop($("#scrollMain").scrollTop() - 15);
+            }
+
+        });
+    </script>
+
+
+</body>
+
+</html>

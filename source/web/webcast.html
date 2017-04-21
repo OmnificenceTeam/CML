@@ -1,0 +1,305 @@
+﻿<div style="height:100%; overflow:auto; -webkit-overflow-scrolling:touch;">
+    <div style="min-height:100%;margin-bottom:140px">
+
+   
+    <div class="bannerMain" style="background-image:url(images/CML_webcast.jpg)">
+        <div class="container" style="height: 100%;">
+            <div class="imgTxt">
+                <p>WEBCAST | VIEW WEBCAST</p>
+                <p class="desc">On the ‘View Webcast’ page, you can view the ‘Current Webcast’, learn about the ‘Upcoming Webcast’ and/or review ‘Archived Webcast’.</p>
+
+            </div>
+              </div>
+    </div>
+
+    <div class="container">
+        <div class="row" style="margin-top:20px;">
+
+            <div class="col-md-2 col-sm-12 col-xs-12 tab-header">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-left gb" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Current <br /> Webcast</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" >Upcoming <br /> Webcast</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" >Archived <br /> Webcast</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-10 col-sm-12 col-xs-12 tab-con">
+                <!-- Tab panes -->
+                <div class="tab-content" style="margin-bottom: 40px;">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="pan-header gn">
+                            Web topic comes here
+                        </div>
+                        <div class="pan-header gn">
+                            Webcast DATE and TIMINGS
+                        </div>
+                        <div class="pan-body">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td style="width:300px; text-align:center;">
+                                            <div id="webcal" class="cal3" style="padding:0px;">
+                                                <script type="text/template" id="template-calendar-months">
+                                                    <!--<div class="clndr-controls top">
+                                                        <div class="clndr-previous-button">&lsaquo;</div>
+                                                        <div class="clndr-next-button">&rsaquo;</div>
+                                                    </div>-->
+                                                    <div class="clearfix">
+                                                        <% _.each(months, function(cal) { %>
+                                                        <div class="cal">
+                                                            <div class="clndr-controls">
+                                                                <div class="month"><%= cal.month.format('MMMM') %>  <%= cal.month.format('YYYY') %></div>
+                                                            </div>
+                                                            <div class="clndr-grid">
+                                                                <div class="days-of-the-week">
+                                                                    <% _.each(daysOfTheWeek, function(day) { %>
+                                                                    <div class="header-day"><%= day %></div>
+                                                                    <% }); %>
+                                                                    <div class="days">
+                                                                        <% _.each(cal.days, function(day) { %>
+                                                                        <div class="<%= day.classes %>"><%= day.day %></div>
+                                                                        <% }); %>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <% }); %>
+                                                    </div>
+                                                    <!--<div class="clndr-today-button">Today</div>-->
+                                                </script>
+                                                <!--</div>-->
+                                            </div>
+                                            <input type="button" class="btn-orange btn-oa" onclick="onClickAddCal()" value="Add to calendar" />
+
+                                        </td>
+                                        <td class="hidden-xs hidden-sm" style="text-align:justify">
+                                            <div class="wc-box">
+                                                <table class="w-100">
+                                                    <tr>
+                                                        <td class="wdata1 wdata" colspan="2">
+                                                            <h4 style="font-weight:bold">Details</h4>
+                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                                        </td>
+                                                        <td class="wdata2 wdata" colspan="2">
+                                                            <h4 style="font-weight:bold">Details</h4>
+                                                            <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has asdad sa dasd as asd das</p>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="wdata1 wdata">
+                                                            <h4 style="font-weight:bold">Timings:</h4>
+                                                            <table style="width: 200px;">
+                                                                <tr>
+                                                                    <td>Saudi Arabia</td>
+                                                                    <td>7:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Australia</td>
+                                                                    <td>8:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>US</td>
+                                                                    <td>14:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        <input type="button" onclick="onCickViewAgenda(1)" class="btn-orange btn-ot" value="View agenda" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td class="wdata2 wdata">
+                                                            <h4 style="font-weight:bold">Timings:</h4>
+                                                            <table style="min-width: 200px;">
+                                                                <tr>
+                                                                    <td>Saudi Arabia</td>
+                                                                    <td>10:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Australia</td>
+                                                                    <td>12:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>US</td>
+                                                                    <td>08:00</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        <input type="button" onclick="onCickViewAgenda(2)" class="btn-orange btn-ot" value="View agenda" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                        <td style="width: 120px;position: relative;">
+                                                            <div class="cdclock"></div>
+                                                            <canvas id="canvasClock" class="cclock" width="100" height="100" style="background-color:transparent;"></canvas>
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+
+                            </div>
+                        </div>
+                        <div class="clearfix">
+
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 visible-sm visible-xs" style="margin-bottom:10px;text-align:justify">
+                            <div class="wc-box">
+                                <table class="w-100">
+                                    <tr>
+                                        <td class="wdata1 wdata" colspan="2">
+                                            <h4 style="font-weight:bold">Details</h4>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
+                                        </td>
+                                        <td class="wdata2 wdata" colspan="2">
+                                            <h4 style="font-weight:bold">Details</h4>
+                                            <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has sadaas sa das d</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="wdata1 wdata">
+                                            <h4 style="font-weight:bold">Timings:</h4>
+                                            <table style="min-width: 200px;">
+                                                <tr>
+                                                    <td>Saudi Arabia</td>
+                                                    <td>7:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Australia</td>
+                                                    <td>8:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US</td>
+                                                    <td>14:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <input type="button" onclick="onCickViewAgenda(1)" class="btn-orange btn-ot" value="View agenda" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="wdata2 wdata">
+                                            <h4 style="font-weight:bold">Timings:</h4>
+                                            <table style="min-width: 200px;">
+                                                <tr>
+                                                    <td>Saudi Arabia</td>
+                                                    <td>10:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Australia</td>
+                                                    <td>12:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US</td>
+                                                    <td>08:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <input type="button" onclick="onCickViewAgenda(2)" class="btn-orange btn-ot" value="View agenda" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td style="width: 120px;position: relative;">
+                                            <div class="cdclock"></div>
+                                            <canvas id="canvasClock2" class="cclock" width="100" height="100" style="background-color:transparent;"></canvas>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="clearfix">
+
+                        </div>
+                        <div class="pan-header gn">
+                            Webcast SPEAKER DETAILS
+                        </div>
+                        <div >
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td style="width:100px;">
+                                            <img src="images/default-avatar.png" style="width:85px; border-radius:50px;" /></td>
+                                        <td>
+                                            <h4 style="font-weight:bold">Speaker Name</h4>
+                                            <h4 style="font-weight:bold">Designation</h4>
+                                            <h4 style="font-weight:bold">Country</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="text-align:justify">
+                                           <p style="margin-top:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+</p>  </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 col-xs-12" style="text-align:center;">
+                                <input type="button" id="cwebcasta" onclick="onCickViewWebcast()" style="width: 90%;
+    margin: 0 auto;
+    margin-top: 10px; display:none;" class="btn-orange btn-ot" value="View webcast" />
+                                <input type="button" id="cwebcastua" onclick="onCickViewunWebcast(this)" style="width: 90%;
+    margin: 0 auto;
+
+    margin-top: 10px; display:none" class="btn-orange btn-gray btn-ot" value="View webcast" />
+
+                            </div>
+                            <div class="col-md-9 col-sm-8 col-xs-12" style="text-align:center;">
+                                <button type="button" onclick="onCickViewSysReq(2)" style="width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;" class="btn-orange btn-ot" value="">View minimum system requirement</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">Currently no webcast available to view</div>
+                    <div role="tabpanel" class="tab-pane" id="messages">Currently no webcast available to view</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    <div class="row land-footer" style="margin-top:50px;">
+        <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+            <div class="col-md-2  col-sm-4 col-xs-12">
+                <h5 class="ftitle15"><a class="clr-orange" href="https://www.novartis.com/terms-use" target="_blank"> Terms of use </a></h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15"><a class="clr-orange" href="https://www.novartis.com/privacy-policy" target="_blank">Privacy Policy </a></h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15 transition close_menutitle" id="mnu-hm2" data-id="#page-hm" data-animate="2" onclick="$.fn.fullpage.silentMoveTo('mPage2', 1);">Contact us</h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15 transition close_menutitle" id="mnu-hm1" data-id="#page-hm" data-animate="2" onclick="$.fn.fullpage.silentMoveTo('mPage2', 2);">FAQ</h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+
+                <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+                <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

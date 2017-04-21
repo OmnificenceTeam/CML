@@ -1,0 +1,829 @@
+﻿.login-btn {
+    display: initial;
+    border: 2px solid white;
+    padding: 10px 20px 10px 20px;
+}
+
+.login-btn-black {
+    display: initial;
+    border: 2px solid black;
+    padding: 10px 20px 10px 20px;
+}
+
+    #section4 .intro
+    {
+        
+            min-height: 100%;
+    }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+
+}
+
+.landing-menu {
+    text-transform: uppercase;
+}
+
+.title-why, .title-cml {
+    font-family: "century gothicB";
+}
+
+
+.profilePic {
+top: -96px;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    margin-right: 10px;
+}
+
+
+.profileFile {
+margin: 0 auto;
+    z-index: 999;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    opacity: 0;
+}
+
+
+
+.menuLine {
+    margin-top: 10px;
+    width: 0px;
+    transition: ease all 1s;
+    -webkit-transition:ease all 1s;
+    height: 4px;
+    background: orange;
+}
+
+    .menuLine.active {
+        width: 100%;
+    }
+
+.intro {
+    padding-top: 80px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.section-content {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: left;
+}
+
+@media screen and (min-width: 1025px) {
+
+    .p-r-40 {
+        padding-right: 40px;
+    }
+
+    .landing-menu {
+        font-size: 24px;
+    }
+
+    .login-btn {
+        display: initial;
+        border: 2px solid white;
+        padding: 10px 20px 10px 20px;
+    }
+
+    .login-btn-black {
+        display: initial;
+        border: 2px solid black;
+        padding: 10px 20px 10px 20px;
+    }
+
+    .menuLine {
+        margin-top: 10px;
+        width: 0px;
+        transition: ease all 1s;
+          -webkit-transition:ease all 1s;
+        height: 4px;
+        background: orange;
+    }
+
+    .tog-table {
+        font-size: 54px;
+        margin-left: 100px;
+        color: white;
+        line-height: 60px;
+    }
+
+        .tog-table .bigT {
+            color: orange;
+            font-size: 20pc;
+        }
+
+        .tog-table .smallO {
+            text-align: left;
+            margin-left: -40px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+    .intro {
+        padding-top: 120px;
+        padding-right: 40px;
+        padding-left: 40px;
+
+    }
+
+
+    #section4 .intro {
+    min-height: 677px;
+    }
+
+
+    .section-content {
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        text-align: left;
+        font-family: "century gothicB";
+    }
+
+    .title-why {
+        font-size: 46px;
+        color: orange;
+        font-weight: bold;
+    }
+
+    .title-cml {
+        font-size: 34px;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .contentB {
+        font-size: 24px;
+    }
+
+    .content {
+        padding: 10px;
+        font-size: 22px;
+    }
+
+        .content .colored {
+            color: orange;
+        }
+
+    .footer-arrow {
+        color: white;
+        line-height: 0px;
+        font-size: 20px;
+    }
+
+    .introTitle {
+        font-size: 38px;
+        font-family: "century gothicB";
+        padding: 0px 100px;
+    }
+}
+
+
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (max-device-width: 1024px) {
+    .p-r-40 {
+        padding-right: 30px;
+    }
+
+    .landing-menu {
+        font-size: 14px;
+    }
+
+    .login-btn {
+        display: initial;
+        border: 2px solid white;
+        padding: 10px 20px 10px 20px;
+    }
+
+    .login-btn-black {
+        display: initial;
+        border: 2px solid black;
+        padding: 10px 20px 10px 20px;
+    }
+
+    .menuLine {
+        margin-top: 10px;
+        width: 0px;
+        transition: ease all 1s;
+          -webkit-transition:ease all 1s;
+        height: 4px;
+        background: orange;
+    }
+
+    .tog-table {
+        font-size: 52px;
+        margin-left: 100px;
+        color: white;
+        line-height: 60px;
+        margin-top: 20px;
+    }
+
+        .tog-table .bigT {
+            color: orange;
+            font-size: 20pc;
+        }
+
+        .tog-table .smallO {
+            text-align: left;
+            margin-left: -40px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+    .intro {
+        padding-top: 80px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .section-content {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        text-align: left;
+    }
+
+
+    .title-why {
+        font-size: 46px;
+        color: orange;
+        font-weight: bold;
+    }
+
+    .title-cml {
+        font-size: 34px;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .contentB {
+        font-size: 24px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+        .content .colored {
+            color: orange;
+        }
+
+    .footer-arrow {
+        color: white;
+        line-height: 0px;
+        font-size: 20px;
+    }
+
+    .introTitle {
+        font-size: 38px;
+        font-family: "century gothicB";
+    }
+}
+
+/* #### Desktops #### */
+
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px) {
+
+    .p-r-40 {
+        padding-right: 20px;
+    }
+
+    .landing-menu {
+        font-size: 14px;
+    }
+
+    .login-btn {
+        display: initial;
+        border: 1px solid white;
+        padding: 5px 8px 5px 8px;
+    }
+
+    .login-btn-black {
+        display: initial;
+        border: 2px solid black;
+        padding: 5px 8px 5px 8px;
+    }
+
+    .menuLine {
+        margin-top: 10px;
+        width: 0px;
+        transition: ease all 1s;
+          -webkit-transition:ease all 1s;
+        height: 4px;
+        background: orange;
+    }
+
+    .tog-table {
+        font-size: 30px;
+        margin-left: 30px;
+        color: white;
+        line-height: 45px;
+        margin-top: 20px;
+    }
+
+        .tog-table .bigT {
+            color: orange;
+            font-size: 12pc;
+        }
+
+        .tog-table .smallO {
+            text-align: left;
+            margin-left: -30px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+    .intro {
+        padding-top: 80px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .section-content {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        text-align: left;
+    }
+
+
+    .title-why {
+    }
+
+    .title-cml {
+    }
+
+    .contentB {
+    }
+
+    .content {
+    }
+
+        .content .colored {
+            color: orange;
+        }
+
+    .footer-arrow {
+        color: white;
+        line-height: 0px;
+        font-size: 20px;
+    }
+}
+
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) {
+    .landing-menu {
+        font-size: 12px;
+    }
+
+
+
+    .login-btn {
+        display: initial;
+        border: 1px solid white;
+        padding: 5px 8px 5px 8px;
+    }
+
+    .login-btn-black {
+        display: initial;
+        border: 1px solid black;
+        padding: 5px 8px 5px 8px;
+    }
+
+    .col-center {
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: -8px;
+    }
+
+
+    .menuLine {
+        margin-top: 10px;
+        width: 0px;
+        transition: ease all 1s;
+          -webkit-transition:ease all 1s;
+        height: 4px;
+        background: orange;
+    }
+
+    .tog-table {
+        font-size: 42px;
+        margin-left: 100px;
+        color: white;
+    }
+
+        .tog-table .bigT {
+            color: orange;
+            font-size: 16pc;
+        }
+
+        .tog-table .smallO {
+            text-align: left;
+            margin-left: -32px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+    .intro {
+        padding-top: 80px;
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+    }
+
+    .section-content {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 16px;
+        text-align: left;
+        font-family: "century gothicB";
+    }
+
+
+    .title-why {
+    }
+
+    .title-cml {
+    }
+
+    .contentB {
+    }
+
+    .content {
+    }
+
+        .content .colored {
+            color: orange;
+        }
+
+    .footer-arrow {
+        color: white;
+        line-height: 0px;
+        font-size: 20px;
+    }
+}
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) {
+
+    .p-r-40 {
+        padding-right: 0px;
+    }
+
+    .landing-menu {
+        font-size: 10px;
+    }
+
+    .login-btn {
+        display: initial;
+        border: 1px solid white;
+        padding: 5px 8px 5px 8px;
+    }
+
+    .login-btn-black {
+        display: initial;
+        border: 1px solid black;
+        padding: 5px 8px 5px 8px;
+    }
+
+    .menuLine {
+        margin-top: 5px;
+        width: 0px;
+        transition: ease all 1s;
+          -webkit-transition:ease all 1s;
+        height: 2px;
+        background: orange;
+    }
+
+    .col-center {
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+    .tog-table {
+        font-size: 28px;
+        margin-left: 25px;
+        color: white;
+    }
+
+        .tog-table .bigT {
+            color: orange;
+            font-size: 12pc;
+        }
+
+        .tog-table .smallO {
+            text-align: left;
+            margin-left: -20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+    .intro {
+        padding-top: 60px;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-bottom: 40px;
+    }
+
+    .section-content {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 16px;
+        text-align: left;
+        font-family: "century gothicB";
+    }
+
+
+    .title-why {
+        font-size: 20px;
+    }
+
+    .title-cml {
+        font-size: 18px;
+    }
+
+    .contentB {
+        font-size: 14px;
+    }
+
+    .content {
+    }
+
+        .content .colored {
+            color: orange;
+        }
+
+    .introTitle {
+        font-size: 24px;
+        font-family: "century gothicB";
+    }
+}
+
+
+
+
+
+
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (max-device-width: 320px) {
+    .landing-menu {
+        font-size: 7px;
+    }
+
+    .login-btn {
+        display: initial;
+        border: 1px solid white;
+        padding: 5px 8px 5px 8px;
+    }
+
+    .login-btn-black {
+        display: initial;
+        border: 1px solid black;
+        padding: 5px 8px 5px 8px;
+    }
+
+    .menuLine {
+        margin-top: 5px;
+        width: 0px;
+        transition: ease all 1s;
+          -webkit-transition:ease all 1s;
+        height: 2px;
+        background: orange;
+    }
+
+    .tog-table {
+        font-size: 34px;
+        color: white;
+    }
+
+        .tog-table .bigT {
+            color: orange;
+            font-size: 10pc;
+        }
+
+        .tog-table .smallO {
+            text-align: left;
+            margin-left: -20px;
+            font-weight: bold;
+            margin-top: 20px;
+            line-height: 32px;
+        }
+
+
+    .col-center {
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: -6px;
+    }
+
+    .intro {
+        padding-top: 50px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .section-content {
+        font-size: 12px;
+        padding: 9px;
+    }
+
+    .section-title {
+        font-size: 16px;
+        text-align: left;
+        font-family: "century gothicB";
+    }
+
+
+    .title-why {
+    }
+
+    .title-cml {
+    }
+
+    .contentB {
+    }
+
+    .content {
+    }
+
+        .content .colored {
+            color: orange;
+        }
+
+
+    .introTitle {
+        font-size: 16px;
+        font-family: "century gothicB";
+    }
+}
+
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+
+       #section4 .intro {
+    min-height: 1082px !important;
+    }
+
+        .land-footer {
+        position:relative !important;
+    }
+
+
+}
+
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+       #section4 .intro {
+    min-height: 657px ;
+    }
+
+
+   
+}
+
+
+@media only screen and (min-height : 850px) {
+
+      .land-footer {
+    background-color: #4b1b64;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+       
+       #section4 .intro {
+    min-height: 700px;
+
+    }
+
+}
+
+
+
+
+
+
+
+/*/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .footer-arrow {
+        color: white;
+        line-height: 0px;
+        font-size: 16px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .footer-arrow {
+        color: white;
+        line-height: 0px;
+        font-size: 10px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .footer-arrow {
+        color: white;
+        line-height: 0px;
+        font-size: 20px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .footer-arrow {
+        color: white;
+        line-height: 0px;
+        font-size: 20px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .footer-arrow {
+        color: white;
+        line-height: 0px;
+        font-size: 20px;
+    }
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+}

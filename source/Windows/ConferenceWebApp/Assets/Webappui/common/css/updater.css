@@ -1,0 +1,61 @@
+﻿html {
+    overflow: hidden;
+}
+
+body {
+    background: url('../../img/bg.png') no-repeat;
+    background-size: 100% 100% !important;
+    color: #fff;
+    overflow: hidden;
+}
+
+progress {
+    -webkit-appearance: none;
+    border: none;
+}
+
+    progress::-webkit-progress-bar {
+        background: black;
+        border-radius: 50px;
+        padding: 2px;
+        box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    progress::-webkit-progress-value {
+        border-radius: 50px;
+        box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+        background: -webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #fff, #fff);
+        background-size: 20px 10px, 100% 100%, 100% 100%;
+    }
+
+#updateProcess {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    text-align: center;
+    padding: 0px 10px;
+}
+
+#alertModal {
+    top: 25%;
+    outline: 0px;
+}
+
+    #alertModal .modal-header {
+        background-color: #952016;
+        color: #fff;
+    }
+
+    #alertModal .modal-body {
+        color: #000;
+    }
+
+    #alertModal .modal-content,
+    #alertModal .btn {
+        border-radius: 0px !important;
+    }
+
+.btn-danger {
+    background-color: #952016 !important;
+    border: none !important;
+}

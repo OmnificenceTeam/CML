@@ -1,0 +1,1432 @@
+﻿html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.fullH {
+    height: 100%;
+}
+
+#instruct1,#instruct2,#instruct3,#instruct4,#instruct5,#instruct6 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 99999999;
+}
+.caseguide1{
+    width:100%;
+}
+
+
+.month-badge-cont {
+    position: relative;
+}
+
+.month-badge {
+    background-color: red;
+    color: white;
+    float: left;
+    text-align: center;
+    color: white;
+    float: left;
+    text-align: center;
+    position: absolute;
+    top: -3px;
+    padding: 1px !important;
+}
+
+
+#swiper-year .swiper-slide-active .case-year-image td img {
+    width: 60px;
+    color: white;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.fullW {
+    width: 100%;
+}
+
+.case-year {
+    font-size: 42px;
+    margin-bottom: 20px;
+    transition: 0.5s all ease;
+    color: white;
+}
+
+.case-year-image td {
+    padding: 10px;
+}
+
+    .case-year-image td img {
+        width: 45px;
+        transition: 0.5s all ease;
+    }
+
+    .case-year-image td div {
+        width: 45px;
+        height: 45px;
+        border-radius: 45px;
+        transition: 0.5s all ease;
+    }
+
+        .case-year-image td div div {
+            width: 14px;
+            height: 14px;
+            border-radius: 14px;
+            font-size: 12px;
+            background-color: #f44336 !important;
+        }
+
+.caseplayer_font {
+    font-family: 'Century gothic';
+}
+
+.swiper-year-main {
+    background: rgba(87, 19, 123, 0.98);
+    /*font-family:'Century gothic';*/
+}
+
+.swiper-month-main {
+    background: #DCD9E0;
+    /*font-family:'Century gothic';*/
+}
+
+#swiper-year-select-box {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.34);
+    border-left: 3px solid white;
+    -webkit-box-shadow: 3px 0px 3px 3px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 3px 0px 3px 3px rgba(0, 0, 0, 0.42);
+    box-shadow: 3px 0px 3px 3px rgba(0, 0, 0, 0.42);
+}
+
+#swiper-month-select-box {
+    color: white !important;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    background: #FE9901;
+    border-right: 3px solid #4a1a64;
+    -webkit-box-shadow: 3px 0px 3px 3px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 3px 0px 3px 3px rgba(0, 0, 0, 0.42);
+    box-shadow: 3px 0px 3px 3px rgba(0, 0, 0, 0.42);
+}
+
+#swiper-month .swiper-slide {
+    border-bottom: 1px dashed rgba(74, 26, 100, 0.14);
+}
+
+#swiper-month .swiper-slide-active {
+    color: white;
+}
+
+#swiper-month .swiper-slide-active,
+#swiper-month .swiper-slide-prev {
+    border-bottom: none;
+}
+
+.case-month {
+    text-align: left;
+    font-size: 23px;
+}
+
+.case-month-image td {
+    padding: 10px 25px 0px 0px;
+}
+
+    .case-month-image td img {
+        width: 45px;
+        transition: 0.1s all ease;
+    }
+    h2{
+        font-family:'Century gothicB';
+    }
+
+.mlogo {
+    width: 80%;
+}
+
+/*scroll top button*/
+#return-to-top {
+    z-index:999999;
+    position:fixed;
+    bottom: 50px;
+    right: 110px;    
+    background:white;
+    width: 40px;
+    height: 40px;
+    opacity:0;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;   
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top span {
+    color:#FE9901;
+    margin: 0;
+    position: relative;
+    left: 12px;
+    top: 9px;
+    font-size: 18px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+/*Tolltip*/
+.tooltip2 {
+  position: relative;
+  z-index: 1070;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: normal;
+  filter: alpha(opacity=0);
+  /*opacity: 0;*/
+
+  line-break: auto;
+}
+
+.tooltip2 .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(87, 19, 123, 0.98);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip2 .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(87, 19, 123, 0.98) transparent transparent transparent;
+}
+
+.tooltip2:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(87, 19, 123, 0.98);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(87, 19, 123, 0.98) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.casetitle{
+    font-size:24px;
+    text-align:center;
+    margin:0px;
+    height:60px;
+    width:100%;
+
+}
+
+@media only screen and (max-width:773px){
+    #return-to-top {
+   
+    bottom: 10px;
+    right: 70px;    
+   
+}
+
+}
+
+#return-to-top:hover {
+    background:#fff;
+}
+
+
+
+
+
+/*Response rates font size*/
+@media only screen and (min-width:1024px) {
+
+
+    .iconlist {
+        text-align: center;
+        display: table;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        padding: 0px 10px;
+    }
+
+    #scrollMain {
+        padding-left: 100px;
+        height: 100%;
+        padding-top: 140px;
+        padding-right: 124px;
+        overflow: auto;
+    }
+
+    .phase {
+        width: 100px;
+    }
+
+    .phase_font {
+        font-size: 20px;
+    }
+
+    #swiper-month .swiper-slide-active .case-month-image td div {
+        width: 55px;
+        height: 55px;
+        border-radius: 55px;
+        cursor: pointer;
+        transition: 0.2s all ease;
+    }
+
+        #swiper-month .swiper-slide-active .case-month-image td div div {
+            width: 17px;
+            height: 17px;
+            border-radius: 17px;
+            font-size: 10px;
+            text-align: center;
+            background-color: #f44336 !important;
+        }
+
+    #swiper-month .swiper-slide-active .case-month span {
+        font-size: 32px !important;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    #swiper-year .swiper-slide-active .case-year span {
+        border-bottom: 2px solid #b19dbe;
+        font-size: 66px;
+    }
+
+    #swiper-year .swiper-slide-active .case-year-image td div {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        cursor: pointer;
+    }
+
+    #swiper-month .swiper-wrapper .case-month-image td div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #swiper-month .swiper-slide-active .case-month-image td div {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        cursor: pointer;
+        transition: 0.2s all ease 0.1s;
+    }
+
+
+    #swiper-year .swiper-slide-active .case-year-image td div div {
+        width: 19px;
+        height: 18px;
+        border-radius: 17px;
+        font-size: 11px;
+        text-align: center;
+        padding: 2px 0px;
+        background-color: #f44336 !important;
+    }
+
+
+
+    #swiper-month .swiper-wrapper .case-month-image td div div {
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+        font-size: 8px;
+        padding: 2px;
+        background-color: #f44336 !important;
+    }
+
+
+
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    #swiper-year .swiper-table {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+
+
+
+@media only screen and (max-width:1023px) {
+
+    .iconlist {
+        text-align: center;
+        display: table;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        padding: 0px 10px;
+        width: 90px;
+    }
+
+    #scrollMain {
+        padding-left: 100px;
+        height: 100%;
+        padding-top: 140px;
+        padding-right: 90px;
+        overflow: auto;
+    }
+
+    #swiper-year .swiper-slide-active .case-year-image td div {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 40px !important;
+    }
+
+        #swiper-year .swiper-slide-active .case-year-image td div div {
+            width: 11px !important;
+            height: 11px !important;
+            border-radius: 11px !important;
+            font-size: 7px;
+            padding: 1px 0px;
+            background-color: #f44336 !important;
+        }
+
+    #swiper-year .swiper-slide-active .case-year span {
+        font-size: 34px !important;
+    }
+
+    .case-year {
+        font-size: 15px;
+    }
+
+    .case-year-image td {
+        padding: 3px !important;
+    }
+
+        .case-year-image td div {
+            width: 30px !important;
+            height: 30px !important;
+            border-radius: 30px !important;
+            cursor: pointer;
+        }
+
+            .case-year-image td div div {
+                width: 14px !important;
+                height: 14px !important;
+                border-radius: 14px !important;
+                font-size: 10px;
+                background-color: #f44336 !important;
+            }
+
+
+
+    #swiper-month .swiper-slide-active .case-month-image td div {
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 28px !important;
+        cursor: pointer;
+        transition: 0.2s all ease;
+    }
+
+        #swiper-month .swiper-slide-active .case-month-image td div div {
+            width: 11px !important;
+            height: 11px !important;
+            border-radius: 12px !important;
+            font-size: 8px;
+            padding: 1px 0px;
+            text-align: center;
+            background-color: #f44336 !important;
+        }
+
+    #swiper-month .swiper-slide-active .case-month span {
+        font-size: 15px !important;
+    }
+
+    .case-month {
+        font-size: 14px;
+    }
+
+    .case-month-image td {
+        padding: 3px !important;
+    }
+
+        .case-month-image td div {
+            width: 25px !important;
+            height: 25px !important;
+            border-radius: 25px !important;
+            cursor: pointer;
+        }
+
+            .case-month-image td div div {
+                width: 12px !important;
+                height: 12px !important;
+                border-radius: 12px !important;
+                font-size: 9px;
+                padding: 1px;
+                background-color: #f44336 !important;
+            }
+
+    .month_icons li div {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:1320px) {
+    #swiper-year .swiper-slide-active .case-year span {
+        border-bottom: 2px solid #b19dbe;
+        font-size: 80px;
+    }
+
+    #swiper-year .swiper-slide-active .case-year-image td div {
+        width: 70px;
+        height: 70px;
+        border-radius: 70px;
+    }
+
+    #swiper-month .swiper-wrapper .case-month-image td div {
+        width: 55px;
+        height: 55px;
+        border-radius: 55px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #swiper-month .swiper-slide-active .case-month-image td div {
+        width: 60px;
+        height: 60px;
+        border-radius: 65px;
+        cursor: pointer;
+        transition: 0.2s all ease 0.1s;
+    }
+
+
+    #swiper-year .swiper-slide-active .case-year-image td div div {
+        width: 22px;
+        height: 23px;
+        border-radius: 16px;
+        font-size: 13px;
+        text-align: center;
+        padding: 2px 2px 0px 0px;
+    }
+
+    #swiper-month .swiper-wrapper .case-month-image td div div, #swiper-month .swiper-slide-active .case-month-image td div div {
+        width: 21px;
+        height: 20px;
+        border-radius: 16px;
+        font-size: 12px;
+        text-align: center;
+        background-color: #f44336 !important;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 22px;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    #swiper-year .swiper-table {
+        width: auto !important;
+        margin: 0 auto;
+    }
+}
+
+/*inner page style*/
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    scrollbar-face-color: #401857;
+    scrollbar-3dlight-color: #401857;
+    scrollbar-shadow-color: #401857;
+    scrollbar-highlight-color: #401857;
+    scrollbar-darkshadow-color: #401857;
+    scrollbar-track-color: #401857;
+    scrollbar-arrow-color: #401857;
+    /*overflow:hidden;*/
+}
+
+.scrollwrapper-child1 {
+    width: 100%;
+    height: 99%;
+    overflow: auto;
+}
+
+.scrollwrapper-child2 {
+    width: 100%;
+    height: 99%;
+    overflow: auto;
+}
+
+.scrollwrapper-child3 {
+    width: 100%;
+    height: 99%;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background: #401857;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #401857;
+}
+
+::-moz-scrollbar {
+    width: 1px;
+}
+
+::-moz-scrollbar-track {
+    background: #401857;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #401857;
+}
+
+.fullH {
+    height: 100%;
+}
+
+.fullW {
+    width: 100%;
+}
+
+.fullhw {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.leftMainInner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+.caseContainer {
+    background: #4a286e;
+}
+
+.vLine {
+    height: 100%;
+    width: 2px;
+    background: white;
+    position: absolute;
+    right: 30%;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+    margin-right: -1px;
+}
+
+
+
+
+.vCircle {
+    background: #301447;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    left: 70%;
+    position: absolute;
+    margin-left: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.61);
+    z-index:9999999999;
+}
+
+#circle1 {
+    margin-top: 40px;
+    cursor:pointer;
+}
+
+#circle2 {
+    margin-bottom: 40px;
+    bottom: 0;
+    cursor:pointer;
+}
+
+    #circle2 .vmonth {
+        opacity: 0.5;
+    }
+
+
+
+.chatWindow {
+    width: 100%;
+    height: 100%;
+    background: #401857;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.caseCont {
+    overflow: hidden;
+    height: 85%;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.iconlist {
+    height: 100%;
+}
+
+.caseYearAnim {
+    color: white;
+    font-size: 100px;
+    position: relative;
+    margin-top: 100px;
+    z-index: 9999999;
+}
+
+.content_logo {
+    opacity: 0.4;
+}
+
+/*CASE PLAYER*/
+/*month logo*/
+.month_icons {
+    display: inline;
+    list-style: none !important;
+    padding: 0px;
+    margin: 0px;
+}
+
+    .month_icons li {
+        text-align: center;
+    }
+
+.bone_marrow {
+    margin: 15% 0;
+}
+
+.heading {
+   
+    text-align: center;
+}
+
+.innertext {
+    text-align: left !important;
+    margin-top: 10px;
+    font-size: 25px;
+    /*line-height: 32px;*/
+}
+
+.reference {
+    font-size: 18px;
+}
+
+.last_content {
+    margin-bottom: 100px;
+}
+
+.heading {
+   
+    text-align: center;
+}
+
+.innertext li {
+    font-size: 22px;
+    /*line-height: 22px;*/
+}
+
+    .innertext li li {
+        font-size: 20px;
+        /*line-height: 22px;*/
+    }
+
+.present_font li {
+    font-size: 22px;
+}
+
+    .present_font li li {
+        font-size: 20px;
+    }
+
+
+
+@media only screen and (min-width:1450px) {
+    .innertext {
+        text-align: left !important;
+        margin-top: 10px;
+        font-size: 35px;
+        /*line-height: 40px;*/
+    }
+
+        .innertext li {
+            font-size: 30px;
+            /*line-height: 32px;*/
+        }
+
+            .innertext li li {
+                font-size: 28px;
+                /*line-height: 32px;*/
+            }
+
+    .present_font li {
+        font-size: 30px;
+        /*line-height: 32px;*/
+    }
+
+        .present_font li li {
+            font-size: 28px;
+            /*line-height: 32px;*/
+        }
+
+    .bone_marrow {
+        margin: 10% 0 !important;
+    }
+
+    .caseYear {
+        width: 150px !important;
+        padding: 20px !important;
+        font-size: 26px !important;
+    }
+
+    .vmonth {
+        /*font-size: 15px !important;*/
+    }
+
+    .reference {
+        font-size: 22px !important;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:773px) {
+    #scrollMain {
+        padding-top: 0px;
+    }
+
+    #leftMain {
+        padding-top: 0px;
+    }
+
+    .caseYearAnim {
+        margin-top: 10px;
+    }
+
+    .fullH {
+        height: 90%;
+        margin-top: 10%;
+    }
+
+    .month_icons li {
+        margin-bottom: 0px !important;
+    }
+
+    .present_font li {
+        font-size: 14px;
+    }
+
+        .present_font li li {
+            font-size: 14px;
+        }
+
+    .innertext {
+        font-size: 16px;
+        /*line-height:24px;*/
+    }
+
+        .innertext li {
+            font-size: 14px;
+            /*line-height: 18px;*/
+        }
+
+            .innertext li li {
+                font-size: 13px;
+                /*line-height: 22px;*/
+            }
+
+    .heading {
+       
+        text-align: center;
+    }
+
+    .present_name {
+        font-size: 18px !important;
+    }
+
+    .present_img {
+        margin: 40% 20% !important;
+        width: 75% !important;
+    }
+
+    .caseCont {
+        /*height: 300px !important;*/
+    }
+
+    .iconlist {
+        top: 10px !important;
+    }
+
+    .last_content {
+        margin-bottom: 200px;
+    }
+
+    .bone_marrow {
+        margin: 34% 0;
+    }
+
+    h1 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 22px !important;
+    }
+
+    h3 {
+        font-size: 20px !important;
+    }
+
+    .reference {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width:569px) and (max-width:773px) {
+    #table-tki-treatment {
+        font-size: 16px !important;
+    }
+
+    .svg1_txt1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width:568px) {
+    #table-tki-treatment {
+        font-size: 13px !important;
+    }
+}
+
+
+@media only screen and (max-width:480px) {
+    #scrollMain {
+        padding-top: 0px;
+    }
+
+    #leftMain {
+        padding-top: 0px;
+    }
+
+    .caseYearAnim {
+        margin-top: 10px;
+    }
+
+    .fullH {
+        height: 90%;
+        margin-top: 10%;
+    }
+
+    .month_icons li {
+        margin-bottom: 0px !important;
+    }
+
+    .present_font li {
+        font-size: 13px;
+    }
+
+        .present_font li li {
+            font-size: 12px;
+        }
+
+    .innertext {
+        font-size: 14px;
+    }
+
+        .innertext li {
+            font-size: 13px;
+            /*line-height: 18px;*/
+        }
+
+            .innertext li li {
+                font-size: 12px;
+                /*line-height: 22px;*/
+            }
+
+    .heading {
+        padding: 5% 5% 0 5%;
+        text-align: center;
+    }
+
+    .present_name {
+        font-size: 18px !important;
+    }
+
+    .present_img {
+        margin: 40% 20% !important;
+        width: 75% !important;
+    }
+
+    .caseCont {
+        /*height: 300px !important;*/
+    }
+
+
+    .iconlist {
+        top: 10px !important;
+    }
+
+    .last_content {
+        margin-bottom: 200px;
+    }
+
+    .bone_marrow {
+        margin: 34% 0;
+    }
+
+    h1 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 22px !important;
+    }
+
+    h3 {
+        font-size: 20px !important;
+    }
+
+    .reference {
+        font-size: 13px;
+    }
+}
+
+/*slide style*/
+.slide {
+    transition: .5s cubic-bezier(0, 1, 0.5, 1);
+    transform: translateY(0);
+}
+
+.slide-up {
+    transform: translateX(-100%);
+}
+
+.slide-right {
+    transform: translateX(200%);
+}
+
+
+@media (min-width: 1450px) {
+    h2 {
+        font-size: 40px !important;
+    }
+
+    h3 {
+        font-size: 30px !important;
+    }
+}
+/*Table cell*/
+#table-tki-treatment {
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    color: black;
+}
+
+.rotate-text-rl-180 {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+}
+
+.td-content {
+    padding: 1%;
+    width: 20%;
+    background-color: #C3C3C3;
+    color: #000;
+}
+
+.left-align {
+    float: left;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.grey-background {
+    background-color: #c3c3c3;
+}
+
+.display-table {
+    height: 250px;
+    max-height: 250px;
+    display: table;
+}
+
+.display-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 2%;
+}
+
+.bottom-align {
+    vertical-align: bottom;
+}
+
+.table-cell-caption {
+    height: 200px;
+    margin-top: -10px;
+}
+
+
+/*Loader*/
+.blockUI {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+
+.blockUIWhite {
+    background-color: white !important;
+}
+
+.blockUI img {
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+#scrollMain {
+   -webkit-overflow-scrolling:touch;
+}
+.month1logo1,.month1logo2,.month1logo3,.month1logo4,.month1logo5{
+    cursor:pointer;
+
+}
+
+
+@media only screen and (min-width : 768px) {
+
+    .vLineCont {
+        padding-top: 100px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #leftMain {
+        position: absolute;
+        height: 100%;
+        width: 100px;
+        padding-top: 60px;
+    }
+
+    .caseYear {
+        position: absolute;
+        width: 115px;
+        background: #36154A;
+        padding: 10px;
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        opacity: 0;
+        top: 40px;
+        z-index: 99;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 25px;
+    }
+
+    .vmonth {
+        position: absolute;
+        color: white;
+        left: -50px;
+        top: -20px;
+        transition: 1s all;
+    }
+
+     .caseCont 
+    {
+        padding:20px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+        .vLineCont {
+        padding-top: 40px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .vmonth {
+        position: absolute;
+        color: white;
+        left: -24px;
+        top: -42px;
+        transition: 1s all;
+        width: 35px;
+    }
+
+    .caseYear {
+        position: absolute;
+        width: 90px;
+        background: #36154A;
+        padding: 10px;
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        opacity: 0;
+        top: -15px;
+        z-index: 9999999999;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 25px;
+    }
+
+     #leftMain {
+        position: absolute;
+        height: 100%;
+        width: 50px;
+        padding-top: 60px;
+    }
+
+
+    .iconlist {
+        text-align: center;
+        display: table;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        padding: 0px 5px;
+        width: 64px;
+    }
+
+    #scrollMain {
+        padding-left: 60px;
+        height: 100%;
+        padding-top: 140px;
+        padding-right: 68px;
+        overflow: auto;
+    }
+
+     .caseCont 
+    {
+        padding:10px;
+    }
+    .casetitle {
+        font-size: 14px;
+       
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+    .heading
+    {
+        padding:5px;
+    }
+    .vLineCont {
+        padding-top: 40px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .vmonth {
+        position: absolute;
+        color: white;
+        left: -24px;
+        top: -42px;
+        transition: 1s all;
+        width: 35px;
+    }
+
+    .caseYear {
+        position: absolute;
+        width: 90px;
+        background: #36154A;
+        padding: 10px;
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        opacity: 0;
+        top: -15px;
+        z-index: 99;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 25px;
+    }
+
+
+    #leftMain {
+        position: absolute;
+        height: 100%;
+        width: 50px;
+        padding-top: 60px;
+    }
+
+    .iconlist {
+        text-align: center;
+        display: table;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        padding: 0px 5px;
+        width: 50px;
+    }
+
+    #scrollMain {
+        padding-left: 60px;
+        height: 100%;
+        padding-top: 140px;
+        padding-right: 54px;
+        overflow: auto;
+    }
+
+     .caseCont 
+    {
+        padding:5px;
+    }
+      .casetitle {
+        font-size: 12px;
+     
+    }
+
+}
+
+#case_player_head{
+    background: #4b1b64;
+    color: white;
+    box-shadow: rgba(23, 19, 19, 0.470588) 0px 2px 3px;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 0px;
+    /*height: 60px;*/
+    padding:10px;
+}
+
+#case_player_header{
+    width: 90%;
+    float:left;
+    height: 60px;
+    /*display: table-cell;
+    vertical-align: middle;*/
+}
+
+ 

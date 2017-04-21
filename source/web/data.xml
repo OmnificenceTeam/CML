@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <page class="pt-page" url="home.html" id="page-hm" onload="onLoadHome"></page>
+  <page class="pt-page" url="opinion.html" id="page-op" onload="onLoadOpinion"></page>
+  <page class="pt-page" url="webcast.html" id="page-wc" onload="onLoadWC"></page>
+  <page class="pt-page" url="asktheexpert.html" id="page-ae" onload="onLoadAE"></page>
+  <page class="pt-page" url="cmlnews.html" id="page-cn" onload="onLoadCN"></page>
+  <page class="pt-page" url="journal.html" id="page-cj" onload="onLoadCJ"></page>
+  <page class="pt-page" url="ulinks.html" id="page-ul" onload="onLoadUL"></page>
+  <page class="pt-page" url="eventcal.html" id="page-ec" onload="onLoadEC"></page>
+  <page class="pt-page" url="guidelinesrepo.html" id="page-gr" onload="onLoadGR"></page>
+  <page class="pt-page" url="expertvideo.html" id="page-ev" onload="onLoadEV"></page>
+  <page class="pt-page" url="case.html" id="page-cs" onload="onLoadCS"></page>
+  <page class="pt-page" url="digassets.html" id="page-da" onload="onLoadDA"></page>
+  <page class="pt-page" url="crepo.html" id="page-cr" onload="onLoadCR"></page>
+</Items>

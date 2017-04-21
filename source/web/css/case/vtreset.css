@@ -1,0 +1,32 @@
+.pt-page
+
+{
+        padding-left: 30px;
+    padding-right: 30px;
+}
+
+#btnnext
+{
+        top: 50%;
+    position: absolute;
+    right: 0;
+    z-index:99;
+}
+
+#btnprev
+{
+        top: 50%;
+    position: absolute;
+    left: 0;
+    z-index:99;
+}
+
+
+.modal-dialog {
+     width: initial; 
+     margin: 0px auto; 
+}
+.modal-dialog {
+    position: relative;
+     width: initial; 
+}

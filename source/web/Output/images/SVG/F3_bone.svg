@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	  viewBox="0 0 1321 755"  xml:space="preserve">
+  
+  <defs>
+  <style type="text/css">
+   <![CDATA[
+   @font-face {
+	font-family: 'gothicB';
+	src: url('../../fonts/gothicB.eot');
+	src: url('../../fonts/gothicB.ttf') format('truetype');
+}
+
+   ]]>
+ </style>
+</defs>
+  
+<g>
+	<g>
+		<path fill="#E5E5E5" d="M1285.004,724.309H430.682c-12.806,0-23.28-10.478-23.28-23.281V499.886
+			c0-12.802,10.474-23.277,23.28-23.277h854.322c12.806,0,23.28,10.476,23.28,23.277v201.142
+			C1308.284,713.831,1297.81,724.309,1285.004,724.309"/>
+		<path fill="#E5E5E5" d="M1285.004,269.625H430.682c-12.806,0-23.28-10.477-23.28-23.28V45.204
+			c0-12.804,10.474-23.279,23.28-23.279h854.322c12.806,0,23.28,10.475,23.28,23.279v201.141
+			C1308.284,259.148,1297.81,269.625,1285.004,269.625"/>
+		<path fill="#E58F29" d="M408.527,251.794H38.504c-12.807,0-23.28-10.473-23.28-23.28V63.034c0-12.803,10.474-23.278,23.28-23.278
+			h370.023c12.803,0,23.281,10.475,23.281,23.278v165.48C431.808,241.321,421.33,251.794,408.527,251.794"/>
+		<path fill="#E58F29" d="M408.527,706.478H38.504c-12.807,0-23.28-10.479-23.28-23.279V517.717
+			c0-12.803,10.474-23.276,23.28-23.276h370.023c12.803,0,23.281,10.474,23.281,23.276v165.481
+			C431.808,696.001,421.33,706.478,408.527,706.478"/>
+	</g>
+	<text transform="matrix(1 0 0 1 73.6777 131.4014)" fill="#FFFFFF" font-family="'gothicB'" font-size="40.7179">Morphological </text>
+	<text transform="matrix(1 0 0 1 165.2925 192.4771)" fill="#FFFFFF" font-family="'gothicB'" font-size="40.7179">Assay</text>
+	<text transform="matrix(1 0 0 1 493.3535 111.4834)" font-family="'Century gothic'" font-size="35.6282">• Hypercellular with basophilia</text>
+	<text transform="matrix(1 0 0 1 493.3535 154.2368)" font-family="'Century gothic'" font-size="35.6282">• Increased M:E ratio</text>
+	<text transform="matrix(1 0 0 1 493.3535 196.9907)" font-family="'Century gothic'" font-size="35.6282">• Hypolobulated megakaryocytes (blasts 5%)</text>
+	<text transform="matrix(1 0 0 1 95.2578 586.085)" fill="#FFFFFF" font-family="'gothicB'" font-size="40.7179">Cytogenetic </text>
+	<text transform="matrix(1 0 0 1 143.3052 647.1611)" fill="#FFFFFF" font-family="'gothicB'" font-size="40.7179">Analysis</text>
+	<text transform="matrix(1 0 0 1 493.3545 610.2969)" font-family="'Century gothic'" font-size="35.6282">• Philadelphia chromosome positive</text>
+</g>
+</svg>

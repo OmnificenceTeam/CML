@@ -1,0 +1,540 @@
+﻿
+<style>
+
+
+  #hCont  a {
+        color: white;
+    }
+
+     #hCont   a:hover,#hCont a:focus {
+            color: white;
+            outline: none;
+            text-decoration: none;
+        }
+
+   #hCont .top-menu a {
+        color: black;
+    }
+
+   #hCont .fn-f18 {
+        font-weight: normal;
+        font-size: 18px;
+    }
+
+   #hCont .br-0 {
+        border-radius: 0px;
+    }
+
+   #hCont .btn-custom {
+        background: #FF9900;
+        border-radius: 0px;
+        font-size: 16px;
+        padding: 5px 15px;
+        border: none;
+        float: right;
+    }
+
+        .modal-body .btn-custom:hover {
+            box-shadow: 0px 2px 9px -4px black;
+        }
+
+
+          .modal-body .btn-custom {
+        background: #FF9900;
+        border-radius: 0px;
+        font-size: 16px;
+        padding: 5px 15px;
+        border: none;
+        float: right;
+    }
+
+       #hCont .btn-custom:hover {
+            box-shadow: 0px 2px 9px -4px black;
+        }
+
+
+   #hCont .regInput {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid;
+        width: 100%;
+        color: white;
+    }
+
+   .modal-body .regInput {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid;
+        width: 100%;
+        color: white;
+    }
+
+
+    #hCont .modal-content {
+        overflow: auto;
+    }
+
+   #hCont .modal {
+        padding: 0px !important;
+    }
+
+   #hCont .m-20 {
+        margin-top: 20px;
+    }
+
+   #hCont #regForm input {
+        margin-top: 20px;
+    }
+
+   #hCont input:focus {
+        outline: none;
+    }
+
+    .modal-body input:focus {
+        outline: none;
+
+    }
+
+    .modal-body .radio input[type="radio"]:focus, .radio input[type="radio"]:active {
+        outline: none;
+    }
+
+
+  #hCont  select option {
+        color: black;
+    }
+
+   #hCont #regForm select {
+        margin-top: 20px;
+    }
+
+
+    /*bootstrap modified*/
+
+   #hCont .panel-group .panel {
+        margin-bottom: 0;
+        border-radius: 4px;
+        border: none;
+    }
+
+   #hCont .panel-default > .panel-heading {
+        color: #333;
+        background-color: transparent;
+    }
+
+     #hCont   .panel-default > .panel-heading + .panel-collapse > .panel-body {
+            border-top-color: #ff9900;
+        }
+
+   #hCont .modal-title {
+        font-family: 'century gothicB';
+        color: #FF9900;
+    }
+
+   #hCont input[type="checkbox"], input[type="radio"] {
+        height: 20px;
+        width: 20px;
+    }
+
+   #hCont .checkbox label {
+        line-height: 24px;
+    }
+
+   #hCont .radio input[type="radio"]:focus, .radio input[type="radio"]:active {
+        outline: none;
+    }
+
+
+   
+   .modal-body input[type="checkbox"], input[type="radio"] {
+        height: 20px;
+        width: 20px;
+    }
+
+   .modal-body .checkbox label {
+        line-height: 24px;
+    }
+
+   .modal-body .radio input[type="radio"]:focus, .radio input[type="radio"]:active {
+        outline: none;
+    }
+
+   #hCont .fp-section {
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+
+  #hCont  #section1 .intro {
+    left: 0%;
+    position: relative;
+}
+
+   #hCont  video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background: url('../images/cml.jpg') no-repeat;
+            background-size: cover;
+            -webkit-transition: 1s opacity;
+            transition: 1s opacity;
+        }
+</style>
+
+
+
+<div style="height:100%; width:100%;" id="hCont">
+    <video poster="images/cml.jpg" id="bgvid" loop>
+        <source src="images/cml.webm" type="video/webm">
+        <source src="images/cml.mp4" type="video/mp4">
+    </video>
+    <div id="header" style="display:none;">
+        
+    </div>
+    <div id="footer">
+        <div id="moveSectionDown" class="footer-arrow">
+            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" style="margin-bottom: -10px;"></span><br />
+            <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+        </div>
+    </div>
+    <div id="fullpage">
+        <div class="section" id="section" style="">
+
+            <div class="intro">
+                <table class="tog-table">
+                    <tr>
+                        <td class="bigT" rowspan="4">T</td>
+                        <td>
+                            <div class="smallO">
+                                Together Towards<br /><sapan style="color: #FF9900;">omorrow</sapan>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="section" id="section1" style="">
+            <div class="intro">
+
+                <table style="height:100%;">
+
+                    <tr>
+                        <td class="hidden-xs">
+                            <h3 class="section-title introTitle clr-orange" style="text-align:center;"> <p class="">Introduction</p><p style="text-align:left;">to CML</p>  </h3>
+                        </td>
+                        <td>
+                            <div class="visible-xs">
+                                <h3 class="section-title introTitle clr-orange" style="text-align:left;"> Introduction to CML </h3>
+
+                            </div>
+                            <div class="section-content" style="text-align:justify;">
+                                Chronic myelogenous leukaemia (CML) will affect over 100,000 patients worldwide every year and represent a significant global health burden. The introduction of tyrosine kinase inhibitors (TKIs) has increased the life expectancy of patients with CML and also an increased prevalence of the condition. It has also been observed that the prevalence of survivors with CML has increased by 4000 to 5000 per year since the approval of oral TKI therapy in 2001 and is expected to plateau at 181,000 by 2050.
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div class="section" id="section2" style="background: rgba(0, 0, 0, 0.62);">
+            <div class="slide">
+
+            <div class="intro " style="    min-height:97%; margin-bottom: 2%;">
+
+                <div class="row  white-clr">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <h3 class="section-title"> <span class="clr-orange">About CML Interact</span>  </h3>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-content" style="text-align:justify;">
+                            <p>
+                                CML Interact is a unified platform which brings together the best minds in the management of CML from around the world while also bringing together several resources that can be useful for better patient outcomes into one portal.
+
+                            </p>
+                            <br />
+                            <p>
+                                There is a wealth of information about CML available from several prestigious groups and organizations. However, all of this information is present in various websites placing demands on time to access it. Despite the availability of all this information some experts believe that the results of scientific advances may not be translated in to public health benefits. CML Interact is an endeavour that attempts to address this by bringing together resources of information and experts from various geographies together to facilitate better understanding of the information and assimilation into clinical practice.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+              
+                <!--<div class="row white-clr">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="content">
+                            <p class="title-why">WHY</p>
+                            <p class="title-cml">CML INTERACT</p>
+                            <p class="contentB"> In sensibus constituto mea, populo gubergren et vis. Ne vocibus eleifend qualisque vis</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="content">
+                            <div class="colored">Lorem ipsum dolor sit amet, id aliquid posidonium per. </div>
+                            <div>In sensibus constituto mea, populo gubergren et vis. Ne vocibus eleifend qualisque vis, lobortis vituperata ut ius. </div>
+
+                        </div>
+                        <div class="content">
+                            <div class="colored">Lorem ipsum dolor sit amet, id aliquid posidonium per. Cum et quaerendum vituperatoribus. Integre deterruisset at qui.</div>
+                            <div>In sensibus constituto mea, populo gubergren et vis. Ne vocibus eleifend qualisque vis, lobortis vituperata ut ius. vis. Ne vocibus eleifend qualisque vis, lobortis vituperata ut ius. vis. Ne vocibus eleifend qualisque vis </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="content">
+                            <div class="colored">Lorem ipsum dolor sit amet, id aliquid posidonium per. Cum et quaerendum vituperatoribus. Integre deterruisset at qui.</div>
+                            <div>In sensibus constituto mea, populo gubergren et vis. Ne vocibus eleifend qualisque vis, lobortis vituperata ut ius. At quaestio reprehendunt mea, case omittam usu te, sit illud modus ex. No quo iusto interesset, eos malorum efficiendi definitionem ex. Mel putant maiestatis ut, usu ludus nihil aliquam ei. Facer omnium fabellas eu mea, malorum fierent dissentiet ut cum, vis in illud numquam.</div>
+
+                        </div>
+
+                    </div>
+                </div>-->
+
+            </div>
+            <div class="clearfix"></div>
+                <div class="row land-footer" style="margin-top:50px;">
+                    <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+                        <div class="col-md-2  col-sm-4 col-xs-12">
+                            <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/terms-use" target="_blank"> Terms of use </a></h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/privacy-policy" target="_blank">Privacy Policy </a></h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage2', 1); clearContactUs();">Contact us</h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage2', 2);">FAQ</h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+                        </div>
+                    </div>
+
+
+                </div>
+                </div>
+            <div class="slide">
+                <div class="intro white-clr" style="min-height:97%; margin-bottom: 2%;">
+                    <h3 class="clr-orange"> Contact Us </h3>
+                    <div class="row">
+                        <form id="contactForm" onsubmit="return false;">
+
+                            <div class="col-md-offset-3 col-sm-offset-3 col-md-6 col-sm-6 col-xs-12 p-r-40">
+
+                                <h4>Feedback type*</h4>
+                                <select id="ddftype" class="regInput cs-style bg-white">
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Feedback">Feedback</option>
+                                    <option value="Request for change of registration">Request for change of registration</option>
+                                </select>
+                                <h4>Email*</h4>
+                                <input type="email" id="cemail" class="regInput cs-style bg-white br-0" placeholder="" />
+                                <h4>Description*</h4>
+                                <textarea rows="4" class="regInput cs-style bg-white br-0" style="resize:none;" id="cdesc" placeholder=""></textarea>
+                                <br />
+
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">
+                                    <div class="col-md-9 col-sm-8 col-xs-12">
+                                        <div id="cuMsg">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 col-xs-12">
+                                        <input type="button" onclick="onClickContactus()" style="margin-bottom:40px;" class="btn-custom" value="Submit" />
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="row land-footer" style="margin-top:50px;">
+                    <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+                        <div class="col-md-2  col-sm-4 col-xs-12">
+                            <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/terms-use" target="_blank"> Terms of use </a></h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/privacy-policy" target="_blank">Privacy Policy </a></h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage2', 1); clearContactUs();">Contact us</h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage2', 2);">FAQ</h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro white-clr" style="margin-bottom:150px;">
+                    <h3 class="clr-orange">FAQ</h3>
+                    <br />
+                    <h4>1.	Unable to register</h4>
+                    <ul>
+                        <li>Ensure to enter the unique access code provided by the Novartis representative</li>
+                        <li>Ensure to enter all mandatory fields (marked with asterisk * )</li>
+                        <li>Password must be 8 characters/digits long</li>
+                        <li>It is mandatory to agree to the terms of use and provide consent. Kindly check the box after going through the details and before clicking/tapping on submit icon.</li>
+                    </ul>
+                    <br />
+                    <h4>2.	Do not have Access code. How to register?</h4>
+                    <ul>
+                        <li>
+                            Approach the Novartis representative
+                        </li>
+                        <li>Alternatively please write to us from the ‘Contact us’ section</li>
+                    </ul>
+                    <br />
+                    <h4>3.	Successfully registered but unable to Login</h4>
+                    <ul>
+                        <li>
+                            Kindly check your registered email ID for an account activation email from 'info@cmlinteract.com'
+                        </li>
+                        <li>	Post activation of your account you will be able to Login with the registered credentials.</li>
+                    </ul>
+                    <br />
+                    <h4>4.	Forgot password/Reset password</h4>
+                    <ul>
+                        <li>
+                            On the landing page click on ‘Forgot Password’, enter the registered email ID and submit. User will receive an automated email on their registered email ID, with a link to reset password. User can then login using the new password
+                        </li>
+                    </ul>
+                    <br />
+                    <h4>5.	Accessibility on Mobile/Tablet </h4>
+                    <ul>
+                        <li>
+                            You can download CML Interact app from windows; android and apple store.
+
+                        </li>
+                        <li>Once registered on either laptop/desktop or mobile app, you can directly login on any device.</li>
+                    </ul>
+                    <br />
+                    <h4> 6.	The minimum system requirements.</h4>
+
+                    <table class="table table-bordered border-white" style="margin-left:25px; width:90%;">
+                        <tr>
+                            <td>CPU</td>
+                            <td>A modern computer manufactured in the last 5 years</td>
+                        </tr>
+                        <tr>
+                            <td> RAM	</td>
+                            <td>512MB required, 1GB or more recommended</td>
+                        </tr>
+                        <tr>
+                            <td> Operating System		</td>
+                            <td>Windows XP, Vista, Windows 7, Mac OS X 10.4.x or later</td>
+                        </tr>
+                        <tr>
+                            <td> Internet	</td>
+                            <td>Cable Modem, DSL, LAN (min 512Kbps, 1Mbps or greater recommended)	</td>
+                        </tr>
+                        <tr>
+                            <td> Sound Card	</td>
+                            <td>Sound card and speakers, headset with microphone (optional)	</td>
+                        </tr>
+                        <tr>
+                            <td> Monitor and Video Card		</td>
+                            <td>1024 x 768 or higher screen resolution</td>
+                        </tr>
+                    </table>
+                    <br />
+                    <h4>7.	Browser settings </h4>
+                    <p>Please check if your browser is updated with the laquizversion. Below are the compatible browsers:</p>
+
+
+                    <ul>
+                        <li>
+                            Internet Explorer: Version 10 and above
+                        </li>
+                        <li>Mozilla Firefox: Version 44 and above</li>
+                        <li>Google Chrome: Version 50 and above</li>
+                        <li>Safari: Version 8 and above</li>
+                    </ul>
+                    <br />
+                    <h4>8.	Technical assistance</h4>
+
+                    <ul>
+
+                        <li>For all technical assistance, you can write to us via 'Contact us' section. Technical team will get back to you over email within 48 business hours.</li>
+                    </ul>
+                    <br />
+                    <h4>9.	Changes in registered email ID.</h4>
+                    <ul>
+
+                        <li>For change in registered email ID, you can write to us via 'Contact us' section. Technical team will get back to you over email within 48 business hours.</li>
+                    </ul>
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="row land-footer" style="margin-top:50px;">
+                    <div class="col-md-12 col-sm-12 col-xs-12 clr-orange" style="text-align:center ;font-family: 'century gothicB';font-size: 16px;margin-top: 30px;">
+
+                        <div class="col-md-2  col-sm-4 col-xs-12">
+                            <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/terms-use" target="_blank"> Terms of use </a></h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15"><a class="clr-orange" onclick="return onClickCheckIdevice(this)" href="https://www.novartis.com/privacy-policy" target="_blank">Privacy Policy </a></h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage2', 1); clearContactUs();">Contact us</h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15 close_menutitle" onclick="$.fn.fullpage.silentMoveTo('mPage2', 2);">FAQ</h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+
+                            <h5 class="ftitle15" data-toggle="modal" data-target="#myModalFb">Feedback</h5>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-12">
+                            <img src="images/novartis.png" style="width: 100%; max-width:200px; position:relative;margin-bottom:15px;" />
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="photo" style="width:0px; height:0px;"></canvas>
+
+
+</div>
